@@ -1,0 +1,557 @@
+﻿<!--<div class="page-loader" style="background: url(../img/preloader.gif) center no-repeat #fff;"></div>-->
+
+
+
+
+
+
+<style>
+    .searchBar {
+        padding-left: 20px;
+    }
+
+    .searchButton {
+        font-size: 30px;
+        padding: 10px;
+        padding-left: 15px;
+    }
+
+
+    /*royal slider stuff*/
+    .visibleNearby {
+        width: 100%;
+        background: #141414;
+        color: #FFF;
+        padding-top: 25px;
+    }
+
+        .visibleNearby img,
+        .visibleNearby .rsSlide {
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            will-change: transform;
+        }
+
+        .visibleNearby .rsGCaption {
+            font-size: 16px;
+            line-height: 18px;
+            padding: 12px 0 16px;
+            background: #141414;
+            width: 100%;
+            position: static;
+            float: left;
+            left: auto;
+            bottom: auto;
+            text-align: center;
+        }
+
+            .visibleNearby .rsGCaption span {
+                display: block;
+                clear: both;
+                color: #bbb;
+                font-size: 14px;
+                line-height: 22px;
+            }
+
+    .royalSliderFeatured > .rsImg {
+        visibility: hidden;
+    }
+
+
+    /* Scaling transforms */
+    .visibleNearby .rsSlide img {
+        opacity: 0.45;
+        -webkit-transition: all 0.3s ease-out;
+        -moz-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
+        -webkit-transform: scale(0.9);
+        -moz-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        -o-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+
+    .visibleNearby .rsActiveSlide img {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+    }
+
+    .rsContent, .featuredRS {
+        height: 400px;
+    }
+
+
+    
+</style>
+<div class="main-wrapper">
+    <!-- HEADER -->
+    <header id="pageTop" class="header">
+
+        <!-- TOP INFO BAR -->
+
+        <div class="nav-wrapper navbarWhite">
+
+            <div class="container-fluid header-bg">
+                <div class="row">
+                    <div class="col-lg-4 col-sm-4 col-xs-6 header-left empty">
+                        empty
+                    </div>
+                    <div class="col-lg-8 col-sm-8 col-xs-6 header-right empty">
+                        empty
+                    </div>
+                </div>
+            </div>
+
+            <!-- NAVBAR -->
+            <nav id="menuBar" class="navbar navbar-default lightHeader" role="navigation">
+                <div class="noContainer">
+
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <div class="ecPhoneHome">
+                            <a href="tel:18333585933">
+                                <div class="phoneNavMobile">
+                                    <i class="icon-telephone-1"></i>
+                                </div>
+                            </a>
+                        </div>
+                        <div><a class="navbar-brand" href="http://www.elitelyfe.com"><img src="../assets/All/el-logo-full.svg" alt="EliteLYFE"></a></div>
+                        <div class="logo crownTop"><a href="http://www.elitelyfe.com"><img src="../assets/svg/crown_mobile.svg" alt="EliteLYFE"></a></div>
+                        <!--<div class="ecLine"></div>-->
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse navbar-ex1-collapse">
+                        <ul class="nav navbar-nav navbar">
+                            <li class="fmnu active">
+                                <a class="mnu" href="http://www.elitelyfe.com">HOME</a>
+                            </li>
+                            <li >
+                                <a class="mnu" href="search-results.html">LISTINGS</a>
+                            </li>
+                            <li>
+                                <a class="mnu" href="about-us.html">ABOUT </a>
+                            </li>
+                            <li>
+                                <div class="extraMobile">
+                                    <ul>
+                                        <li></li>
+                                        <li>
+                                            <ul class="topMobMenu list-unstyled ecFootList ecSocialList">
+                                                <li><a target="_blank" href="https://www.instagram.com/elitelyfe/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                                <li><a target="_blank" href="https://www.facebook.com/elitelyfe/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <div class="footerText">
+                                        <a href="http://www.elitelyfe.com"><img src="../img/logo-footer.png" alt="Footer Logo" class="ecFooterLogo"></a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+</div>
+<!-- BANNER SECTION -->
+<section class="clearfix homeBanner " style="background-image: url('../../Assets/All/Placeholder.jpg');">
+    <div class="overlayMain"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="banerInfo">
+                    <div class="ecTitleHome">LUXURY, REDEFINED</div>
+
+                    <div class="form-inline">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <!-- <div class="input-group-addon">Find</div>-->
+                                <!--<input id="searchBox" type="text" class="form-control"/>-->
+                                <select id="searchBox" class="ecSearch" placeholder="Where Would You Like To Go?">
+                                    <option value="Punta Cana">Punta Cana</option>
+                                    <option value="Caicos">Turks & Caicos</option>
+                                    <option value="Los Angeles">Los Angeles</option>
+                                    <option value="St. Barts">St. Barts</option>
+                                    <option value="Los Angeles">Los Angeles</option>
+                                </select>
+                                <div class="input-group-addon addon-right ecSearchButton">SEARCH</div>
+                            </div>
+                        </div>
+
+
+                        <div id="ecTopLocations">
+                            TOP DESTINATIONS: <a href='../search-results.html?q=Punta%20Cana'>PUNTA CANA</a> | <a href='../search-results.html?q=Caicos'>TURKS & CAICOS</a> | <a href="search-results.html?q=St.%20Barts">ST. BARTS</a> | <a href="search-results.html?q=Los%20Angeles">LOS ANGELES</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<section class="clearfix">
+    <div class="container">
+        <div id="ecTagline">
+            <span class="ecTagTitle">LIVE THE ELITELYFE</span>
+            <p class="ecRosa ecTagP">From spectacular vacation villas and hotel suites, to exotic car rentals, superyacht, helicopter, or private jet charters, we put worldwide luxury in the palm of your hands.</p>
+        </div>
+    </div>
+</section>
+<section class="clearfix ecBoxes">
+    <div class="container">
+        <div class="row">
+            <div class="index_section_2">
+                <div class="col-sm-12 col-md-4 col-lg-4 ecBoxHolder">
+                    <div class="ecOrBox">
+                        <img src="~/Assets/svg/Villa Icon.svg" class="ecOrImg" />
+                        <div class="ecHilightTitle">Luxury Villas & Hotel Suites</div>
+                        <div class="adjust_section_2x">ELITELYFE offers you the ultimate in luxury, comfort, and class from our hand-picked villas and hotels in the most sought-after destinations around the world.</div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4 ecBoxHolder">
+                    <div class="ecOrBox">
+                        <img src="~/Assets/svg/Concierge icon.svg" class="ecOrImg" />
+                        <div class="ecHilightTitle">Platinum Concierge</div>
+                        <div class="adjust_section_2x">Our clients enjoy exclusive access to our Global Platinum Concierge Services. Our team is here for you 24/7 to ensure a flawless travel experience.</div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4 ecBoxHolder">
+                    <div class="ecOrBox">
+                        <img src="~/Assets/svg/Itinerary Icon.svg" class="ecOrImg" />
+                        <div class="ecHilightTitle">Bespoke Itineraries</div>
+                        <div class="adjust_section_2x">Our team of global travel designers will custom-tailor the perfect blend of luxury for your next getaway.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="clearfix thingsArea">
+    <div class="row ecRowClear">
+        <div class="col-sm-12 ">
+            <div class="ecFeatListTitle">FEATURED PROPERTIES</div>
+            <div class="ecFeatListDesc">A selection of our most popular villas and destinations</div>
+            <div id="featuredListings"></div>
+        </div>
+    </div>
+
+</section>
+
+<section class="clearfix ecCarouselOuter ">
+    <div class="row ecRowClear">
+        <div class="col-sm-12">
+            <a class="carousel-control-prev ecQuotePrevNext ecQPNP" href="#fade-quote-carousel" role="button" data-slide="prev">
+
+                &lt;
+            </a>
+            <a class="carousel-control-next ecQuotePrevNext ecQPNN" href="#fade-quote-carousel" role="button" data-slide="next">
+                &gt;
+            </a>
+            <div class="tcb-quote-carousel">
+                <div class="quote"><img src='../assets/all/quote.png'/>
+                </div>
+                <div class="carousel slide carousel-fade" id="fade-quote-carousel" data-ride="carousel" data-interval="3000">
+
+                    <!-- Carousel items -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <blockquote class="ecQuote">
+                                <p>EliteLyfe was incredibly helpful from the first inquiry until after we returned home... quick to respond when I had questions and made themselves available via email and phone during the entire process. They even called and checked on us several times while we were in Punta Cana to make sure all was well!</p>
+                            </blockquote>
+                            <div class="ecQuoteBy">SATISFIED CUSTOMER</div>
+                        </div>
+                        <div class="item">
+                            <blockquote class="ecQuote">
+                                <p>ELITELYFE makes luxury travel easy and accessible by providing a single solution for booking trusted travel products all under the same umbrella without having to scour the web or source multiple providers.</p>
+                                <div class="ecQuoteBy"><a href="https://www.usatoday.com/story/travel/roadwarriorvoices/2015/12/14/startup-spotlight-elitelyfe-wants-you-to-rent-a-yacht-and-an-exotic-car-with-your-luxurious-vacation-rental/83313698/" target="_blank">USA TODAY ></a>
+                                </div>
+                            </blockquote>
+                        </div>
+                        <div class="item">
+                            <blockquote class="ecQuote">
+                                <p>ELITELYFE has a unique edge in the luxury travel market as they provide a single and accessible solution for booking with trusted travel services all under one roof.</p>
+                                <div class="ecQuoteBy"><a href="https://europeluxurycars.com/luxuria/news/elitelyfe-and-their-freakin-love-for-luxury" target="_blank">LUXURIA ></a>
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+
+
+                    <!-- Carousel indicators -->
+                    <ol class="carousel-indicators ecIndicator">
+                        <li data-target="#fade-quote-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#fade-quote-carousel" data-slide-to="1"></li>
+                        <li data-target="#fade-quote-carousel" data-slide-to="2"></li>
+                    </ol>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<!-- COUNT UP SECTION -->
+<section class="clearfix thingsArea">
+    <div class="ecContainDestinations">
+        <div class="ecDestinationsTitle">DESTINATIONS</div>
+        <div class="row ecRowClear">
+            <div class="col-sm-12 ">
+                <div class="col-sm-12 col-md-8 col-lg-8 wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                    <a href="search-results.html?q=Punta%20Cana">
+                        <div class="ecFeatContain" style="background-image: url('../Assets/high_res/home/Featured_PuntaCana.jpg'); ">
+                            <div class="ecDestExploreMask"></div>
+                            <div class="ecDestExplore">Punta Cana<div class="ecDestVilla">VIEW VILLAS -></div></div>
+                            
+                            <div class="ecDestExploreDesc">If an ultra-luxurious villa in an ultra-relaxed destination is what you need, let us take you to Punta Cana. The perfect beaches, world-class golf courses, and everything from the oldest colonial history in the new world to the best eco-tourism, will make this your dream vacation.</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4 wow fadeInUp animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                    <a href="search-results.html?q=Los%20Angeles">
+                        <div class="ecFeatContain" style="background-image: url('../Assets/high_res/home/Featured_LA.jpg');">
+                            <div class="ecDestExploreMask"></div>
+                            <div class="ecDestExplore">Los Angeles<div class="ecDestVilla">VIEW VILLAS -></div></div>
+                            
+                            <div class="ecDestExploreDesc">Whether you are looking for the action of Hollywood, the shopping in Beverly Hills, or the elite seclusion of Malibu, we have a stunning residence to suit your style while in the LA area, with every amenity imaginable (and perhaps some you can’t imagine).</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4 wow fadeInUp animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                    <a href="search-results.html?q=Caicos">
+                        <div class="ecFeatContain" style="background-image: url('../Assets/high_res/home/Featured_TandC.jpg');">
+                            <div class="ecDestExploreMask"></div>
+                            <div class="ecDestExplore">Turks & Caicos<div class="ecDestVilla">VIEW VILLAS -></div></div>
+                            <div class="ecDestExploreDesc">With endless white-sand beaches and the world’s third largest barrier reef, the Turks and Caicos islands are hidden gems of the Caribbean. The historic villages, pristine beaches and crystal-clear waters teeming with marine life provide a bounty of leisure activities.</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-12 col-md-8 col-lg-8 wow fadeInUp animated" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
+                    <a href="search-results.html?q=ST%20Barts">
+                        <div class="ecFeatContain" style="background-image: url('../Assets/high_res/home/Featured_StBarts.jpg');">
+                            <div class="ecDestExploreMask"></div>
+                            <div class="ecDestExplore">St. Barts<div class="ecDestVilla">VIEW VILLAS -></div></div>
+                            <div class="ecDestExploreDesc">When it comes to the pairing of idyllic island beaches with the style and glamour of the French Riviera, nothing comes close to St. Barts. Whether you prefer a stunning mega-yacht or a secluded villa (or both!), EliteLyfe can craft the perfect getaway for you.</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- FORM SECTION -->
+<section class="clearfix ecContact">
+    <div class="col-sm-12 inqueryContainer">
+        <a id="contactForm"></a>
+        <!-- Wrapper for slides -->
+        <div class="col-md-6 big_slider_image_holder">
+            <div class="ecQuestionsContain">
+                <div class="ecQuestions">
+                    QUESTIONS?
+                </div>
+                <div class="ecH2H">
+                    We're here to help
+                </div>
+                <div class="ecH2Htext">
+                    Complete this form and we will contact you right away.
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 big_slider_image_holder">
+            <div class="big_slider_image inqueryContainerText">
+                
+                <div class="row" id="index_sussfull_submitions" style="display:none;">
+                    <div class="col-md-12">
+                        <div class="ajax_sussfull_submitions" style="font-size: 15px;  margin-top: 50px; text-align: center;">
+                            <h3>Thank you for your an inquiry!</h3>
+                            <p>A Travel Designer will be in touch within 24 hours. Would you like to speak to a travel designer now? Give us a call!</p>
+                            <p>USA & Canada: 1.877.887.7818 </p>
+                            <p>Int. +1.424.281.6881</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="index_form_sction">
+                    <form role="form" class="" action="#" method="post" id="submitRequestForm" onSubmit="javaScript:;" name="submitRequestForm">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class='form-group'>
+                                    <input placeholder="First Name *" name="index_first_name" id="index_first_name" type="text" class="form-control " />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class='form-group'>
+                                    <input placeholder="Last Name" name="index_last_name" type="text" id="index_last_name" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class='form-group'>
+                                    <input placeholder="Email *" name="index_email" id="index_email" type="text" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class='form-group'>
+                                    <input placeholder="Phone #" name="index_phone_number" id="index_phone_number" type="text" class="form-control" />
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class='form-group'>
+                                    <select name="index_would_like_to_go" id="index_would_like_to_go" class="form-control" placeholder="Destination">
+                                        <option value="All Destinations">Destination</option>
+                                        <option style="margin-left:5px; font-weight:bold" value="29"><strong>Asia</strong></option>
+                                        <option style="margin-left: 15px;" value="64">--Indonesia</option>
+                                        <option style="margin-left:15px;" value="45">--Maldives</option>
+                                        <option style="margin-left:15px;" value="30">--Thailand</option>
+                                        <option style="margin-left:5px; font-weight:bold" value="80"><strong>Central America</strong></option>
+                                        <option style="margin-left:15px;" value="82">--Costa Rica</option>
+                                        <option style="margin-left:5px; font-weight:bold" value="20"><strong>Europe</strong></option>
+                                        <option style="margin-left:15px;" value="16">--France</option>
+                                        <option style="margin-left:15px;" value="125">--Greece</option>
+                                        <option style="margin-left:15px;" value="48">--Italy</option>
+                                        <option style="margin-left:15px;" value="51">--Spain</option>
+                                        <option style="margin-left:15px;" value="61">--Switzerland</option>
+                                        <option style="margin-left:5px; font-weight:bold" value="24"><strong>North America</strong></option>
+                                        <option style="margin-left:15px;" value="34">--Caribbean</option>
+                                        <option style="margin-left:15px;" value="131">--Hawaii</option>
+                                        <option style="margin-left:15px;" value="75">--Mexico</option>
+                                        <option style="margin-left:15px;" value="13">--United States</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class='form-group'>
+                                    <select name="index_month_to_go" id="index_month_to_go" class="form-control">
+                                        <option value="" disabled="disabled">Looking To Travel In</option>
+                                        <option value="0" id="0">Travel dates not set yet</option>
+                                        <option value="1" id="1">January</option>
+                                        <option value="2" id="2">February</option>
+                                        <option value="3" id="3">March</option>
+                                        <option value="4" id="4">April</option>
+                                        <option value="5" id="5">May</option>
+                                        <option value="6" id="6">June</option>
+                                        <option value="7" id="7">July </option>
+                                        <option value="8" id="8">August</option>
+                                        <option value="9" id="9">September</option>
+                                        <option value="10" id="10">October</option>
+                                        <option value="11" id="11">November</option>
+                                        <option value="12" id="12">December</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class='form-group'>
+                                    <select name="index_budget" id="index_budget" class="form-control">
+                                        <option value="" disabled="disabled">Budget</option>
+                                        <option value="Not sure about budget yet" id="">Not sure about budget yet</option>
+                                        <option value="<1000" id="">&lt; $1000 per night</option>
+                                        <option value="1000-1500" id="">$1000-$1500 per night</option>
+                                        <option value="1500-2500" id="">$1500-$2500 per night</option>
+                                        <option value="2500-5000" id="">$2500-$5000 per night</option>
+                                        <option value="5000+" id="">$5000+ per night</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class='form-group'>
+                                    <textarea placeholder="What's the occasion?" name="index_occasion" id="index_occasion" class="form-control"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div id="message_index_lable" class="ajax_response_place" style="margin: 10px 0px;"></div>
+                                <div id="submitRequestButton" class="ecSubmitRequest">SEND INQUIRY</div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer class="ecFooter">
+
+    <!-- FOOTER INFO -->
+    <div class="clearfix footerInfo2" style="padding-top: 20px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 col-xs-12">
+                    <div class="footerText">
+                        <a href="http://www.elitelyfe.com"><img src="../img/logo-footer.png" alt="Footer Logo" class="ecFooterLogo"></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-xs-12">
+                    <div class="footerPad">
+                        <div class="ecFootHeader">CONTACT ELITELYFE</div>
+                        <ul class="list-styled list-contact ecFootList">
+                            <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:sales@elitelyfe.com">sales@elitelyfe.com</a></li>
+                            <li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:18333585933">US/Canada: 1.833.358.5933</a></li>
+                            <!--<li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:14242816881">International: +1.424.281.6881</a></li>-->
+                            <li><i class="fa fa-globe" aria-hidden="true"></i><a href="http://www.elitelyfe.com">www.EliteLYFE.com</a></li>
+                        </ul>
+                        <br />
+                        <div class="ecFootHeader">
+                            SOCIAL
+                        </div>
+                        <ul class="list-unstyled ecFootList ecSocialList">
+                            <li><a target="_blank" href="https://www.instagram.com/elitelyfe/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            <li><a target="_blank" href="https://www.facebook.com/elitelyfe/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-xs-12">
+                    <div class="footerPad">
+                        <div class="ecFootHeader">SUBSCRIBE</div>
+                        <div class="ecMailList">
+                            Sign up for our mailing list for ELITELYFE news and exclusive offers.
+                        </div>
+                        <div class="ecSUEmail">
+
+                            <input type="text" id="emailSignupFooter" placeholder="Email Address..." class="ecSignupEmail" aria-describedby="ecSign" />
+                            <div class="ecSignupButton">&gt;</div>
+
+                        </div>
+                        <ul class="list-unstyled ecFootList ecFootLinksList">
+                            <li><a href="http://www.elitelyfe.com">HOME</a></li>
+                            <li><a href="search-results.html">VILLAS</a></li>
+                            <li><a href="about-us.html">ABOUT</a></li>
+                            <li><a href="#" class="sendToContact" >CONTACT</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="clearfix footerInfo2">
+        <div class="copyFoot">
+            <div class="ecCopyText"> &copy; 2018 ELITELYFE All Rights Reserved | <a href="terms-of-services.html">Terms & Conditions</a></div>
+        </div>
+    </div>
+</footer>

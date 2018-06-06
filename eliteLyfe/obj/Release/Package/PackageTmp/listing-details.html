@@ -1,0 +1,664 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- SITE TITTLE -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Listing Details - EliteLyfe</title>
+    <!-- PLUGINS CSS STYLE -->
+    <link href="plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet">
+    <link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!--<link href="plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">-->
+    <link href="css/fontawesome-all.min.css" rel="stylesheet" />
+    <script defer src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.0/js/v4-shims.js"></script>
+    <link href="plugins/listtyicons/style.css" rel="stylesheet">
+    <link href="plugins/bootstrapthumbnail/bootstrap-thumbnail.css" rel="stylesheet">
+    <link href="plugins/datepicker/datepicker.min.css" rel="stylesheet">
+    <link href="plugins/selectbox/select_option1.css" rel="stylesheet">
+    <link href="plugins/owl-carousel/owl.carousel.min.css" rel="stylesheet">
+    <link href="plugins/fancybox/jquery.fancybox.pack.css" rel="stylesheet">
+    <link href="plugins/isotope/isotope.min.css" rel="stylesheet">
+    <link href="plugins/map/css/map.css" rel="stylesheet">
+    <!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Muli:200,300,400,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Herr+Von+Muellerhoff" rel="stylesheet">
+    <!-- CUSTOM CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- FAVICON -->
+    <link href="img/favicon.png" rel="shortcut icon">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .header {
+            font-size: 22px;
+            color: #52527A;
+            padding-bottom: 15px;
+            padding-top: 30px;
+        }
+
+        h2 {
+            margin-bottom: 0px;
+        }
+
+        .paddingAdjustTopBottom {
+            padding: 0px;
+        }
+
+        .altRow {
+            background: #f0f0f5;
+        }
+
+        .rowStyle {
+            border-bottom: 1px solid #ccccb3;
+            font-size: 20px;
+            line-height: 58px;
+        }
+
+        .feeType {
+            font-size: 20px;
+            font-weight: 700;
+            display: inline;
+        }
+
+        .feeAmount {
+            font-size: 18px;
+        }
+
+        #policyListing, #amenityListing, #suitabilityListing {
+            font-size: 20px;
+            line-height: 28px;
+        }
+
+        .listingTitleArea, #listingDescriptionStart {
+            font-size: 20px;
+            line-height: 26px;
+            font-weight: 300;
+            color: #545454;
+            font-family: helvetica, sans-serif;
+            padding-bottom: 10px;
+        }
+
+        #listing-title {
+            margin: 0;
+            font-size: 24px;
+            line-height: 30px;
+            letter-spacing: 1px;
+            font-family: Georgia,serif;
+            margin-bottom: 10px;
+        }
+
+        #bedBathBeyond {
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-family: Georgia,serif;
+        }
+
+        .big {
+            font-size: 40px;
+        }
+
+        .bbb {
+            display: inline-block;
+            margin: 15px;
+            text-align: center;
+            padding: 0px 15px;
+        }
+
+        .item img {
+            background-repeat: no-repeat;
+            background-color: #f5f5f5;
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+            background-position: 50% 50%;
+            max-height: 800px;
+        }
+
+        #myCarousel {
+            width: 100%;
+        }
+
+        #listingCarousel, #detailSummary {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        #detailSummary {
+            padding-right: 80px;
+            padding-bottom: 50px;
+        }
+
+        .fullScreen {
+            position: absolute;
+            bottom: 45px;
+            right: 50%;
+            margin-right: -25px;
+            width: 50px;
+            font-size: 40px;
+            background: black;
+            opacity: .3;
+            color: white;
+            z-index: 99999;
+            padding: 3px;
+            text-align: center;
+        }
+
+            .fullScreen:hover {
+                opacity: .8;
+                cursor: pointer;
+            }
+
+        .searchBar {
+            padding-left: 20px;
+        }
+
+        .searchButton {
+            font-size: 30px;
+            padding: 0px;
+        }
+
+        #bedroomListingSection, #bathroomListingSection {
+            font-size: 20px;
+            padding-top: 80px;
+        }
+
+        .bedDiv, .bathDiv {
+            border-radius: 4px;
+            border: 1px solid #e5e5e5;
+            padding: 15px;
+        }
+
+        .amenities {
+            font-size: 19px;
+            line-height: 35px;
+        }
+
+        .altRowCurve {
+            background-color: #f5f5f5;
+        }
+
+        #listingDescription, #currentCurrency {
+            font-size: 22px;
+        }
+
+        h4.amenityHeader {
+            font-size: 18px;
+            margin-top: 30px;
+            text-transform: capitalize;
+            margin-bottom: 15px;
+        }
+
+        .feeType, .feeAmount {
+            display: inline;
+            padding: 5px;
+        }
+
+        .leftSideCarousel, .rightSideCTA {
+            float: left;
+            clear: both;
+            height: 200px;
+            width: 350px;
+            padding-right: 20px;
+            position: -webkit-sticky;
+            position: sticky;
+            z-index: 0;
+            left: 10px;
+            display: none;
+            top: 20px;
+        }
+
+        .rightSideCTA {
+            float: right;
+            background: gray;
+            border: 1px solid navy;
+            color: black;
+            font-size: 16px;
+            border-radius: 5px;
+            padding: 15px;
+            margin-right: 20px;
+        }
+
+        .leftSideCarousel #listingCarousel .fullScreen {
+            display: none;
+        }
+
+        .planTripTop {
+            display: none;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .bookNow {
+            border-radius: 5px;
+            color: white;
+            background: navy;
+            padding: 15px;
+            width: 160px;
+            margin-top: 30px;
+            margin-left: 10px;
+            margin-bottom: 30px;
+        }
+
+
+
+
+
+        /*iPad horizontal*/
+        @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+            .big, .bbb {
+                font-size: 24px;
+                font-weight: 400;
+                vertical-align: top;
+                line-height: 28px;
+                margin: 5px;
+            }
+
+            .bbb {
+                font-size: 16px;
+                line-height: 20px;
+            }
+
+            #listingDescriptionStart {
+                font-size: 14px;
+                line-height: 18px;
+            }
+
+            #detailSummary {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+        }
+    </style>
+</head>
+<body class="body-wrapper">
+
+    <!--<div class="page-loader" style="background: url(img/preloader.gif) center no-repeat #fff;"></div>-->
+    <div class="main-wrapper">
+
+
+        <nav class="navbar navbar-inverse" style="padding-bottom: 20px;">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#"><img src="img/el-logo.png" alt="EliteLyfe" /></a>
+                </div>
+                <div class="form-group " style="margin-bottom: 0px;">
+                    <div class="searchBar">
+                        <div class="input-group" style="padding-top: 10px; padding-left: 170px; width: 200px;">
+
+                            <input type="text" class="form-control error" id="searchListings" placeholder="Search" aria-describedby="ownerPhonePrefix" onblur="formatPhoneUS(this);" onkeyup="formatPhoneUS(this);" style="width: 250px;">
+                            <span class="input-group-btn">
+                                <button id="searchButton" class="btn btn-secondary" type="button" style="width: 65px; padding: 10px;"><i class="icon-search-12 searchButton"></i></button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- <ul class="nav navbar-nav" style="float: right;">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Page 1</a></li>
+                    <li><a href="#">Page 2</a></li>
+                    <li><a href="#">Page 3</a></li>
+                </ul>
+                -->
+            </div>
+        </nav>
+
+
+        <!-- LISTINGS Get Info Section -->
+        <section class="clearfix paddingAdjustTopBottom">
+            <div class="row">
+                <div id="carouselSummary" class="col-md-12 col-xs-12">
+                    <div id="listingCarousel"></div>
+                </div>
+                <div class="col-md-6 col-xs-12" id="detailSummary">
+
+                    <div id="listing-title"></div>
+                    <div class="listingTitleArea">
+                        <!--<h3>with Panoramic Ocean Views</h3>-->
+                        <div id="listing-address"> </div>
+                        <div id="listing-summary"></div>
+                        <br />
+
+                    </div>
+                    <div id="bedBathBeyond">
+
+                    </div>
+                    <span id="listingDescriptionStart"></span>
+                    <br />
+                    <div>
+                        <div class="row">
+                            <div class="bookNow">Plan Your Trip Now!</div>
+                            <div class="form-group col-sm-12 planTripTop">
+
+                                <div class="form-group col-sm-3 col-xs-12">
+                                    <label for="infoFName">First Name</label>
+                                    <input type="text" class="form-control" id="infoFName" placeholder="First Name">
+                                </div>
+                                <div class="form-group col-sm-3 col-xs-12">
+                                    <label for="infoLName">Last Name</label>
+                                    <input type="text" class="form-control" id="infoLName" placeholder="Last Name">
+                                </div>
+                                <div class="form-group col-sm-3 col-xs-12">
+                                    <label for="infoStart">Start</label>
+                                    <input type="text" class="form-control" id="infoStart" placeholder="Start Date">
+                                </div>
+                                <div class="form-group col-sm-3 col-xs-12">
+                                    <label for="infoEnd">Start</label>
+                                    <input type="text" class="form-control" id="infoEnd" placeholder="End Date">
+                                </div>
+                                <div class="form-group col-sm-12 col-xs-12">
+                                    <label for="infoComments">Comments</label>
+                                    <textarea class="form-control" rows="3" id="infoComments" placeholder="Comments / Special Instructions"></textarea>
+                                </div>
+                                <div class="col-sm-3 col-xs-12">
+                                    <div id="requestInfo" class="btn btn-primary" style="padding: 10px">Request Information</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="otherInfo"></div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <section class="clearfix paddingAdjustTop">
+            <div class="leftSideCarousel"></div>
+            <div class="rightSideCTA">
+                <h2>Plan Your Trip!</h2>
+                <i class="fas fa-calendar big"></i> - <i class="fas fa-calendar big"></i><br />
+                <select>
+                    <option value="0"># Guests</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+            <div class="container" id="mainContain">
+                <div class="row">
+                    <div class="col-sm-12 col-xs-12">
+                        <div class="listDetailsInfo">
+                            <div class="detailsInfoBox">
+                                <a id="description"></a>
+                                <h3>About This Villa</h3>
+                                <p id="listingDescription">
+
+
+                                </p>
+                                <input type="hidden" id="lat" />
+                                <input type="hidden" id="lng" />
+                            </div>
+                            <div class="detailsInfoBox">
+                                <div class="row">
+
+                                </div>
+                            </div>
+                            <!--<div class="detailsInfoBox">
+                                <h3>Reviews (3)</h3>
+                                <div class="media media-comment">
+                                    <div class="media-left">
+                                        <img src="img/listing/list-user-1.jpg" class="media-object img-circle" alt="Image User">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Jessica Brown</h4>
+                                        <ul class="list-inline rating">
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                        </ul>
+                                        <p>
+                                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudan
+                                            totam rem ape riam,
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="media media-comment">
+                                    <div class="media-left">
+                                        <img src="img/listing/list-user-2.jpg" class="media-object img-circle" alt="Image User">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Jessica Brown</h4>
+                                        <ul class="list-inline rating">
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                                        </ul>
+                                        <p>
+                                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudan
+                                            totam rem ape riam,
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="media media-comment">
+                                    <div class="media-left">
+                                        <img src="img/listing/list-user-3.jpg" class="media-object img-circle" alt="Image User">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Jessica Brown</h4>
+                                        <ul class="list-inline rating">
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                                        </ul>
+                                        <p>
+                                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudan
+                                            totam rem ape riam,
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="detailsInfoBox">
+                                <h3>Write A Review </h3>
+                                <div class="listingReview">
+                                    <span>( 5 Reviews )</span>
+                                    <ul class="list-inline rating rating-review">
+                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    </ul>
+                                </div>
+                                <form action="#">
+                                    <div class="formSection formSpace">
+                                        <div class="form-group">
+                                            <textarea class="form-control" rows="3" placeholder="Comment"></textarea>
+                                        </div>
+                                        <div class="form-group mb0">
+                                            <button type="submit" class="btn btn-primary">Send Review</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>-->
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div id="rateListing"></div>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12" style="padding-top: 50px;">
+
+                                <div id="feeListing"></div>
+                                <br />
+                                <div id="policyListing"></div>
+                                <br />
+                                <div id="suitabilityListing"></div>
+                                <input type="hidden" id="unitId" />
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-xs-12">
+                                <div class="clearfix map-sidebar map-right pull-left mt20">
+                                    <div id="map" style="position: relative; margin: 0; padding: 0; height: 538px; max-width: none;"></div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div id="amenityListing"></div>
+                </div>
+
+                <div id="bedroomListingSection">
+                </div>
+
+                <div id="bathroomListingSection">
+                </div>
+            </div>
+        </section>
+
+        <!-- LISTINGS DETAILS INFO SECTION -->
+        <!-- FOOTER
+        <footer style="background-image: url(img/background/bg-footer.jpg);">
+
+            <div class="clearfix footerInfo">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-7 col-xs-12">
+                            <div class="footerText">
+                                <a href="index-villas.html" class="footerLogo"><img src="img/logo-footer.png" alt="Footer Logo"></a>
+                                <p>Something about the company ... mission statement ... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor</p>
+                                <ul class="list-styled list-contact">
+                                    <li><i class="fa fa-phone" aria-hidden="true"></i>(555)555-5555</li>
+                                    <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="#">info@elitelyfe.com</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-xs-12">
+                            <div class="footerInfoTitle">
+                                <h4>Links</h4>
+                            </div>
+                            <div class="useLink">
+                                <ul class="list-unstyled">
+                                    <li><a href="dashboard.html">Dashboard</a></li>
+                                    <li><a href="sign-up.html">Create Account</a></li>
+                                    <li><a href="login.html">Login</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 col-xs-12">
+                            <div class="footerInfoTitle">
+                                <h4>Company</h4>
+                            </div>
+                            <div class="useLink">
+                                <ul class="list-unstyled">
+                                    <li><a href="contact-us.html">Contact Us</a></li>
+                                    <li><a href="terms-of-services.html">Terms and Conditions</a></li>
+                                    <li><a href="how-it-works.html">How It Works</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix copyRight">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="copyRightWrapper">
+                                <div class="row">
+                                    <div class="col-sm-5 col-sm-push-7 col-xs-12">
+                                        <ul class="list-inline socialLink">
+                                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-7 col-sm-pull-5 col-xs-12">
+                                        <div class="copyRightText">
+                                            <p>Copyright &copy; 2017. All Rights Reserved by <a href="#">EliteLyfe</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer> -->
+    </div>
+    <!-- LOGIN MODAL -->
+    <div id="loginModal" tabindex="-1" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Log In to your Account</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="loginForm">
+                        <div class="form-group">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            <input type="email" class="form-control" id="email" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                            <input type="password" class="form-control" id="pwd" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-block">Log In</button>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox"> Remember me</label>
+                            <a href="#" class="pull-right link">Fogot Password?</a>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <p>
+                        Don’t have an Account? <a href="#" class="link">Sign up</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JAVASCRIPTS -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="plugins/smoothscroll/SmoothScroll.min.js"></script>
+    <script src="plugins/waypoints/waypoints.min.js"></script>
+    <script src="plugins/counter-up/jquery.counterup.min.js"></script>
+    <script src="plugins/datepicker/bootstrap-datepicker.min.js"></script>
+    <script src="plugins/selectbox/jquery.selectbox-0.1.3.min.js"></script>
+    <!-- <script src="plugins/owl-carousel/owl.carousel.min.js"></script>-->
+    <script src="plugins/isotope/isotope.min.js"></script>
+    <script src="plugins/fancybox/jquery.fancybox.pack.js"></script>
+    <script src="plugins/isotope/isotope-triger.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEDfNcQRmKQEyulDN8nGWjLYPm8s4YB58"></script>
+    <script src="plugins/map/js/rich-marker.js"></script>
+    <script src="plugins/map/js/infobox_packed.js"></script>
+    <script src="js/single-map.js"></script>
+    <script src="js/map.js"></script>
+    <!--<script src="js/custom.js"></script>-->
+    <script src="Scripts/listingDetails.js"></script>
+    <script src="Scripts/utils.js"></script>
+    <script src="plugins/bootstrap/js/stickyfill.min.js"></script>
+</body>
+</html>

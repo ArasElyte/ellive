@@ -1,0 +1,725 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- SITE TITTLE -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Listing Details - EliteLyfe</title>
+    <!-- PLUGINS CSS STYLE -->
+    <link href="plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet">
+    <link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!--<link href="plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">-->
+    <link href="css/fontawesome-all.min.css" rel="stylesheet" />
+    <script defer src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.0/js/v4-shims.js"></script>
+    <link href="plugins/listtyicons/style.css" rel="stylesheet">
+    <link href="plugins/bootstrapthumbnail/bootstrap-thumbnail.css" rel="stylesheet">
+    <link href="plugins/datepicker/datepicker.min.css" rel="stylesheet">
+    <link href="plugins/selectbox/select_option1.css" rel="stylesheet">
+    <link href="plugins/owl-carousel/owl.carousel.min.css" rel="stylesheet">
+    <link href="plugins/fancybox/jquery.fancybox.pack.css" rel="stylesheet">
+    <link href="plugins/isotope/isotope.min.css" rel="stylesheet">
+    <link href="plugins/map/css/map.css" rel="stylesheet">
+    <!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Muli:200,300,400,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Herr+Von+Muellerhoff" rel="stylesheet">
+    <!-- CUSTOM CSS -->
+    <link href="css/old-style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Oswald" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Rosario" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Crimson+Text"/>
+    <!-- skin stylesheet (change it if you use another) -->
+    <link rel="stylesheet" href="royalslider/skins/default/rs-default.css">
+    <!-- basic stylesheet -->
+    <link rel="stylesheet" href="royalslider/royalslider.css">
+    <link href="css/ecStyle.css" rel="stylesheet">
+
+
+
+    
+    <!-- FAVICON -->
+    <link href="../img/favicon/favicon.png" rel="shortcut icon">
+    <link rel="apple-touch-icon" sizes="57x57" href="../img/favicon//apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../img/favicon//apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../img/favicon//apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../img/favicon//apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../img/favicon//apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../img/favicon//apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../img/favicon//apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../img/favicon//apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon//apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../img/favicon//android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../img/favicon//favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon//favicon-16x16.png">
+    <link rel="manifest" href="../img/favicon//manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../img/favicon//ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .paddingAdjustTopBottom {
+            padding: 0px;
+        }
+
+        .altRow {
+            background: #f0f0f5;
+        }
+
+        .rowStyle {
+            border-bottom: 1px solid #ccccb3;
+            font-size: 14px;
+            line-height: 28px;
+            height: 40px;
+        }
+
+
+        .containerWhite {
+            background: white;
+        }
+
+
+        .big {
+            font-size: 40px;
+        }
+
+
+        .item img {
+            background-repeat: no-repeat;
+            background-color: #f5f5f5;
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+            background-position: 50% 50%;
+            max-height: 800px;
+        }
+
+        #myCarousel {
+            width: 100%;
+        }
+
+        #listingCarousel, #detailSummary {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        #detailSummary {
+            /*padding-right: 80px;*/
+            padding: 10px;
+        }
+
+
+
+        /*iPad horizontal*/
+        @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+            .big, .bbb {
+                font-size: 24px;
+                font-weight: 400;
+                vertical-align: top;
+                line-height: 28px;
+                margin: 5px;
+            }
+
+            .bbb {
+                font-size: 16px;
+                line-height: 20px;
+            }
+
+            #listingDescriptionStart {
+                font-size: 14px;
+                line-height: 18px;
+            }
+
+            #detailSummary {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+        }
+
+
+
+
+        @media screen and (min-height: 700px) {
+            .featuredImage {
+                height: 700px;
+            }
+
+            .rowStyle {
+                font-size: 14px;
+                line-height: 36px;
+                height: 40px;
+            }
+
+
+
+            #villaMainImage {
+                margin-top: -100px;
+            }
+        }
+
+
+        
+    </style>
+</head>
+<body class="body-wrapper">
+    <div id="greyform"></div>
+    <div id="shareform">
+        <div class="closeShare">X</div>
+        <div class="shareTitle">SHARE THIS PAGE</div>
+        <input id="shareLink" type="text" />
+        <div id="copyLink">COPY LINK</div>
+    </div>
+    <form style="display: none" id="picForm">
+        <div class="xClose" title="Close">
+            <div class="xClosex">X</div>
+            <!--<div id="carouselSummary" class="col-md-12 col-xs-12">-->
+            <!--</div>-->
+        </div>
+        <div id="listingCarousel"></div>
+    </form>
+    <div class="page-loader" style="background: url(img/preloader.gif) center no-repeat #fff;"></div>
+    <div class="main-wrapper">
+        <!-- HEADER -->
+        <header id="pageTop" class="header">
+
+            <!-- TOP INFO BAR -->
+
+            <div class="nav-wrapper navbarWhite">
+
+                <div class="container-fluid header-bg">
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-4 col-xs-6 header-left empty">
+                            empty
+                        </div>
+                        <div class="col-lg-8 col-sm-8 col-xs-6 header-right empty">
+                            empty
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NAVBAR -->
+                <nav id="menuBar" class="navbar navbar-default lightHeader" role="navigation">
+                    <div class="noContainer">
+
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <div class="ecPhoneHome">
+                                <a href="tel:18333585933">
+                                    <div class="phoneNavMobile">
+                                        <i class="icon-telephone-1"></i>
+                                    </div>
+                                </a>
+                            </div>
+                            <a class="navbar-brand" href="http://www.elitelyfe.com"><img src="../assets/All/el-logo.png" alt="EliteLYFE"></a>
+                            <div class="logo crownTop"><a href="http://www.elitelyfe.com"><img src="../assets/svg/crown_mobile.svg" alt="EliteLYFE"></a></div>
+                            <div class="ecLine"></div>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse navbar-ex1-collapse">
+                            <ul class="nav navbar-nav navbar">
+                                <li class="fmnu">
+                                    <a class="mnu" href="http://www.elitelyfe.com">HOME</a>
+                                </li>
+                                <li class="active ">
+                                    <a class="mnu" href="search-results.html">LISTINGS</a>
+                                </li>
+                                <li>
+                                    <a class="mnu" href="about-us.html">ABOUT </a>
+                                </li>
+                                <li>
+                                    <div class="extraMobile">
+                                        <ul>
+                                            <li></li>
+                                            <li>
+                                                <ul class="topMobMenu list-unstyled ecFootList ecSocialList">
+                                                    <li><a target="_blank" href="https://www.instagram.com/elitelyfe/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                                    <li><a target="_blank" href="https://www.facebook.com/elitelyfe/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <div class="footerText">
+                                            <a href="http://www.elitelyfe.com"><img src="../img/logo-footer.png" alt="Footer Logo" class="ecFooterLogo"></a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+    </div>
+
+    <!-- LISTINGS Get Info Section -->
+    <section class="clearfix paddingAdjustTopBottom">
+        <!--  <div class="row" style="margin-top: 80px;">THIS WAS AROUND CAROUSEL</div>-->
+        <!--<div id="carouselSummary" class="col-md-12 col-xs-12" style="display: none;">
+            <div id="listingCarousel"></div>
+        </div>
+        <div id="closeCarousel">X</div>
+        <div id="listingCarousel"></div>-->
+
+        <div id="featuredImage" class="featuredImage">
+            <img itemprop="photo" id="villaMainImage">
+            <!-- Mini Media Tool -->
+            <div class="rsArrow rsArrowLeft" style="display: block;"><div class="rsArrowIcnFeat"></div></div>
+            <div class="rsArrow rsArrowRight" style="display: block;"><div class="rsArrowIcnFeat"></div></div>
+        </div>
+
+    </section>
+
+
+
+    <section class="clearfix paddingAdjustTop">
+        <!--<div class="leftSideCarousel"></div>
+        <div class="rightSideCTA" style="display: none;">
+            <h2>Plan Your Trip!</h2>
+            <i class="fas fa-calendar big"></i> - <i class="fas fa-calendar big"></i><br />
+            <select>
+                <option value="0"># Guests</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+        </div>-->
+        <div class="container containerWhite" id="mainContain">
+            <!-- <div class="row">
+                <div class="col-md-12 col-xs-12">
+                    <ul class="ecBreadcrumbs">
+                        <li class="homeBC">Home ></li>
+                        <li class="searchBC">Search Results ></li>
+                        <li class="detailBC">Listing Details</li>
+                    </ul>
+                </div>
+            </div>-->
+            <div class="row ecRowClear">
+                <div class="col-md-12 col-xs-12">
+                    <div class="ecTabContain">
+                        <ul class="ecTabs">
+                            <li class="ecActive" id="ecOverview">Overview</li>
+                            <li id="ecDetails">Details</li>
+                            <!--<li id="ecReviews">Reviews</li>-->
+                            <li id="ecShare" class="ecShare">Share<img class="ecShare" src="../assets/svg/share.svg" /></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row ecRowClear">
+                <div class="col-lg-7 col-md-12 col-xs-12" id="detailSummary">
+
+                    <div id="listing-title"></div>
+
+                    <div class="listingTitleArea">
+                        <div id="listing-address"> </div>
+                        <div id="listing-number"></div>
+
+                    </div>
+                    <div id="bedBathBeyond">
+
+                    </div>
+                    <div id="listingDescriptionStart"></div>
+                    <div class="ecViewDetails ecViewDesc">View Details &gt;</div>
+                    <a id="linkDescription"></a>
+                    <p id="listingDescription">
+                    </p>
+
+                    <hr />
+                    <div class="amenityTop">
+                        <div class="ecTitle">Amenities</div>
+                        <div id="ecAmenityTopDetails"></div>
+                        <div class="ecViewDetails ecViewAmen">View All &gt;</div>
+                        <hr />
+                    </div>
+
+                    <div class="amenityFull amenityBotDet">
+                        <a id="linkAmenities"></a>
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12">
+                                <div id="amenityListing"></div>
+                            </div>
+                            <div class="col-md-4 col-sm-12">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div id="otherInfo"></div>
+
+                </div>
+                <div class="col-lg-1 col-sm-12"></div>
+                <div class="col-md-4 col-sm-12" id="ecSideFollow">
+                    <div class="ecSideInfo">
+                       <!-- <div class="ecDollarIcon">
+                            <img src="../img/dollar.jpg" class="ecSideIcon" />
+                        </div>-->
+                        <div class="ecPricePerNight listing-summary">Price Per Night</div>
+                        <div class="ecPriceDesc">Rates vary by season and availability. Please review the rate table below.</div>
+                        <div class="ecPriceLink">
+                            <a href="#rateLink">VIEW RATES ></a>
+                        </div>
+                    </div>
+                    <div class="ecRequestBooking bookNow">REQUEST MORE INFO</div>
+                    <div class="ecServices">
+                       <!-- <div class="ecCrownIcon">
+                            <img src="../img/crown.jpg" class="ecSideIcon ecCrown" />
+                        </div>-->
+                        <div class="ecServicesTitle">Exclusive EliteLyfe Services</div>
+                        <div class="ecServicesDesc">Elitelyfe's Platinum Concierge Services ensure the ultimate travel experience.</div>
+                        <div class="ecServicesList">
+                            <ul>
+                                <li>
+                                    <div class="ecSvcIco">
+                                        <img src="../assets/svg/concierge_ffffff.svg" />
+                                    </div> 24/7 Global Platinum Concierge Service
+                                </li>
+                                <li>
+                                    <div class="ecSvcIco">
+                                        <img src="../assets/svg/itinerary_ffffff.svg" />
+                                    </div> Customized Pre-arrival itinerary
+                                </li>
+                                <li>
+                                    <div class="ecSvcIco">
+                                        <img src="../assets/svg/checkin_ffffff.svg" />
+                                    </div> Private Check-In
+                                </li>
+                                <li>
+                                    <div class="ecSvcIco">
+                                        <img src="../assets/svg/pricematch_ffffff.svg" />
+                                    </div> Price Match Guarantee
+                                </li>
+                                <li>
+                                    <div class="ecSvcIco">
+                                        <img src="../assets/svg/handselected_ffffff.svg" />
+                                    </div> Hand-Picked & Personally Vetted Villas
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
+                    <a id="rateLink"></a>
+                    <div id="rateListing"></div>
+                </div>
+                <div class="col-lg-1 col-sm-12">
+                </div>
+                <div class="col-lg-4 col-sm-12">
+                </div>
+                <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12" style="padding-top: 50px;">
+
+                    <div id="feeListing"></div>
+                    <br />
+                    <div id="policyListing"></div>
+                    <br />
+                    <div id="suitabilityListing"></div>
+                    <input type="hidden" id="unitId" />
+
+                </div>
+                <div class="col-md-1 col-sm-12">
+                </div>
+                <div class="col-md-4 col-sm-12">
+                </div>
+            </div>
+
+
+
+            <div class="row ecRowClear">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <input type="hidden" id="lat" />
+                    <input type="hidden" id="lng" />
+                </div>
+
+            </div>
+        </div>
+
+    <div id="ecFooterTablet">
+        <div class="row ecRowClear">
+            <div class="col-sm-6">
+                <div class="footText">
+                    <div class="ecPricePerNight listing-summary ecFootRate">Price Per Night</div>
+                    <div class="ecPriceLink">
+                        <a href="#rateLink">VIEW RATES ></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 ecFootCont">
+                <div class="ecFootRequest ecRequestBooking bookNow">REQUEST MORE INFO</div>
+            </div>
+        </div>
+    </div>
+        <div id="ecFooterMobile">
+            <div class="row ecRowClear">
+                <div class="col-sm-6">
+                    <div class="footText">
+                        <div class="ecPricePerNight listing-summary ecFootRate">Price Per Night</div>
+                        <div class="ecPriceLink">
+                            <a href="#rateLink">VIEW RATES ></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 ecFootCont">
+                    <div class="ecFootRequest ecRequestBooking bookNow">REQUEST MORE INFO</div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row ecRowClear">
+
+                <div class="col-md-8 col-sm-12">
+                    <a id="poiLink"></a>
+                    <div id="poiListingSection"></div>
+                </div>
+                <div class="col-md-8 col-sm-12">
+                    <a id="bedLink"></a>
+                    <div id="bedroomListingSection"></div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                </div>
+                <div class="col-md-8 col-sm-12">
+                    <a id="bathLink"></a>
+                    <div id="bathroomListingSection"></div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-8 col-sm-12 col-xs-12">
+                    <div class="clearfix map-sidebar map-right pull-left mt20">
+                        <div id="map"></div>
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FORM SECTION -->
+    <section class="clearfix ecContact">
+        <div class="col-sm-12 inqueryContainer">
+            <a id="contactForm"></a>
+            <!-- Wrapper for slides -->
+            <div class="col-md-6 big_slider_image_holder">
+                <div class="ecQuestionsContain">
+                    <div class="ecQuestions">
+                        Ready to Travel?
+                    </div>
+                    <div class="ecH2H">
+                        We're here to help
+                    </div>
+                    <div class="ecH2Htext">
+                        Fill out the inquiry form to book a getaway at <span style="display: inline;" id="bookTitle"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 big_slider_image_holder">
+                <div class="big_slider_image inqueryContainerText">
+
+                    <div class="row" id="index_sussfull_submitions" style="display:none;">
+                        <div class="col-md-12">
+                            <div class="ajax_sussfull_submitions" style="font-size: 15px;  margin-top: 50px; text-align: center;">
+                                <h3>Thank you for your an inquiry!</h3>
+                                <p>A Travel Designer will be in touch within 24 hours. Would you like to speak to a travel designer now? Give us a call!</p>
+                                <p>USA & Canada: 1.877.887.7818 </p>
+                                <p>Int. +1.424.281.6881</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="index_form_sction">
+                        <form role="form" class="" action="#" method="post" id="submitRequestForm" onSubmit="javaScript:;" name="submitRequestForm">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class='form-group'>
+                                        <input placeholder="First Name *" name="index_first_name" id="index_first_name" type="text" class="form-control " />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class='form-group'>
+                                        <input placeholder="Last Name" name="index_last_name" type="text" id="index_last_name" class="form-control" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class='form-group'>
+                                        <input placeholder="Email *" name="index_email" id="index_email" type="text" class="form-control"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class='form-group'>
+                                        <input placeholder="Phone #" name="index_phone_number" id="index_phone_number" type="text" class="form-control"/>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input placeholder="Arrival" name="arriveDate" id="arriveDate" type="text" class="form-control"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input placeholder="Departure" name="departDate" id="departDate" type="text" class="form-control"/>
+                                    </div>
+                                </div>
+
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class='form-group'>
+                                        <select name="numGuests" id="numGuests" class="form-control" placeholder="Guests">
+                                            <option value="">Guests</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11+">11+</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div id="message_index_lable" class="ajax_response_place" style="margin: 10px 0px;"></div>
+                                    <div id="submitListingInquiry" class="ecSubmitRequest">Request to Book</div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="ecFooter">
+
+        <!-- FOOTER INFO -->
+        <div class="clearfix footerInfo2" style="padding-top: 20px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 col-xs-12">
+                        <div class="footerText">
+                            <a href="http://www.elitelyfe.com"><img src="../img/logo-footer.png" alt="Footer Logo" class="ecFooterLogo"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-xs-12">
+                        <div class="footerPad">
+                            <div class="ecFootHeader">CONTACT ELITELYFE</div>
+                            <ul class="list-styled list-contact ecFootList">
+                                <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:sales@elitelyfe.com">sales@elitelyfe.com</a></li>
+                                <li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:18333585933">US/Canada: 1.833.358.5933</a></li>
+                                <!--<li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:14242816881">International: +1.424.281.6881</a></li>-->
+                                <li><i class="fa fa-globe" aria-hidden="true"></i><a href="http://www.elitelyfe.com">www.EliteLYFE.com</a></li>
+                            </ul>
+                            <br />
+                            <div class="ecFootHeader">
+                                SOCIAL
+                            </div>
+                            <ul class="list-unstyled ecFootList ecSocialList">
+                                <li><a target="_blank" href="https://www.instagram.com/elitelyfe/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                <li><a target="_blank" href="https://www.facebook.com/elitelyfe/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-xs-12">
+                        <div class="footerPad">
+                            <div class="ecFootHeader">SUBSCRIBE</div>
+                            <div class="ecMailList">
+                                Sign up for our mailing list for ELITELYFE news and exclusive offers.
+                            </div>
+                            <div class="ecSUEmail">
+
+                                <input type="text" id="emailSignupFooter" placeholder="Email Address..." class="ecSignupEmail" aria-describedby="ecSign" />
+                                <div class="ecSignupButton">&gt;</div>
+
+                            </div>
+                            <ul class="list-unstyled ecFootList ecFootLinksList">
+                                <li><a href="http://www.elitelyfe.com">HOME</a></li>
+                                <li><a href="search-results.html">VILLAS</a></li>
+                                <li><a href="about-us.html">ABOUT</a></li>
+                                <li><a href="#" class="sendToContact">CONTACT</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="clearfix footerInfo2">
+            <div class="copyFoot">
+                <div class="ecCopyText"> &copy; 2018 ELITELYFE All Rights Reserved | <a href="terms-of-services.html">Terms & Conditions</a></div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- JAVASCRIPTS -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="plugins/smoothscroll/SmoothScroll.min.js"></script>
+    <script src="plugins/waypoints/waypoints.min.js"></script>
+    <script src="plugins/counter-up/jquery.counterup.min.js"></script>
+    <script src="plugins/datepicker/bootstrap-datepicker.min.js"></script>
+    <script src="plugins/selectbox/jquery.selectbox-0.1.3.min.js"></script>
+    <!-- <script src="plugins/owl-carousel/owl.carousel.min.js"></script>-->
+    <script src="plugins/isotope/isotope.min.js"></script>
+    <script src="plugins/fancybox/jquery.fancybox.pack.js"></script>
+    <script src="plugins/isotope/isotope-triger.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgMicwP5cLwgRyNd9ipY1KwX3PWLGRra8"></script>
+    <!--<script src="plugins/map/js/rich-marker.js"></script>
+     <script src="plugins/map/js/infobox_packed.js"></script>
+    <script src="js/single-map.js"></script>
+     <script src="js/map.js"></script>
+      <script src="js/custom.js"></script>-->
+
+    <script src="Scripts/utils.js"></script>
+    <script src="royalslider/jquery.royalslider.min.js"></script>
+    <script src="Scripts/listingDetails.js"></script>
+    <script src="Scripts/shared.js"></script>
+</body>
+</html>

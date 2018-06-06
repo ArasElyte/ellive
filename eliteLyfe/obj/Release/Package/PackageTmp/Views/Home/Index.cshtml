@@ -1,0 +1,616 @@
+﻿<!--<div class="page-loader" style="background: url(../img/preloader.gif) center no-repeat #fff;"></div>-->
+<style>
+    .searchBar {
+        padding-left: 20px;
+    }
+
+    .searchButton {
+        font-size: 30px;
+        padding: 10px;
+        padding-left: 15px;
+    }
+</style>
+<div class="main-wrapper" style="margin-top:-20px">
+    <!-- HEADER -->
+    <header id="pageTop" class="header">
+        <!-- TOP INFO BAR -->
+        <div class="nav-wrapper">
+
+            <!-- NAVBAR -->
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#"><img src="img/el-logo.png" alt="EliteLyfe" /></a>
+                    </div>
+                    <!--  <div class="form-group " style="margin-bottom: 0px;">
+                          <div class="searchBar">
+                              <div class="input-group" style="padding-top: 10px; padding-left: 170px; width: 200px;">
+
+                                  <input type="text" class="form-control error" id="searchListings" placeholder="Search" aria-describedby="ownerPhonePrefix" onblur="formatPhoneUS(this);" onkeyup="formatPhoneUS(this);" style="width:250px;">
+                                  <span class="input-group-btn">
+                                      <button id="searchButton" class="btn btn-secondary" type="button" style="width: 65px; padding: 10px;"><i class="icon-search-12 searchButton"></i></button>
+                                  </span>
+                              </div>
+                          </div>
+                      </div>-->
+                    <div style="float: right; font-size: 20px; padding: 20px; padding-top: 30px;">
+                        <a href="../search-results.html">Villas</a> | <a href="../verify/aboutus.html">About</a> | <a href="../admin">Admin</a>
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- BANNER SECTION -->
+    <section class="clearfix homeBanner" style="background-image: url(../img/banner/banner1.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="banerInfo">
+                        <h1>Luxury. Redefined.</h1>
+                        <p style="color: black">
+                            <br />From luxury vacation rentals and villas, to exotic car rentals, luxury hotel suites, superyacht charters, helicopter charters, or private jet charters, we put worldwide luxury into the palm of your hands.
+                        </p>
+                        <form class="form-inline" action="listing-sidebar-map-left.html" method="">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <!-- <div class="input-group-addon">Find</div>-->
+                                    <select id="searchBox" class="form-control">
+                                        <option value="" selected="selected">Where would you like to go?</option>
+                                        <option value="Beverly Hills">California - Beverly Hills</option>
+                                        <option value="Hollywood">California - Hollywood</option>
+                                        <option value="Los Angeles">California - Los Angeles</option>
+                                        <option value="Punta Cana">Caribbean - Punta Cana</option>
+                                        <option value="Punta Mita">Caribbean - Punta Mita</option>
+                                        <option value="Costa Rica">Costa Rica</option>
+                                     </select>
+                                    
+                                </div>
+                            </div>
+                            <!--<div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon">Near</div>
+                                    <input type="text" class="form-control" id="nearLocation" placeholder="Location">
+                                    <div class="input-group-addon addon-right"><i class="icon-listy icon-target" aria-hidden="true"></i></div>
+                                </div>
+                            </div>-->
+                            <div id="searchButton" class="btn btn-primary">
+                                Search <i class="fa fa-search" aria-hidden="true"></i>
+                            </div>
+                            <br />
+                            <div id="topLocations" style="padding: 20px; background-color: white; font-size: 18px; font-weight: 700; border-radius: 5px; width: 600px; text-align: center; margin: auto;margin-top: 15px;">
+                                Top Locations:<br />
+                                <a href='../search-results.html?q=Punta%20Mita'>Punta Mita</a> | <a href='../search-results.html?q=Punta%20Cana'>Punta Cana</a> | <a href="search-results.html?q=Los%20Angeles">Los Angeles</a> | <a href="search-results.html?q=Costa%20Rica">Costa Rica</a> | <a href="search-results.html?q=Hollywood">Hollywood</a>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="clearfix">
+        <div id="searchResults"></div>
+    </section>
+    <!-- INTEREST SECTION -->
+    <section class="clearfix interestArea">
+        <div class="container">
+            <div class="page-header text-center">
+                <h2>What are You Interested in? <small>Explore and connect with great local businesses</small></h2>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 col-xs-12">
+
+                    <a href="category-grid-full.html" class="interestContent">
+                        <span>
+                            <i class="icon-listy icon-tea-cup-1"></i>
+                            Restaurant
+                        </span>
+                    </a>
+                </div>
+                <div class="col-sm-3 col-xs-12">
+                    <a href="category-list-full.html" class="interestContent">
+                        <span>
+                            <i class="icon-listy icon-building"></i>
+                            Hotels
+                        </span>
+                    </a>
+                </div>
+                <div class="col-sm-3 col-xs-12">
+                    <a href="category-grid.html" class="interestContent">
+                        <span>
+                            <i class="icon-listy icon-martini"></i>
+                            Nightclubs
+                        </span>
+                    </a>
+                </div>
+                <div class="col-sm-3 col-xs-12">
+                    <a href="category-list-left.html" class="interestContent">
+                        <span>
+                            <i class="icon-listy icon-car-1"></i>
+                            Auto Motive
+                        </span>
+                    </a>
+                </div>
+                <div class="col-sm-3 col-xs-12">
+                    <a href="category-grid-right.html" class="interestContent">
+                        <span>
+                            <i class="icon-listy icon-castle"></i>
+                            Museums
+                        </span>
+                    </a>
+                </div>
+                <div class="col-sm-3 col-xs-12">
+                    <a href="category-list-right.html" class="interestContent">
+                        <span>
+                            <i class="icon-listy icon-television"></i>
+                            Movie Theaters
+                        </span>
+                    </a>
+                </div>
+                <div class="col-sm-3 col-xs-12">
+                    <a href="category-grid-full.html" class="interestContent">
+                        <span>
+                            <i class="icon-listy icon-mall-1"></i>
+                            Shopping
+                        </span>
+                    </a>
+                </div>
+                <div class="col-sm-3 col-xs-12">
+                    <a href="all-business.html" class="interestContent">
+                        <span>
+                            <i class="icon-listy icon-more"></i>
+                            View All
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- THINGS SECTION -->
+    <section class="clearfix thingsArea">
+        <div class="container">
+            <div class="page-header text-center">
+                <h2>Popular Things Near You <small>This are some of most popular listing</small></h2>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div id="thubmnailSlider" class="carousel slide thumbnailCarousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#thubmnailSlider" data-slide-to="0" class="active"></li>
+                            <li data-target="#thubmnailSlider" data-slide-to="1"></li>
+                            <li data-target="#thubmnailSlider" data-slide-to="2"></li>
+                            <li data-target="#thubmnailSlider" data-slide-to="3"></li>
+                            <li data-target="#thubmnailSlider" data-slide-to="4"></li>
+                            <li data-target="#thubmnailSlider" data-slide-to="5"></li>
+                            <li data-target="#thubmnailSlider" data-slide-to="6"></li>
+                            <li data-target="#thubmnailSlider" data-slide-to="7"></li>
+                        </ol>
+                        <!-- Carousel items -->
+                        <div class="carousel-inner">
+                            <div class="item row active">
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="thingsBox">
+                                        <div class="thingsImage">
+                                            <img src="../img/things/things-1.jpg" alt="Image things">
+                                            <div class="thingsMask">
+                                                <ul class="list-inline rating">
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                </ul>
+                                                <a href="blog-details.html"><h2>The City Theater <i class="fa fa-check-circle" aria-hidden="true"></i></h2></a>
+                                                <p>10 Bay Street Toronto Ontario Canada</p>
+                                            </div>
+                                        </div>
+                                        <div class="thingsCaption ">
+                                            <ul class="list-inline captionItem">
+                                                <li><i class="fa fa-heart-o" aria-hidden="true"></i> 10 k</li>
+                                                <li><a href="category-list-left.html">Hotel, Restaurant</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item row">
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="thingsBox">
+                                        <div class="thingsImage">
+                                            <img src="../img/things/things-2.jpg" alt="Image things">
+                                            <div class="thingsMask">
+                                                <ul class="list-inline rating">
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                </ul>
+                                                <a href="blog-details.html"><h2>The City Theater</h2></a>
+                                                <p>10 Bay Street Toronto Ontario Canada</p>
+                                            </div>
+                                        </div>
+                                        <div class="thingsCaption ">
+                                            <ul class="list-inline captionItem">
+                                                <li><i class="fa fa-heart-o" aria-hidden="true"></i> 10 k</li>
+                                                <li><a href="category-grid-full.html">Hotel, Restaurant</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item row">
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="thingsBox">
+                                        <div class="thingsImage">
+                                            <img src="../img/things/things-3.jpg" alt="Image things">
+                                            <div class="thingsMask">
+                                                <ul class="list-inline rating">
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                </ul>
+                                                <a href="blog-details.html"><h2>The City Theater <i class="fa fa-check-circle" aria-hidden="true"></i></h2></a>
+                                                <p>10 Bay Street Toronto Ontario Canada</p>
+                                            </div>
+                                        </div>
+                                        <div class="thingsCaption ">
+                                            <ul class="list-inline captionItem">
+                                                <li><i class="fa fa-heart-o" aria-hidden="true"></i> 10 k</li>
+                                                <li><a href="category-grid.html">Hotel, Restaurant</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item row">
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="thingsBox">
+                                        <div class="thingsImage">
+                                            <img src="../img/things/things-1.jpg" alt="Image things">
+                                            <div class="thingsMask">
+                                                <ul class="list-inline rating">
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                </ul>
+                                                <a href="blog-details.html"><h2>The City Theater</h2></a>
+                                                <p>10 Bay Street Toronto Ontario Canada</p>
+                                            </div>
+                                        </div>
+                                        <div class="thingsCaption ">
+                                            <ul class="list-inline captionItem">
+                                                <li><i class="fa fa-heart-o" aria-hidden="true"></i> 10 k</li>
+                                                <li><a href="category-grid-full.html">Hotel, Restaurant</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item row">
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="thingsBox">
+                                        <div class="thingsImage">
+                                            <img src="../img/things/things-2.jpg" alt="Image things">
+                                            <div class="thingsMask">
+                                                <ul class="list-inline rating">
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                </ul>
+                                                <a href="blog-details.html"><h2>The City Theater <i class="fa fa-check-circle" aria-hidden="true"></i></h2></a>
+                                                <p>10 Bay Street Toronto Ontario Canada</p>
+                                            </div>
+                                        </div>
+                                        <div class="thingsCaption ">
+                                            <ul class="list-inline captionItem">
+                                                <li><i class="fa fa-heart-o" aria-hidden="true"></i> 10 k</li>
+                                                <li><a href="category-list-right.html">Hotel, Restaurant</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item row">
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="thingsBox">
+                                        <div class="thingsImage">
+                                            <img src="../img/things/things-3.jpg" alt="Image things">
+                                            <div class="thingsMask">
+                                                <ul class="list-inline rating">
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                </ul>
+                                                <a href="blog-details.html"><h2>The City Theater</h2></a>
+                                                <p>10 Bay Street Toronto Ontario Canada</p>
+                                            </div>
+                                        </div>
+                                        <div class="thingsCaption ">
+                                            <ul class="list-inline captionItem">
+                                                <li><i class="fa fa-heart-o" aria-hidden="true"></i> 10 k</li>
+                                                <li><a href="category-grid-full.html">Hotel, Restaurant</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item row">
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="thingsBox">
+                                        <div class="thingsImage">
+                                            <img src="../img/things/things-1.jpg" alt="Image things">
+                                            <div class="thingsMask">
+                                                <ul class="list-inline rating">
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                </ul>
+                                                <a href="blog-details.html"><h2>The City Theater <i class="fa fa-check-circle" aria-hidden="true"></i></h2></a>
+                                                <p>10 Bay Street Toronto Ontario Canada</p>
+                                            </div>
+                                        </div>
+                                        <div class="thingsCaption ">
+                                            <ul class="list-inline captionItem">
+                                                <li><i class="fa fa-heart-o" aria-hidden="true"></i> 10 k</li>
+                                                <li><a href="category-grid.html">Hotel, Restaurant</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item row">
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="thingsBox">
+                                        <div class="thingsImage">
+                                            <img src="../img/things/things-2.jpg" alt="Image things">
+                                            <div class="thingsMask">
+                                                <ul class="list-inline rating">
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                </ul>
+                                                <a href="blog-details.html"><h2>The City Theater</h2></a>
+                                                <p>10 Bay Street Toronto Ontario Canada</p>
+                                            </div>
+                                        </div>
+                                        <div class="thingsCaption ">
+                                            <ul class="list-inline captionItem">
+                                                <li><i class="fa fa-heart-o" aria-hidden="true"></i> 10 k</li>
+                                                <li><a href="category-list-full.html">Hotel, Restaurant</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="left carousel-control" href="#thubmnailSlider" data-slide="prev"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+                        <a class="right carousel-control" href="#thubmnailSlider" data-slide="next"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- COUNT UP SECTION -->
+    <section class="clearfix countUpSection">
+        <div class="container">
+            <div class="page-header text-center">
+                <h2>Why EliteLyfe?</h2>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 col-xs-12">
+                    <div class="text-center countItem">
+                        <div class="counter">140</div>
+                        <div class="counterInfo bg-color-1">Color Variations</div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-xs-12">
+                    <div class="text-center countItem">
+                        <div class="counter">120</div>
+                        <div class="counterInfo bg-color-2">Layouts</div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-xs-12">
+                    <div class="text-center countItem">
+                        <div class="counter">180</div>
+                        <div class="counterInfo bg-color-3">Inner Pages</div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-xs-12">
+                    <div class="text-center countItem">
+                        <div class="counter">220</div>
+                        <div class="counterInfo bg-color-4">Admin Pages</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="btnArea text-center">
+                        <a href="#" class="btn btn-primary">Get it now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- WORKS SECTION -->
+    <section class="clearfix worksArea">
+        <div class="container">
+            <div class="page-header text-center">
+                <h2>How it Works.</h2>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 col-xs-12">
+                    <div class="thumbnail text-center worksContent">
+                        <img src="../img/works/works-1.png" alt="Image works">
+                        <div class="caption">
+                            <a href="how-it-works.html"><h3>Find what you want</h3></a>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod tempor incididunt  labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                    <div class="thumbnail text-center worksContent">
+                        <img src="../img/works/works-2.png" alt="Image works">
+                        <div class="caption">
+                            <a href="how-it-works.html"><h3>Review & Book with an Agent</h3></a>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod tempor incididunt  labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                    <div class="thumbnail text-center worksContent">
+                        <img src="../img/works/works-3.png" alt="Image works">
+                        <div class="caption">
+                            <a href="how-it-works.html"><h3>Relax and Enjoy!</h3></a>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod tempor incididunt  labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="btnArea text-center"><a href="#" class="btn btn-primary">Watch it now <i class="fa fa-play-circle" aria-hidden="true"></i></a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CALL TO ACTION SECTION -->
+    <section class="clearfix callAction">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-sm-9 col-xs-12">
+                    <div class="callInfo">
+                        <h4><span>EliteLyfe</span> is the <span>best way</span> <br>to find luxurious getaways</h4>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-3 col-xs-12">
+                    <div class="btnArea">
+                        <a href="sign-up.html" class="btn btn-primary btn-block">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FOOTER -->
+    <footer style="background-image: url(../img/background/bg-footer.jpg);">
+        <!-- FOOTER INFO -->
+        <div class="clearfix footerInfo">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-7 col-xs-12">
+                        <div class="footerText">
+                            <a href="index-villas.html" class="footerLogo"><img src="../img/logo-footer.png" alt="Footer Logo"></a>
+                            <p>Something about the company ... mission statement ... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor</p>
+                            <ul class="list-styled list-contact">
+                                <li><i class="fa fa-phone" aria-hidden="true"></i>(555)555-5555</li>
+                                <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="#">info@elitelyfe.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-xs-12">
+                        <div class="footerInfoTitle">
+                            <h4>Links</h4>
+                        </div>
+                        <div class="useLink">
+                            <ul class="list-unstyled">
+                                <li><a href="dashboard.html">Dashboard</a></li>
+                                <li><a href="sign-up.html">Create Account</a></li>
+                                <li><a href="login.html">Login</a></li>
+                                <!--<li><a href="add-listings.html">Add Listing</a></li>
+                                <li><a href="edit-listings.html">Edit Listing</a></li>-->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-2 col-xs-12">
+                        <div class="footerInfoTitle">
+                            <h4>Company</h4>
+                        </div>
+                        <div class="useLink">
+                            <ul class="list-unstyled">
+                                <li><a href="contact-us.html">Contact Us</a></li>
+                                <li><a href="terms-of-services.html">Terms and Conditions</a></li>
+                                <li><a href="how-it-works.html">How It Works</a></li>
+                                <!--<li><a href="payment-process.html">Payment</a></li>
+                                <li><a href="pricing-table.html">Pricing</a></li>-->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- COPY RIGHT -->
+        <div class="clearfix copyRight">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="copyRightWrapper">
+                            <div class="row">
+                                <div class="col-sm-5 col-sm-push-7 col-xs-12">
+                                    <ul class="list-inline socialLink">
+                                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-7 col-sm-pull-5 col-xs-12">
+                                    <div class="copyRightText">
+                                        <p>Copyright &copy; 2018. All Rights Reserved by <a href="#">EliteLyfe</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<!-- LOGIN  MODAL -->
+<div id="loginModal" tabindex="-1" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Log In to your Account</h4>
+            </div>
+            <div class="modal-body">
+                <form class="loginForm">
+                    <div class="form-group">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <input type="email" class="form-control" id="email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                        <input type="password" class="form-control" id="pwd" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block">Log In</button>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox"> Remember me</label>
+                        <a href="#" class="pull-right link">Fogot Password?</a>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <p>Don’t have an Account? <a href="#" class="link">Sign up</a></p>
+            </div>
+        </div>
+    </div>
+</div>

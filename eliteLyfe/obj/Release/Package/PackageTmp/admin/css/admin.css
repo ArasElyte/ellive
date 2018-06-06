@@ -1,0 +1,27 @@
+﻿.amenityListItem {
+    display: inline-block;
+    width: 200px;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid blue;
+    border-radius: 2px;
+}
+
+.deleteme {
+    float: right;
+   
+    font-weight: 700;
+    padding: 10px;
+    vertical-align: top;
+    margin-top: -20px;
+    cursor: pointer;
+}
+
+#dropZone {
+        background: gray;
+        border: black dashed 3px;
+        width: 200px;
+        padding: 50px;
+        text-align: center;
+        color: white;
+    }

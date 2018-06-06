@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="13px" viewBox="0 0 16 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>2. Icon / 2. Icon Box / 16 Size  / ic_send contact</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M4.76830708,9.92200692 C4.53535528,10.0702511 4.2263366,10.0015793 4.07809455,9.76862421 C3.92985249,9.53566913 3.99852331,9.22664612 4.23147511,9.07840198 L15.2305833,2.07887113 C15.4635351,1.93062699 15.7725538,1.99929878 15.9207959,2.23225385 C16.0690379,2.46520892 16.0003671,2.77423194 15.7674153,2.92247608 L4.76830708,9.92200692 Z M14.6471282,3.24528025 L1.58555074,6.7284165 L10.293269,13.694689 L14.6471282,3.24528025 Z M7.62249123,12.8385758 L4.77733977,14.9074881 C4.44506682,15.1491074 4,14.8892973 4,14.4537118 L4,9.94054206 L0.187893178,6.89081375 C-0.132370796,6.63459898 -0.0248951693,6.12299916 0.371394498,6.01732043 L15.3701784,2.01758851 C15.7709082,1.91072575 16.1200131,2.31013235 15.9605004,2.69296841 L10.9609057,14.6921641 C10.8330188,14.999097 10.4467259,15.0979953 10.1870825,14.8902776 L7.62249123,12.8385758 Z M6.76410712,12.1518588 L4.99998672,10.7405427 L4.99998672,13.4346764 L6.76410712,12.1518588 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Elitelyfe-|-Home-Page" transform="translate(-875.000000, -6073.000000)">
+            <g id="Footer" transform="translate(0.000000, 5900.000000)">
+                <g id="Widgets" transform="translate(875.000000, 99.000000)">
+                    <g id="Group-6">
+                        <g id="2.-Icon-/-2.-Icon-Box-/-16-Size--/-ic_send-contact" transform="translate(0.000000, 72.000000)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="ic_send-contact" fill-rule="nonzero"></g>
+                            <g id="3.-Color-/-3.-Light-/-3.-Light-80%" mask="url(#mask-2)" fill="#FFFFFF" fill-opacity="0.8" fill-rule="evenodd">
+                                <rect id="Placeholder" x="0" y="0" width="16" height="16"></rect>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

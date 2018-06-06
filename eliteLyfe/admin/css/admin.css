@@ -1,0 +1,81 @@
+﻿.amenityListItem {
+    display: inline-block;
+    width: 200px;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid blue;
+    border-radius: 2px;
+}
+
+.deleteme {
+    float: right;
+   
+    font-weight: 700;
+    padding: 10px;
+    vertical-align: top;
+    margin-top: -20px;
+    cursor: pointer;
+}
+
+#dropZone {
+        background: gray;
+        border: black dashed 3px;
+        width: 200px;
+        padding: 50px;
+        text-align: center;
+        color: white;
+    }
+
+.jbar{
+	height:50px;
+	width:100%;
+	background-color: #fff;
+	position:fixed;
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=95); 
+	opacity: 0.95;
+	-moz-opacity: 0.95;
+	text-align:center;
+	left:0px;
+	z-index:9999999;
+	margin:0px;
+	padding:0px;
+}
+.jbar-top{
+	top:0px;
+	border-top:2px solid #fff;
+	border-bottom: 1px solid #ebebeb;
+}
+.jbar-bottom{
+	bottom:0px;
+	border-bottom:2px solid #fff;
+	border-top: 1px solid #ebebeb;
+	color:#777;
+}
+.jbar-content{
+	line-height:46px;
+	font-size: 18px;
+	font-family:'Lucida Grande',sans-serif;
+}
+a.jbar-cross{
+	position:absolute;
+	width:31px;
+	height:31px;
+	background:transparent url(../images/cross.png) no-repeat top left;	
+	cursor:pointer;
+	right:10px;
+}
+a.jbar-cross:hover{
+	background-image: url(../images/cross_hover.png)
+}
+.jbar-top a.jbar-cross{
+	top:8px;	
+}
+.jbar-bottom a.jbar-cross{
+	bottom:8px;
+}
+
+.navbar .navbar-nav {
+    width: 100%;
+    font-size: 16px;
+    margin-left: 0px; 
+}

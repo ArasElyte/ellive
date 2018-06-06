@@ -1,0 +1,2561 @@
+﻿body {
+    font-family: Oswald;
+}
+
+.ecQuestionsContain {
+    margin: auto;
+    padding: 30px;
+    width: 300px;
+    padding-top: 80px;
+}
+
+.ecQuestions{
+    height: 23px;
+
+    color: #FFFFFF;
+    font-family: Oswald;
+    font-size: 16px;
+    letter-spacing: 1.6px;
+    line-height: 23px;
+    }
+.ecH2H{
+    height: 61px;
+
+    color: #FFFFFF;
+    font-family: "Crimson Text";
+    font-size: 32px;
+    line-height: 61px;
+    }
+.ecH2Htext{
+    height: 52px;
+
+    color: #FFFFFF;
+    font-family: Rosario;
+    font-size: 16px;
+    letter-spacing: 0.1px;
+    line-height: 26px;
+    }
+
+.ecSubmitRequest {
+    height: 54.24px;
+
+    background-color: #FFC34A;
+    font-family: Oswald;
+    text-align: center;
+    color: #FFF;
+    padding: 10px;
+    font-size: 20px;
+    float: right;
+}
+
+.ecNav {
+    text-align: center;
+    background: #000000;
+    height: 80px;
+    opacity: .8;
+    z-index: 900;
+
+}
+.ecNav .logoImage {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height:35px;
+   
+}
+
+.ecNav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 15px;
+    letter-spacing: 2px;
+    
+}
+    .ecNav ul li a{
+        font-family: Oswald;
+        color: white;
+        font-weight: 100;
+        font-size: 14px;
+    }
+
+.ecNav hr {
+    margin-top: 8px;
+    margin-bottom:12px
+}
+
+.ecNav ul li a.activeLink {
+    color: #E5AF42;
+    text-decoration: underline;
+}
+
+
+.ecTitleHome {
+    font-family: Oswald;
+    font-size: 115px;
+    margin-top: 40px;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.ecBoxes {
+    padding-bottom: 100px;
+}
+
+.adjust_section_2x {
+    font-family: Rosario;
+    font-size: 18px;
+    line-height: 26px;
+    color: #666;
+}
+
+.ecSearch {
+    border: 5px solid #ECECEC;
+    border-radius: 0px;
+    height: 48px;
+   /* width: 500px;
+           margin-left:-110px;*/
+           width: 425px;
+color: #333333;
+font-family: Rosario;
+font-size: 14px;
+letter-spacing: 0.1px;
+line-height: 17px;
+    margin-left: -55px;
+
+}
+
+.ecSearchButton {
+    height: 14px;
+width: 84px;
+color: #FFFFFF;
+font-family: Oswald;
+font-size: 19px;
+font-weight: 500;
+letter-spacing: 1.36px;
+line-height: 13px;
+text-align: center;
+}
+
+
+
+
+.ecSearchButton:hover {
+    cursor: pointer;
+}
+
+
+#ecTopLocations a {
+    color: rgba(255,255,255,0.6);
+}
+
+#ecTopLocations a:hover {
+    text-decoration: underline;
+}
+
+
+#ecTagline {
+    text-align: center;
+    padding-top: 50px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.ecRosa {
+    font-family: Rosario;
+}
+.ecTagTitle {
+    font-size: 45px;
+    padding-bottom: 20px;
+    font-family: Crimson Text;
+    letter-spacing: 3px;
+  
+    color: #000000;
+}
+
+.ecTagP {
+    font-size: 19px;
+    line-height: 30px;
+}
+
+.ecOrBox {
+    border: 1px solid #E5AF42;
+    padding:35px;
+    padding-top:50px;
+    text-align: left;
+    margin: 5px;
+    min-height: 350px;
+}
+
+.ecOrImg {
+    vertical-align: bottom;
+    height: 60px;
+}
+
+.ecContain {
+    margin: 0px;
+    width: 1200px;
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    
+}
+.adjust_section_2x {
+    color: #666666;
+}
+.ecHilightTitle {
+    font-size: 21px;
+    font-family: Oswald;
+    padding-top: 20px;
+    color: #000000;
+    padding-bottom: 20px;
+}
+
+.thingsArea {
+    background: #FAFBFC;
+      position: relative;
+    margin: auto;
+    text-align: center;
+}
+
+.ecFeatLinkTop {
+        float: right;
+    margin-right: 100px;
+    font-size: 24px;
+    font-family: Oswald;
+    padding-top: 60px;
+    color: #ececec;
+}
+
+.ecFeatLinkTop a{
+    color: #ececec;
+}
+
+
+.ecFeatListTitle {
+    font-size: 51px;
+    font-family: Crimson Text;
+    color: #000000;
+    padding-top: 100px;
+}
+.ecFeatListDesc {
+    font-size: 19px;
+    font-family: Rosario;
+    color: #666666;
+}
+
+
+.ecQuoteContainer {
+    height: 300px;
+}
+
+.ecQuoteBox {
+    background: #666666;
+}
+
+
+.ecStartupContain {
+    width: 600px;
+    text-align: left;
+    margin:auto;
+        margin-top: 100px;
+    margin-left: 40px;
+
+}
+
+.ecStartupTitle {
+    font-family: Crimson Text;
+    font-size: 28px;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.ecStartupText {
+    font-family: Rosario;
+    color: #666666;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.ecStartupButton {
+    width: 162px;
+    padding:20px;
+    background:#2F63CC ;
+    color: white;
+    font-family: Oswald;
+    font-size: 18px;
+}
+
+.ecDestinationsTitle {
+    padding-top: 100px;
+    font-size: 48px;
+    font-family: Crimson Text;
+    letter-spacing: 2px;
+    color: #333333;
+    padding-bottom: 20px;
+}
+
+.ecContainDestinations {
+    width: 100%;
+    max-width: 1100px;
+
+    position: relative;
+    margin: auto;
+}
+
+.ecMissionPic {
+    margin-top: 40px;
+}
+
+.ecAboutFeat li {
+    color: #666666;
+    font-family: Rosario;
+    font-size: 16px;
+    line-height: 28px;
+    margin-left: 20px;
+    list-style-type: disc;
+}
+
+.ecDestExplore {
+    height: 42px;
+    padding-top: 120px;
+    color: #FFFFFF;
+    font-family: "Crimson Text";
+    font-size: 28px;
+    line-height: 42px;
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    top: -20px;
+    width: 100%;
+    margin-left: -20px;
+}
+
+.ecDestVilla {
+    font-family: Oswald;
+    color: #FFF;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 1px;
+}
+
+.ecFeatContain {
+    height:290px;
+    background-size: cover;
+    margin-bottom: 30px;
+    cursor: pointer;
+
+}
+
+.ecDestExploreDesc {
+
+    left: 15px;
+    margin-right: 15px;
+    
+    position: absolute;
+    bottom: 30px;
+    opacity: .95;
+    padding: 15px;
+    display: none;
+
+background-color: rgba(204,170,102,0.9);
+
+
+color: #FFFFFF;
+font-family: Rosario;
+font-size: 14px;
+letter-spacing: 0.11px;
+line-height: 18px;
+    
+}
+
+.es-list li {
+    font-family: Rosario;
+    font-size: 14px;
+
+}
+
+.form-control {
+    border-radius: 0px;
+    font-family: Rosario;
+    font-size: 14px;
+}
+
+.ecMask {
+    bottom: 0px;
+}
+
+.ecFPTitle {
+    font-size: 18px;
+    font-family: Rosario;
+    font-weight: 700;
+    line-height: 24px;
+    color: #333333;
+    text-align: left;
+}
+.ecFPText,.ecPrice {
+    font-size: 14px;
+    font-family: Rosario;
+    line-height: 22px;
+    color: #666666;
+    text-align: left;
+}
+
+.ecThingBox {
+    margin: 15px;
+}
+
+/*
+.ecPrice {
+    display: inline;
+}
+    */
+
+.ecFeatListDetails {
+    font-size: 16px;
+}
+
+.ecThingsCaption {
+    padding: 10px;
+    position: absolute;
+    right: 5px;
+    bottom: 0px;
+    font-size: 30px;
+}
+
+.ecIco {
+    margin: 0px 5px;
+    height: 18px;
+    width: auto;
+    margin-top: -10px;
+}
+
+
+
+.thingsBox:hover {
+
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.1);
+
+}
+
+.thingsBox:hover .ecFPTitle {
+    color: #2F63CC;
+}
+
+.ecContact {
+    padding-top: 80px;
+}
+
+.ecFooterLogo {
+    width: 240px;
+}
+
+.footerText {
+    padding-bottom: 18px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.footerPad {
+    padding-left: 10px;
+    padding-bottom: 30px;
+}
+
+
+.ecFooter {
+    background:#333333;
+    padding-top: 40px;
+        z-index: 9999;
+}
+
+
+.ecFootHeader {
+    font-family: Oswald;
+    font-size: 23px;
+    padding-bottom: 20px;
+    color: #FFFFFF;
+
+}
+
+.ecFootHeader a {
+    color: #FFFFFF;
+}
+
+.ecFootList li {
+    color: #FFFFFF;
+    font-family: Rosario;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.ecFootLinks {
+    display: inline;
+}
+
+.ecFootLinks li,.ecFootList li a{
+    color: #FFFFFF;
+    font-family: Oswald;
+    font-size: 14px;
+    line-height: 23px;
+    letter-spacing: 1.4px;
+    display: inline-block;
+}
+
+.ecFootList li a:hover {
+    color: #1966FF;
+    text-decoration: underline;
+}
+
+#emailSignupFooter {
+    margin-bottom: 20px;
+    height: 55px;
+    font-size: 16px;
+    padding: 10px;
+    font-family: Rosario;
+    background: rgba(255,255,255,0.05);
+    color: #FFF;
+    display: inline;
+    width: 240px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.ecSignupArrow {
+    height: 55px;
+    text-align: center;
+    padding: 20px;
+    color: #FAFBFC;
+    background: #2F63CC;
+    display: inline-block;
+    font-size: 14px;
+}
+
+
+.ecCopyRightWrapper {
+    padding: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.ecCopyText, .ecCopyText a {
+   text-align: center;
+    padding: 20px;
+    background: rgba(0,0,0,0.05);
+
+
+
+    color: rgba(255,255,255,0.6);
+    font-family: Oswald;
+    font-size: 14px;
+    letter-spacing: 0.88px;
+    line-height: 23px;
+
+}
+
+.ecCopyText a {
+    padding: 0px;
+}
+
+.ecSocialList li {
+    display: inline;
+    padding-right: 15px;
+}
+
+.ecMailList {
+    font-size: 16px;
+    font-family: Rosario;
+    padding-bottom: 15px;
+    padding-right: 100px;
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: .08px;
+}
+
+.inqueryContainer {
+   /* background-image: url("../img/luxury-travel-maldives-elitelyfe.jpg");*/
+    background-image: url("../assets/all/contact_bg_2x.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 587px;
+    position: relative;
+    z-index: 700;
+}
+.ecRowClear {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.inqueryContainerText {
+    background-color: rgba(0, 0, 0, 0.66);
+    color: #fff;
+    min-height: 587px;
+    padding: 45px;
+    width: 100%;
+}
+
+
+
+
+.thingsArea .thumbnailCarousel {
+    padding-top: 35px;
+}
+
+
+.banerInfo .input-group-addon.addon-right {
+    background-color: #E5AF42;
+    color: #FFFFFF;
+    border: none;
+    padding: 6px 20px;
+}
+
+#searchBox {
+    border-radius: 0px;
+    padding-left: 15px;
+    height: 50px;
+}
+
+.list-contact li a {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 26px;
+    font-family: Rosario;
+    padding: 0px 10px;
+    letter-spacing: .08px;
+}
+
+
+
+
+
+/*DETAILS*/
+.ecSideInfo {
+    border: 1px solid #FFC34A;
+    padding: 40px;
+    background: #FFFFFF;
+    margin-top: 30px;
+    margin-bottom: 30px;
+   
+}
+
+#amenityListing {
+    font-family: Rosario;
+}
+
+.ecServices {
+    border: 1px solid #FFC34A;	
+    background-color: #FFFBF2;
+    padding: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.ecRequestBooking {
+    background-color: #2F63CC;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    color: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    font-family: Oswald;
+    letter-spacing: 1.6px;
+    
+}
+
+
+
+.ecRequestBooking:hover {
+    background-color: #1966FF;
+}
+
+.ecPricePerNight, .ecServicesTitle {
+    font-family: Crimson Text;
+    font-size: 21px;
+    line-height: 32px;
+    color: #333333;
+
+}
+
+.ecPriceDesc, .ecServicesDesc {
+    font-family: Rosario;
+    font-size: 16px;
+    line-height: 26px;
+    color: #666666;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
+
+#listing-title {
+    font-family: Crimson Text;
+    color: #333333;
+    font-size: 38px;
+    line-height: 45px;
+}
+
+#listing-address,#listingTitleArea {
+    font-family: Rosario;
+    color: #666666;
+    font-size: 16px;
+    line-height: 26px;
+}
+#listing-number {
+    
+   margin-top: 10px;
+    margin-bottom: 20px;
+    max-width: 58px;
+    border: 1px solid #1966FF;
+    border-radius: 20px;
+    background-color: rgba(59,124,255,0.15);
+    padding: 2px 4px;
+    padding-left: 8px;
+    font-family: Oswald;
+}
+
+#listingDescriptionStart, #listingDescription, #listingDescription p {
+    font-family: Rosario;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.ecImgIcon {
+    height: 30px;
+    margin-right: 15px;
+    margin-left: 30px;
+    margin-top: -12px;
+}
+
+.ecPerson {
+    margin-left: 0px;
+}
+
+.bbb {
+    font-size: 16px;
+    font-family: Oswald;
+    line-height: 23px;
+    padding-bottom: 30px;
+    color: #666;
+}
+
+.planTripTop {
+    display: none;
+}
+
+.featuredProp {
+    height: 26px;
+    color: #2F63CC;
+    font-family: Oswald;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 26px;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.ecTitle {
+    font-family: Crimson Text;
+    font-size: 21px;
+    line-height: 32px;
+    color: #333333;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.amenityHeader {
+    font-family: Rosario;
+    font-weight: 700;
+    color: #666;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+
+
+#ecAmenityTopDetails,.amenityBotDet {
+    font-family: Rosario;
+    font-size: 16px;
+    color: #797979;
+    line-height: 24px;
+}
+
+.ecViewDetails {
+    color: #2F63CC;
+    font-family: Rosario;
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.ecViewDetails:hover {
+    color: #1966FF;
+    text-decoration: underline;
+}
+
+#currencyType {
+    margin-bottom: 30px;
+}
+
+#currentCurrency {
+    font-family: Rosario;
+    font-size: 16px;
+}
+
+#ecSideFollow {
+
+    float: right;
+    width: 390px;
+    z-index: 1;
+        }
+.ecBreadcrumbs {
+    padding-top: 30px;
+    font-family: Rosario;
+}
+.ecBreadcrumbs li {
+    display: inline;
+    font-size: 14px;
+    color: rgba(0,0,0,0.6);
+}
+
+.ecTabContain {
+    height: 64px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.ecTabs li {
+    font-size: 21px;
+    line-height: 32px;
+    font-family: Rosario;
+    color: #000000;
+    display: block;
+    float: left;
+    padding: 15px 40px;
+    cursor: pointer;
+}
+
+
+.ecTabs li:hover {
+    background: #ECECEC;
+}
+
+.ecTabs li.ecActive {
+    color: #2F63CC;
+    border-bottom: 2px solid #2F63CC;
+}
+
+.ecRowHeader,.ecRowItem,.ecPol {
+    font-family: Rosario;
+    color: #333333;
+    font-size: 16px;
+    line-height: 32px;
+    height: 40px;
+}
+
+.ecPol {
+    height: 30px;
+    line-height: 45px;
+    color: #666;
+}
+
+.ecRowItem {
+    color: #666666;
+}
+
+.ecRowAlt {
+    background-color: #FAFBFC;
+}
+
+.feeType,.feeAmount {
+    display: inline;
+    width: 200px;
+    border-bottom: 1px solid #ECECEC;
+    font-family: Rosario;
+    font-size: 16px;
+    line-height: 26px;
+    color: #666666;
+}
+#listingDescription,.amenityFull,#bedroomListingSection,#bathroomListingSection {
+    display: none;
+}
+
+#closeCarousel {
+    padding-right: 20px;
+    /* width: 50px; */
+    text-align: right;
+    font-size: 24px;
+    margin-top: 90px;
+    margin-bottom: 10px;
+    color: #000;
+    text-align: right;
+    /* margin-right: 30px; */
+    background: #fff;
+}
+
+
+
+
+ .ecSideIcon {
+     margin-bottom: 20px;
+ }
+
+ .ecCrown {
+     top: 400px;
+ }
+
+ .ecServicesList ul li {
+     height: 26px;
+    color: #333333;
+    font-family: Rosario;
+    font-size: 14px;
+    line-height: 24px;
+     height: 30px;
+ }
+
+ .ecSvcIco img,.ecSvcIco {
+     height: 24px;
+     display: inline;
+ }
+
+ .ecAmenSpace {
+     padding-right: 10px;
+ }
+
+ .ecPriceLink a {
+    height: 32px;
+    width: 270px;
+    color: #3B7CFF;
+    font-family: Rosario;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 26px;
+    }
+ .ecPriceLink {
+     padding-top: 20px;
+     cursor: pointer;
+     
+ }
+  .ecDescBB,.ecTitleBB,.bedDiv ,.bedSpan {
+     font-family: Rosario;
+     font-size: 16px;
+      line-height: 22px;
+      padding-bottom: 3px;
+ }
+
+
+
+ .amenitiesBB {
+     padding-bottom: 10px;
+     padding-top: 10px;
+     line-height: 34px;
+ }
+
+ .bedSpan {
+     display: inline;
+ }
+
+ .ecDescBB {
+     padding-top: 20px;
+ }
+ .ecSeparate {
+     margin-bottom: 50px;
+     
+ }
+
+ .rsDefault .rsThumb.rsNavSelected {
+    background: #2F63CC;
+}
+
+
+
+ /*new mobile menu*/
+ 
+
+/* header */
+
+.header {
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: fixed;
+  width: 100%;
+  z-index: 999999;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.header li a {
+  display: block;
+  text-decoration: none;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #f4f4f4;
+}
+
+.header .logo {
+  font-size: 30px;
+  text-decoration: none;
+      width: 100%;
+    padding-left: 45%;
+    margin-top: -55px;
+        padding-left: 230px;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+    padding: 0px;
+  position: relative;
+  user-select: none;
+    margin-right: 20px;
+    margin-top: -30px;
+}
+
+.header .menu-icon .navicon {
+  background: #FFF;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 24px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #FFF;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn, .mobileNav {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 720px;
+    text-align: left;
+    padding-left: 20px;
+    font-family: Oswald;
+    font-size: 16px;
+    letter-spacing: 1.6px;
+    line-height: 30px;
+}
+
+.extraMenu {
+    display: none;
+}
+
+.extraLinks {
+    font-size: 12px;
+    line-height: 30px;
+    color: #333333;
+}
+.ecMenuLogo {
+    width: 250px;
+}
+
+.extraLogo {
+    text-align: center;
+}
+
+.header .menu-btn:checked ~ .extraMenu {
+  display:inline
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+ 
+ .ecCarouselOuter {
+     margin-top: 30px;
+     margin-bottom: 30px;
+     padding: 40px;
+ }
+
+ .ecQuotePrevNext {
+     position: absolute;
+     font-weight: 700;
+     font-family: Oswald;
+     color: #E6E6E6;
+     font-size: 90px;
+     padding: 30px;
+     font-family: Crimson Text;
+     font-weight: 100;
+
+ }
+
+ .ecQuotePrevNext:hover {
+    color: #E6E6E6;
+}
+ .ecQPNP {
+     left: 30px;
+ }
+ .ecQPNN {
+     right: 30px;
+ }
+
+ .ecQuote {
+     font-family: Crimson Text;
+     font-size: 21px;
+     line-height: 32px;
+     color: #1A1A1A;
+ }
+ .ecQuoteBy {
+     font-family: Rosario;
+     font-size: 16px;
+     line-height: 20px;
+     color: #999999;
+     text-align: center;
+ }
+
+ .ecDestExploreMask {
+   
+    text-align: center;
+    margin: auto;
+    height: 100%;
+    background: #000000;
+    opacity: .4;
+}
+
+ .ecIndicator {
+     bottom: 0;
+ }
+
+ .ecMobileUL {
+     padding-top: 10px;
+ }
+
+ .ecLine {
+     border-bottom: 1px solid rgba(255,255,255,0.1);
+     width: 100%;
+ }
+ .phoneNavMobile {
+     float: left;
+    margin-top: 18px;
+    margin-left: 20px;
+ }
+ .phoneNavMobile i {
+     font-size: 30px;
+     font-weight: 700;
+     padding: 5px;
+     color: white;
+ }
+ .mobileNavNav {
+     float: right;
+ }
+
+ .ecHamburger {
+     width: 35px;
+    height: 5px;
+    background-color: white;
+     border-radius: 30px;
+    margin: 6px 0;
+ }
+
+ .logo{ margin: 0px;margin-top: -55px;width:100%}
+ .navicon{ /*margin-top: -55px;*/color: white;}
+
+
+ 
+
+
+ /*new carousel for quotes*/
+ .tcb-quote-carousel {
+     background: #FFFFFF;
+     min-height: 350px;
+         max-width: 800px;
+    width: 100%;
+    margin: auto;
+}
+.tcb-quote-carousel .quote {
+  color: rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.tcb-quote-carousel .carousel {
+  padding-bottom: 60px;
+}
+.tcb-quote-carousel .carousel .carousel-indicators > li {
+  background-color: #E5AF42;
+  border: none;
+}
+.tcb-quote-carousel blockquote {
+  margin-top: 15px;
+  text-align: center;
+  border: none;
+}
+.tcb-quote-carousel .profile-circle {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 100px;
+}
+.carousel-fade .carousel-inner .item {
+  transition-property: opacity;
+}
+.carousel-fade .carousel-inner .item,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  opacity: 0;
+}
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+.carousel-fade .carousel-inner .next,
+.carousel-fade .carousel-inner .prev,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  transform: translate3d(0, 0, 0);
+}
+
+.rsArrow {
+            height: 100%;
+            width: 30px;
+            position: absolute;
+            display: block;
+            cursor: pointer;
+            z-index: 99;
+            margin-top: 250px;
+        }
+
+        .rsArrowRight {
+            right: 0px;
+            top: 0;
+        }
+
+        .rsArrowLeft {
+            left: 15px;
+            top: 0;
+        }
+
+        .rsArrow, .rsNav, .rsThumbsArrow {
+            opacity: 1;
+            -webkit-transition: opacity .3s linear;
+            -moz-transition: opacity .3s linear;
+            -o-transition: opacity .3s linear;
+            transition: opacity .3s linear;
+        }
+
+        .rsArrow, .rsThumbsArrow {
+            cursor: pointer;
+            z-index: 0;
+        }
+
+        .rsArrowIcnFeat {
+            border-radius: 0;
+            cursor: pointer;
+            height: 60px;
+            left: 50%;
+            margin-top: 0;
+            position: absolute;
+            width: 60px;
+            border-bottom: 4px solid #fff;
+            border-left: 4px solid #fff;
+        }
+
+        .rsArrowRight .rsArrowIcnFeat {
+            -moz-transform: rotate(225deg) skew(5deg,5deg);
+            -ms-transform: rotate(225deg) skew(5deg,5deg);
+            -o-transform: rotate(225deg) skew(5deg,5deg);
+            -webkit-transform: rotate(225deg) skew(5deg,5deg);
+            transform: rotate(225deg) skew(5deg,5deg);
+            margin-left: -70px;
+        }
+
+        .rsArrowLeft .rsArrowIcnFeat {
+            margin-left: -10px;
+            -moz-transform: rotate(45deg) skew(5deg,5deg);
+            -ms-transform: rotate(45deg) skew(5deg,5deg);
+            -o-transform: rotate(45deg) skew(5deg,5deg);
+            -webkit-transform: rotate(45deg) skew(5deg,5deg);
+            transform: rotate(45deg) skew(5deg,5deg);
+        }
+
+        .royalSlider {
+            height: 600px;
+        }
+
+        .navbar-default .navbar-nav.navbar-right {
+            margin-right: 50px;
+            margin-top: 0px;
+        }
+
+        .planTripTop {
+            background: #F2F2F2;
+            border-radius: 5px;
+            padding-top: 20px;
+        }
+
+        #closeForm {
+            color: #F2623B;
+            font-weight: 700;
+        }
+
+        #rsCarousel {
+            width: 100%;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+
+
+
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+
+
+/*About us styles*/
+
+.ecAboutUs {
+    width: 100%;
+    padding: 10px;
+    max-width: 800px;
+    margin: auto;
+}
+.ecAboutTitle {
+        padding-top: 200px;
+}
+.ecAboutText p {
+   
+    color: #666666;
+    font-family: Rosario;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.ecAboutExperience {
+    background: #FAFBFC;
+    padding-bottom: 70px;
+}
+
+.ecMissionService {
+    width: 95%;
+    max-width: 1240px;
+    margin: auto;
+    padding: 10px;
+}
+
+
+
+.ecServiceListings {
+    font-size: 18px;
+    font-family: Rosario;
+}
+
+
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+  .section-split a {
+    width: 50%;
+  }
+}
+
+
+
+.ecCrownAbout {
+    margin: auto; 
+    text-align: center;
+    height: 300px;
+   
+}
+
+ #ecTopLocations {
+        padding-top: 30px;
+     color: rgba(255, 255, 255, 0.6);
+        font-size: 16px;
+        font-family: Oswald;
+    letter-spacing: 1px;
+    }
+
+
+ /*SEARCH RESULTS*/
+
+ .ecSearchHeader {
+     padding-top: 140px;
+     padding-bottom: 40px;
+     font-family: Crimson Text;
+     color: #333333;
+     font-size: 28px;
+     letter-spacing: 2px;
+     line-height: 46px;
+     margin: auto;
+     text-align: center;
+ }
+
+ .menuContain {
+     width: 100%;
+     padding: 10px;
+ }
+ #searchMenu {
+     width: 100%;
+     display: inline;
+ }
+
+ #searchMenu li {
+     width: 25%;
+     float: left;
+ }
+
+ 
+
+ #listingResults {
+     padding-top: 30px;
+ }
+
+ .searchDest {
+     margin-right: 20px;
+ }
+ .ecSearchLabel {
+     font-family: Rosario;
+     font-size: 14px;
+     color: #333;
+ }
+
+ .ecSignupButton {
+     height: 58px;
+     background: #2F63CC;
+     text-align: center;
+    padding: 17px;
+    color: white;
+    font-family: Oswald;
+     display: inline;
+     margin-left: -5px;
+ }
+ .ecSearchFilter {
+         height: 50px;
+    background: #2F63CC;
+    text-align: center;
+    padding: 15px;
+    color: white;
+    font-family: Oswald;
+     font-size: 14px;
+    letter-spacing: 2px;
+    margin-top: 28px;
+     cursor: pointer;
+ }
+
+ .ecSearchFilter:hover {
+       
+    background: #1966FF;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+ }
+
+ #loading {
+    background: url("/img/preloader.gif") no-repeat;
+	position:fixed;
+	top:280px;
+	left:50%;
+    margin-left:-32px;	
+	height:100%;
+	width:100%;
+	z-index:9999;
+	display:none;
+}
+
+#greyform{
+	position:fixed;
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
+	z-index:6050;
+	background:#000;
+	display:none;
+	background-repeat:repeat;
+    opacity: .95;
+}
+
+.closeShare {
+    position: absolute;
+    right:10px;
+    font-size: 20px;
+    color: #000;
+    padding: 5px;
+    cursor: pointer;
+}
+	
+#shareform
+{
+    color: #5a6064;
+    font-size: 14px;
+    line-height: 1.6;
+   
+    z-index:9999;
+    background: white;
+	text-align: left;
+	position:absolute;
+	top:30%;
+	left:50%;
+	margin-left:-210px;
+    display: none;
+    text-align: center;
+    width: 420px;
+	min-height:145px;
+    
+
+	    }
+
+.shareTitle{
+    font-size: 20px;
+    font-family: Crimson Text;
+    line-height: 24px;
+    color: #666;
+    padding: 10px;
+
+}
+
+#copyLink {
+    background-color: #2F63CC;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    color: #FFFFFF;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    font-family: Oswald;
+    letter-spacing: 1.6px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+#shareLink {
+    width: 95%;
+    height: 50px;
+    font-size: 16px;
+    font-family: Rosario;
+    color: #333;
+    background: #ECECEC;
+    padding: 8px;
+}
+
+.share
+ .ecSearchInput {
+     height: 50px;
+     color: #666666;
+     font-size: 14px;
+     border-radius: 0;
+     padding: 10px;
+     width: 100%;
+     background: #EEE;
+ }
+
+ .input-group-addon{ 
+     border:none;
+ }
+
+ .ecFull {
+     width: 93%;
+ }
+
+ .endSearch {
+     margin-top: -3px;
+ }
+
+ .ecLIinner {
+     display: inline;
+ }
+
+.thingsMaskSearch {
+    height: 100px;
+}
+
+.ecSRTitle {
+    font-family: Rosario;
+    font-size: 21px;
+    color: #2F63CC;
+    line-height: 32px;
+}
+
+.ecSRText {
+    font-family: Rosario;
+    color: #666666;
+    font-size: 16px;
+    line-height: 23px;
+}
+
+.ecSearchCaption {
+        padding: 10px;
+    position: absolute;
+    right: 20px;
+    bottom: 0px;
+    font-size: 20px;
+}
+
+.ecSearchIcon {
+    right: 20px;
+    bottom: 0px;
+    font-size: 20px;
+}
+
+
+/*  
+.ecPriceSearch {
+  display: inline;
+    padding-left: 10px;
+}
+    
+    */
+
+.mobileSearchMenu {
+    display: none;
+}
+
+.ecFooterLogo {
+        padding-bottom: 50px;
+    }
+
+.inqueryContainerText {
+    background: none;
+}
+
+.ecImage {
+         width: 100%;
+        height: auto;
+    padding-bottom: 40px;
+        }
+
+.ecTitleAbout {
+    color: #333333;
+    font-family: "Crimson Text";
+    font-size: 38px;
+    line-height: 46px;
+    padding-top: 80px;
+    padding-bottom: 20px;
+    }
+
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+     margin-left: -0px; 
+}
+
+.navbar-brand {
+    padding: 5px;
+}
+
+.ecLine {
+    position: absolute;
+    top: 35px;
+    float: left;
+    right: 0px;
+
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+     border: none;
+}
+
+
+        .royalSlider img {
+            width: 100%;
+            height: auto;
+            margin: 10px auto;
+        }
+
+        .featuredImage {
+            background-repeat: no-repeat;
+            background-color: #f5f5f5;
+            height: auto;
+            width: 100%;
+            /*background-size: cover;*/
+            background-position: 50% 50%;
+            cursor: pointer;
+        }
+
+        #villaMainImage {
+            display: block;
+            height: auto;
+            vertical-align: middle;
+            width: 100%;
+            margin-top: 55px;
+        }
+
+
+#ecShare {
+    float: right;
+}
+
+#map {
+    height: 600px;
+    width: 100%;
+}
+
+
+#ecFooterTablet,#ecFooterMobile {
+    display: none;
+}
+
+/*remember picForm for other displays*/
+#rsCarousel {
+  width: 100%;
+  height: 600px;
+}
+
+#picForm {
+    color: #5a6064;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    z-index: 6015;
+    background: white;
+    text-align: left;
+    position: absolute;
+    /*margin: 40px auto;
+    top: 0px;
+    left: 50%;
+    margin-left: -180px;*/
+    width: 100%;
+    height: 600px;
+    /*border: 4px solid #0085cb;
+    border-radius: 10px;*/
+    text-align: center;
+}
+
+
+.overlayMain {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.extraMobile {
+        display: none;
+    }
+
+
+.rsDefault .rsFullscreenBtn {
+    top: 80px;
+}
+
+.logo img {
+            margin-top: 10px;
+            margin-left: -55px;
+            width: 65px;
+        display: none;
+        }
+
+        .imgCrwn {
+            width: 55px;
+        }
+
+
+
+
+
+
+
+
+
+ /*MOBILE DESKTOP*/
+
+ @media (min-width: 1400px) {
+
+    .container {
+        width: 1350px;
+    }
+}
+
+ @media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) {
+     .mobNo {
+         display: none;
+     }
+
+     .navbar-brand {
+         display: none;
+     }
+
+     #ecShare {
+         display: none;
+     }
+
+     .ecTabContain {
+         border: none;
+         /*height*/
+         border-bottom: none;
+     }
+
+     img.ecShare {
+         height: 30px;
+     }
+
+     .featuredImage {
+         height: 300px;
+         margin-top: 70px;
+     }
+
+    .ecTabs li {
+        padding: 10px;
+    }
+
+     #ecSideFollow {
+         display: none;
+     }
+
+     .rsArrow {
+        margin-top: 190px;
+     }
+
+      .rsArrowIcnFeat {
+          height: 40px;
+          width: 40px;
+      }
+
+     .ecFeatContain {
+
+         width: 100%;
+         height: 250px;
+     }
+     .logo {
+         margin-top: 0px;
+         margin-left: -65px;
+     }
+
+     .header .logo {
+         padding: 0;
+     }
+
+    .ecMailList {
+        padding-right: 0px;
+    }
+
+    .searchDest {
+        margin-right: 0px;
+    }
+
+
+
+     
+
+    
+
+     .phoneNavMobile {
+         float: left;
+
+     }
+
+     
+
+
+     .ecCrownAbout {
+    height: 150px;
+    }
+
+     .ecFPTitle,.ecFPText,.ecFeatListDetails,.ecPrice {
+         font-size: 14px;
+         line-height: 18px;
+     }
+
+     .ecThingsCaption {
+         right: 0;
+         padding: 0;
+         bottom: 10px;
+     }
+
+     .ecIco {
+    margin: 0;
+    height: 20px;
+    width: 20px;
+
+         margin-left: 5px;
+         margin-right: 25px;
+}
+
+     .ecLIinner {
+         margin-left: -30px;
+     }
+
+      
+
+     .ecNav ul li {
+        padding: 0px;
+    }
+
+     .banerInfo {
+        padding-top: 40px;
+    }
+          .ecAboutTitle {
+    padding-top: 100px;
+}
+     .ecTagP {
+         padding-bottom: 0;
+     }
+
+     .mobileNav {
+     display: inline;
+ }
+
+     .ecNav {
+         height: 55px;
+     }
+     .container-nav {
+         display: none;
+     }
+
+      .ecNav ul li {
+        font-size: 18px;
+    } 
+
+      .ecNav ul li.menu {
+         display: inline;
+         padding: 20px;
+     }
+
+
+      .ecTitleHome {
+          font-size: 34px;
+      }
+
+      .topMenu ul li {
+    list-style-type: none;
+    display: inline;
+    padding: 10px 40px;
+}
+
+      .ecSearch {
+          width: 250px;
+          margin-left: 0px;
+      }
+      .ecSearchButton {
+          width: 100px;
+          font-size: 12px;
+          margin-left: -60px;
+      }
+    .homeBanner {
+       height: 340px;
+        min-height: 340px;
+    }
+    .container {
+        width: 100%;
+    }
+    .ecFeatLinkTop {
+        margin-right: 10px;
+        font-size: 16px;
+        padding-top:25px
+    }
+    .ecTagTitle, #ecTagline,.ecFeatListTitle,.ecDestinationsTitle {
+        font-size: 26px;
+        line-height: 40px;
+        padding-top: 20px;
+
+    }
+
+    .tcb-quote-carousel {
+        min-height: 450px;
+    }
+
+   
+
+    .ecOrBox {
+        margin: 0px;
+        margin-bottom: 25px;
+    }
+
+    .ecBoxHolder {
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
+   
+
+    .ecFeatListDesc {
+        font-size: 14px;
+    }
+
+    .ecFootLinks li {
+       
+        font-size: 14px;
+        line-height: 26px;
+        display: inline-block;
+        padding: 15px;
+    }
+
+    .ecCopyText {
+        font-size: 12px;
+        padding-right: 0;
+    }
+
+    .input-group-addon {
+            border-radius: 0px;
+    }
+
+    
+
+
+    /*mobile detail*/
+    .ecTabContain {
+        height: 40px;
+    }
+
+    .ecTabs li {
+        font-size: 16px;
+        font-family: Rosario;
+        color: #000000;
+        display: block;
+        float: left;
+        border-bottom: 1px solid #666666;
+        cursor: pointer;
+            padding: 15px 50px;
+    }
+
+    .ecImgIcon {
+        height: 20px;
+        width: 20px;
+        margin-right: 5px;
+        margin-left: 10px;
+        margin-top: -12px;
+    }
+    .bbb {
+        font-size: 14px;
+        font-family: Oswald;
+        line-height: 18px;
+        padding-bottom: 20px;
+    }
+
+    .thingsImage img {
+        width: auto;
+    }
+
+    .ecContain {
+        width: 100%;
+    }
+
+   #searchMenu li {
+     width: 100%;
+       padding: 10px;
+     float: left;
+ }
+
+   .mobileSearchMenu {
+       display: block;
+       background: blue;
+       padding: 30px;
+       font-size: 30px;
+       font-family: Oswald;
+       width: 100%;
+       cursor: pointer;
+       text-align: center;
+       color: #FFF;
+   }
+
+   .ecSRTitle {
+    font-family: Rosario;
+    font-size: 14px;
+    color: #333333;
+    line-height: 32px;
+}
+
+   .ecSRText {
+       font-size: 14px;
+       line-height: 23px;
+       color: #666666;
+   }
+
+   .ecPriceSearch {
+       display: inline;
+   }
+
+   .ecSearchListDetails {
+       width: 100%;
+       padding-top: 10px;
+       margin-left: 30px;
+   }
+   .ecSearchListDetails li {
+       width: 33%;
+   }
+
+   #searchMenu {
+       display: none;
+   }
+
+    .ecSearchCaption {
+        position: relative;
+        right: 0;
+        text-align: center;
+        bottom: 10px;
+        margin-top: 10px;
+        float: right;
+
+    }
+    #listingResults {
+        padding: 0px;
+    }
+
+    .thingsMaskSearch {
+    height: 110px;
+    }
+
+    .thingsImage .ecIco {
+    padding-bottom: 0;
+    /* display: none; */
+    /* display: none; */
+}
+
+    .thingsImage img {
+        padding-bottom: 100px;
+    }
+
+    .list-inline>li {
+        /*float: right;*/
+    }
+    .ecPrice {
+        display: block;
+    }
+
+    #emailSignupFooter {
+
+        width: 200px;
+    }
+
+    .ecFootLinksList li {
+        display: inline;
+        padding: 3px;
+        font-size: 12px;
+    }
+
+    .ecQuotePrevNext {
+        display: none;
+    }
+
+    .ecQuote p {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .ecCarouselOuter {
+        padding: 5px;
+    }
+
+    .ecBoxes {
+        padding: 10px;
+    }
+
+    /*footer menu lock*/
+    #ecSideFollow {
+         display: none;
+     }
+     #ecFooterMobile {
+         display: inline;
+         height: 60px;
+         background: #FFF;
+         color: #333;
+         font-family: Crimson Text;
+         font-size: 21px;
+         position: fixed;
+         width: 100%;
+         bottom: 0px;
+         z-index: 699;
+         border-top: 1px solid #ECECEC;
+     }
+    /*end footer mendu lock*/
+    .ecPricePerNight {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .ecPriceLink {
+        padding-top: 0px;
+    }
+
+    .ecFootRequest {
+        float: right;
+        margin-top: -50px;
+    }
+
+    .ecRequestBooking {
+        padding: 10px;
+        margin-right: 10px;
+    }
+    
+    .footText {
+        margin-left: 10px;
+        margin-top: 5px;
+    }
+
+    #picForm,#rsCarousel {
+        height: 370px;
+    }
+
+
+    .navbar-brand > img {
+    width: 200px;
+    margin-top: 0px; 
+    
+
+}
+    .ecH2H {
+        font-size: 32px;
+    }
+
+    .searchDest {
+    margin-right: 0px;
+    }
+
+    .carousel-control {
+        display: none;
+    }
+
+    .ecDestExplore {
+        margin-left: -10px;
+    }
+
+   /* .thingsArea {
+        width:95%
+    }
+       */
+   hr {
+       display: none;
+   }
+
+    .index_section_5 {
+        padding: 0px;
+    }
+
+    .navbar .navbar-nav {
+        width: 100%;
+        height: 400px;
+    }
+
+    .fmnu {
+        padding-top: 30px;
+    }
+
+    .navbarWhite .navbar-default .navbar-nav > li > a {
+        padding: 15px;
+    }
+
+    .navbarWhite .navbar-default .navbar-nav > li {
+        float: left;
+        width: 100%;
+        text-align: left;
+    }
+
+    .extraMobile {
+        display: inline;
+    }
+
+    .topMobMenu li a {
+    display: inline-block;
+    text-decoration: none;
+    padding-left: 15px;
+    padding-top: 30px;
+}
+    .ecRowHeader {
+        height: 65px;
+    }
+
+    .crownTop {
+        display: inline;
+    }
+
+    .crownTop img {
+        position: absolute;
+        left: 50%;
+        margin: auto;
+        margin-left: -30px;
+        height: 45px;
+        display: inline;
+        top: 10px;
+    }
+
+    .navbar-collapse {
+        width: 100%;
+        margin-right: 0px;
+        padding-right: 0px;
+        margin-left: 0px;
+        padding-left: 0px;
+    }
+
+ } /*end mobile*/
+   @media only screen and (min-width:1200px) {
+       .ecFeatContain:hover .ecDestExploreDesc{
+            display: inline;
+        }
+   }
+
+   /*special for side follow*/
+@media only screen and  (max-width : 1200px)and  (min-width : 800px) {
+     #ecSideFollow {
+         display: none;
+     }
+     #ecFooterTablet {
+         display: inline;
+         height: 142px;
+         background: #FFF;
+         color: #333;
+         font-family: Crimson Text;
+         font-size: 21px;
+         position: fixed;
+         width: 100%;
+         bottom: 0px;
+         z-index: 699;
+         border-top: 1px solid #ECECEC;
+     }
+
+     #ecFooterTablet .ecRequestBooking {
+        width:100%;
+         padding: 20px;
+     }
+
+
+     .ecFootCont { 
+        width: 365px;
+        float: right;
+        margin-right: 30px;
+     }
+
+     .ecFootRequest {
+         display: block;
+         position: relative;
+     }
+
+     .footText .ecPriceLink {
+         margin-top: 5px;
+     }
+     
+     .ecFootRate, .ecFootRequest {
+         font-size: 21px;
+         line-height: 32px;
+     }
+
+     .footText {
+         margin: 20px;
+     }
+     .ecFootRequest {
+         margin-top: 30px;
+     }
+
+     .ecFootRate {
+        font-size: 25px;
+        padding-left: 30px;
+        padding-top: 5px;
+     }
+
+     .ecPriceLink {
+         padding-top: 0px;
+         padding-left: 30px;
+     }
+    
+}
+
+
+
+ /*tablet start*/
+ @media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+
+     .ecTitleHome {
+         font-size: 72px;
+         letter-spacing: 1.5px;
+     }
+
+     .ecQuotePrevNext {
+        display: none;
+    }
+
+    .ecOrBox {
+        min-height: 200px;
+    }
+
+     .banerInfo .form-group {
+    width: 56%;
+    margin: 0 10px 0 0;
+  }
+     
+     #ecShare {
+         display: none;
+     } 
+
+     .ecRowHeader {
+         padding-bottom: 60px;
+     }
+
+     #ecSideFollow {
+         display: none;
+     }
+     #ecFooterTablet {
+         display: inline;
+         height: 142px;
+         background: #FFF;
+         color: #333;
+         font-family: Crimson Text;
+         font-size: 21px;
+         position: fixed;
+         width: 100%;
+         bottom: 0px;
+         z-index: 699;
+         border-top: 1px solid #ECECEC;
+     }
+
+     #ecFooterTablet .ecRequestBooking {
+        width:100%;
+         padding: 20px;
+     }
+
+
+     .ecFootCont { 
+        width: 325px;
+        float: right;
+        margin-right: 30px;
+     }
+
+     .ecFootRequest {
+         display: block;
+         position: relative;
+     }
+
+     .footText .ecPriceLink {
+         margin-top: 5px;
+     }
+     
+     .ecFootRate, .ecFootRequest {
+         font-size: 21px;
+         line-height: 32px;
+     }
+
+     .footText {
+         margin: 20px;
+     }
+     .ecFootRequest {
+         margin-top: 30px;
+     }
+
+     .ecFootRate {
+        font-size: 25px;
+        padding-left: 30px;
+        padding-top: 5px;
+     }
+
+     .ecPriceLink {
+         padding-top: 0px;
+         padding-left: 30px;
+     }
+
+     .homeBanner {
+         min-height: 500px;
+     }
+     .banerInfo {
+     padding-top: 100px;
+}
+     
+ }
+ /*tablet end*/
+
+ @media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+    .banerInfo .form-group {
+    margin: 0 10px 0 0;
+        width: 410px;
+}
+     
+}
+
+
+
+
+
+
+
+
+ /*desktop again*/
+
+.navbarWhite .navbar-default .navbar-nav > li > a ,.navbar-default .navbar-nav > li > a {
+    font-family: Oswald;
+    color: #FFF;
+    font-weight: 100;
+    font-size: 14px;
+    background-color: transparent;
+    display: inline-block;
+    letter-spacing: 2px;
+    text-decoration: none;
+    
+}
+.navbarWhite .navbar-default .navbar-nav > li.active > a {
+    opacity: 1;
+    color: #FFC34A;
+    text-decoration: underline;
+}
+
+
+
+.navbar-default .navbar-toggle {
+    background: #000;
+    border-color: #000;
+}
+

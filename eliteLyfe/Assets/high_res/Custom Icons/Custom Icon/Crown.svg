@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="38px" height="38px" viewBox="0 0 38 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Custom Icon / Crown</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Custom-Icon-/-Crown" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Money-icon" transform="translate(3.000000, 3.000000)" fill="#FFC34A" fill-rule="nonzero">
+            <g id="noun_1637333_ffffff" transform="translate(7.000000, 9.000000)">
+                <path d="M16.8194447,13.7666664 L0.291666409,13.7666664 L0.291666409,1.829938 L1.85262325,1.18719109 L4.88271593,4.21728368 L8.55555556,0.544444172 L12.2283952,4.21728368 L15.2584879,1.18719109 L16.8194447,1.829938 L16.8194447,13.7666664 Z M2.12808622,11.9302466 L14.9830249,11.9302466 L14.9830249,10.0938269 L2.12808622,10.0938269 L2.12808622,11.9302466 Z M2.12808622,8.25740714 L14.9830249,8.25740714 L14.9830249,4.0336417 L12.2283952,6.78827133 L8.55555556,3.11543183 L4.88271593,6.78827133 L2.12808622,4.0336417 L2.12808622,8.25740714 Z" id="Shape"></path>
+            </g>
+            <path d="M16,32 C7.163,32 0,24.836 0,16 C0,7.163 7.163,0 16,0 C24.836,0 32,7.163 32,16 C32,24.835 24.836,32 16,32 Z M16,1.999 C8.268,1.999 2,8.267 2,15.999 C2,23.729 8.268,29.999 16,29.999 C23.731,29.999 30,23.73 30,15.999 C30,8.267 23.731,1.999 16,1.999 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>
