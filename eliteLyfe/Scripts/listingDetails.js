@@ -820,7 +820,7 @@ function GetListingDetail(myId) {
 
             */
 
-            GetListingRatesByCurrCode('USD');
+            GetListingRatesByCurrCode(tc.baseCurrency);
 
             $("#currencyType").change(function() {
                 GetListingRatesByCurrCode($("#currencyType").val());//TODO:check this out !!!!!

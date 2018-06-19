@@ -319,6 +319,7 @@
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bs-combo.css" />
     <Content Include="css\css-index.css" />
+    <Content Include="css\custombox.min.css" />
     <Content Include="css\ecStyle.css" />
     <Content Include="css\fontawesome-all.min.css" />
     <Content Include="css\jquery-editable-select.css" />
@@ -396,6 +397,7 @@
     <Content Include="royalslider\skins\universal\rs-universal.png" />
     <Content Include="Scripts\bootstrap-combobox.js" />
     <Content Include="Scripts\contact.js" />
+    <Content Include="Scripts\custombox.min.js" />
     <Content Include="Scripts\jquery-editable-select.js" />
     <Content Include="Scripts\jquery.sticky.js" />
     <Content Include="Scripts\owl.carousel.min.js" />

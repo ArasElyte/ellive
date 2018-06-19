@@ -1,6 +1,37 @@
-﻿$(document).ready(function() {
+﻿$(document).ready(function () {
+
+    //check cookie and if not set, pop modal after 10 seconds
+    var modalCookie = getCookie('signup');
+    if (modalCookie == "") {
+        setTimeout(function () {
+            var modal = new Custombox.modal({
+                content: {
+                    effect: 'fadein',
+                    target: '#modalSignup'
+                }
+            });
+            modal.open();
+        }, 5000);
+    }
+
+    $("#closeModal").click(function() {
+        Custombox.modal.close();
+        setCookie("signup", "sawbox", 365);
+    });
+
     $(".sendToContact").click(function() {
         GoToContactForm();
+    });
+
+    $(".signupButton").click(function () {
+        var email = $("#modalEmailSignup").val();
+        var signup = validateEmail(email);
+
+        if (signup) {
+            SignUpForNews(email);
+        } else {
+            alert("invalid email");
+        }
     });
 
     $(".ecSignupButton").click(function () {
@@ -12,6 +43,10 @@
         } else {
             alert("invalid email");
         }
+    });
+
+    $("#eliteIcon").click(function() {
+        window.location.href = "https://www.elitelyfe.com";
     });
 
     $("#submitListingInquiry").click(function() {
@@ -107,9 +142,10 @@ function SignUpForNews(email) {
             var myListings = "";
 
             $("#emailSignupFooter").attr("placeholder", tc.status).val("").focus().blur();
+            $("#modalEmailSignup").attr("placeholder", tc.status).val("").focus().blur();
         },
         error: function (msg) {
-            ////alert("something went wrong! " + msg.exception);
+            alert("something went wrong! " + msg.exception);
         }
     });
 }

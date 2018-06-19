@@ -43,6 +43,7 @@
         .error {
             border: 0.5px solid red;
         }
+
         .errorTitle {
             color: red;
             border: 3px solid red;
@@ -51,25 +52,28 @@
         }
 
         .alert {
-        padding: 15px;
-        margin-bottom: -20px;
-        border: 1px solid transparent;
-        border-radius: 4px;
-    }
+            padding: 15px;
+            margin-bottom: -20px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+        }
 
         .alert-dismissable .close, .alert-dismissible .close {
             position: relative;
             top: -2px;
-            right:0px; 
+            right: 0px;
             color: inherit;
         }
+
         .header {
             background: #52527A;
             color: white;
         }
+
         .altRow {
-            background:#e0e0eb;
+            background: #e0e0eb;
         }
+
         .rowStyle {
             border: 1px solid #ccccb3;
         }
@@ -95,20 +99,18 @@
             opacity: .8;
         }
 
-        .firstPicture:before {
-           
-        content: "★"; /* Insert content that looks like bullets */
-        padding-right: 8px;
-        color: gold; /* Or a color you prefer */
-
-        }
+            .firstPicture:before {
+                content: "★"; /* Insert content that looks like bullets */
+                padding-right: 8px;
+                color: gold; /* Or a color you prefer */
+            }
 
         .ci-co {
             display: inline;
             width: 90px;
         }
 
-        #editBedroom, #editBathroom,#editRates,#editFee {
+        #editBedroom, #editBathroom, #editRates, #editFee {
             display: none;
             width: 800px;
             margin: auto;
@@ -132,7 +134,7 @@
             opacity: .75;
         }
 
-        #saveAbout,#saveLocation, #saveOwner {
+        #saveAbout, #saveLocation, #saveOwner {
             padding: 10px;
             width: 100px;
             border-radius: 5px;
@@ -142,1417 +144,1413 @@
             background-color: #006600;
             text-align: center;
             cursor: pointer;
-            
         }
-        #saveAbout.updated:hover,#saveLocation.updated:hover, #saveOwner.updated:hover {
-            background-color: teal;
-            color: white;
-           
-        }
+
+            #saveAbout.updated:hover, #saveLocation.updated:hover, #saveOwner.updated:hover {
+                background-color: teal;
+                color: white;
+            }
 
         .updated {
             background-color: #006600;
-            
         }
 
         .picText {
             width: 100%;
         }
-        
     </style>
 </head>
 <body class="body-wrapper2">
-<!-- <div class="page-loader" style="background: url(../img/preloader.gif) center no-repeat #fff;"></div>-->
+    <!-- <div class="page-loader" style="background: url(../img/preloader.gif) center no-repeat #fff;"></div>-->
     <div id="grayout"></div>
-<div class="main-wrapper">
-<!--edits for bedroom and bathroom-->
-<div id="editFee" style="display: none;">
-    <div class="form-group editRateDetail" style="border: 1px solid black; border-radius: 5px; padding: 10px; background-color: #f5f5ef;">
-        <div class="row">
+    <div class="main-wrapper">
+        <!--edits for bedroom and bathroom-->
+        <div id="editFee" style="display: none;">
+            <div class="form-group editRateDetail" style="border: 1px solid black; border-radius: 5px; padding: 10px; background-color: #f5f5ef;">
+                <div class="row">
 
-            <div class="form-group col-sm-6 col-xs-12">
-                <label for="rateType">Type *</label>
-                <div class="contactSelect">
-                    <select name="listingFeeType" id="e_listingFeeType" class="form-control">
-                        <option value="0">Type</option>
-                        <option value="SECURITY">Security Deposit</option>
-                        <option value="HOUSEKEEPING">Housekeeping</option>
-                        <option value="CLEANING">Cleaning (Exit)</option>
-                        <option value="CHEF">Private Chef</option>
-                        <option value="EVENT">Event Fee</option>
-                    </select>
+                    <div class="form-group col-sm-6 col-xs-12">
+                        <label for="rateType">Type *</label>
+                        <div class="contactSelect">
+                            <select name="listingFeeType" id="e_listingFeeType" class="form-control">
+                                <option value="0">Type</option>
+                                <option value="SECURITY">Security Deposit</option>
+                                <option value="HOUSEKEEPING">Housekeeping</option>
+                                <option value="CLEANING">Cleaning (Exit)</option>
+                                <option value="CHEF">Private Chef</option>
+                                <option value="EVENT">Event Fee</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-sm-6 col-xs-12">
+                        <label for="rateAmount" ">Amount *</label>
+                        <input type="text" class="form-control" id="e_feeAmount" onkeypress="return CheckIfFloat(event, 1, 12);">
+                        <input type="hidden" id="editFeeId" />
+                    </div>
+
+
+
                 </div>
+
+                <div id="e_cancelFee" style="float: left; padding: 10px; color: white; background-color: #990000; border-radius: 5px; margin-top: 15px;"> Cancel</div>
+                <div id="updateFee" style="float: right; padding: 10px; color: white; background-color: #006600; border-radius: 5px; margin-top: 15px;"> Update Fee Details</div>
             </div>
+        </div>
+        <div id="editRates" style="display: none;">
+            <div class="form-group editRateDetail" style="border: 1px solid black; border-radius: 5px; padding: 10px; background-color: #f5f5ef;">
+                <div class="row">
 
-            <div class="form-group col-sm-6 col-xs-12">
-                <label for="rateAmount" ">Amount *</label>
-                <input type="text" class="form-control" id="e_feeAmount" onkeypress="return CheckIfFloat(event, 1, 12);">
-                <input type="hidden" id="editFeeId"/>
+                    <div class="form-group col-sm-6 col-xs-12">
+                        <label for="rateType">Type *</label>
+                        <div class="contactSelect">
+                            <select name="rateType" id="e_rateType" class="form-control">
+
+                                <option value="STANDARD">Standard</option>
+                                <option value="HOLIDAY">Holiday</option>
+                                <option value="PEAK">Peak Season</option>
+                                <option value="THANKSGIVING">Thanksgiving</option>
+                                <option value="CHRISTMAS">Christmas</option>
+                                <option value="NEWYEARS">New Years</option>
+                                <option value="SPRING">Spring Break</option>
+                                <option value="PRESIDENTS">Presidents Week</option>
+                                <option value="FALL">Fall Season</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-6 col-xs-12">
+                        <label for="rateAmount" ">Amount *</label>
+                        <input type="text" class="form-control" id="e_rateAmount" onkeypress="return CheckIfFloat(event, 1, 12);">
+                        <input type="hidden" id="editRateId" />
+                    </div>
+                    <div class="form-group col-sm-6 col-xs-12">
+                        <label for="e_rateStartDate">Start Date *</label>
+                        <input type="text" class="form-control" id="e_rateStartDate" readonly>
+                    </div>
+                    <div class="form-group col-sm-6 col-xs-12">
+                        <label for="e_rateEndDate">End Date *</label>
+                        <input type="text" class="form-control" id="e_rateEndDate" readonly>
+                    </div>
+
+                    <div class="form-group col-sm-6 col-xs-12">
+                        <label for="e_rateMinStay">Min Stay *</label>
+                        <input type="text" class="form-control" id="e_rateMinStay" onkeypress="return CheckIfInt(event, 1, 3);">
+                    </div>
+                    <div class="form-group col-sm-6 col-xs-12">
+                        <label for="cp60">Cancellation Policy (days)</label>
+                        <label class="radio-inline">
+                            <input type="radio" name="e_optCancel" id="e_cp60" checked="checked">60
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="e_optCancel" id="e_cp90">90
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="e_optCancel" id="e_cp120">120
+                        </label>
+                    </div>
+
+
+                </div>
+
+                <div id="e_cancelRate" style="float: left; padding: 10px; color: white; background-color: #990000; border-radius: 5px; margin-top: 15px;"> Cancel</div>
+                <div id="updateRate" style="float: right; padding: 10px; color: white; background-color: #006600; border-radius: 5px; margin-top: 15px;"> Update Rate Details</div>
             </div>
+        </div>
+        <div id="editBedroom" style="display: none;">
+            <div class="form-group editBedroomDetail" style="border: 1px solid black; border-radius: 5px; padding: 10px; background-color: #f5f5ef;">
+                <div class="row">
+                    <div class="form-group col-sm-6 col-xs-12">
+                        <label for="bedroomTitle">Title *</label>
+                        <input type="text" class="form-control" id="e_bedroomTitle">
+                        <input type="hidden" id="editBedroomId" />
+                    </div>
+                    <div class="form-group col-sm-6 col-xs-12">
+                        <label for="bedroomType">Type *</label>
+                        <div class="contactSelect">
+                            <select name="bedroomType" id="e_bedroomType" class="form-control">
+                                <option value="0">Type</option>
+                                <option value="Bedroom">Bedroom</option>
+                                <option value="Studio">Studio</option>
+                                <option value="Other">Other</option>
 
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-12 col-xs-12">
+                        <label for="bedroomDescription">Description *</label>
+                        <input type="text" class="form-control" id="e_bedroomDescription">
+                    </div>
+                    <div class="form-group col-sm-2 col-xs-12">
+                        <label for="bedKing">king</label>
+                        <div class="contactSelect">
+                            <select name="bedKing" id="e_bedKing" class="form-control">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-2 col-xs-12">
+                        <label for="bedQueen">queen</label>
+                        <div class="contactSelect">
+                            <select name="bedQueen" id="e_bedQueen" class="form-control">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                        </div>
+                    </div>
 
+                    <div class="form-group col-sm-2 col-xs-12">
+                        <label for="bedDouble">double</label>
+                        <div class="contactSelect">
+                            <select name="bedDouble" id="e_bedDouble" class="form-control">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-2 col-xs-12">
+                        <label for="bedTwin">twin</label>
+                        <div class="contactSelect">
+                            <select name="bedTwin" id="e_bedTwin" class="form-control">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-2 col-xs-12">
+                        <label for="bedBunk">bunk bed</label>
+                        <div class="contactSelect">
+                            <select name="bedBunk" id="e_bedBunk" class="form-control">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-sm-2 col-xs-12">
+                        <label for="bedChild">child bed</label>
+                        <div class="contactSelect">
+                            <select name="bedChild" id="e_bedChild" class="form-control">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-2 col-xs-12">
+                        <label for="bedFuton">sleep sofa/futon</label>
+                        <div class="contactSelect">
+                            <select name="bedFuton" id="e_bedFuton" class="form-control">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-2 col-xs-12">
+                        <label for="bedMurphy">murphy bed</label>
+                        <div class="contactSelect">
+                            <select name="bedMurphy" id="e_bedMurphy" class="form-control">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-2 col-xs-12">
+                        <label for="bedCrib">baby crib</label>
+                        <div class="contactSelect">
+                            <select name="bedCrib" id="e_bedCrib" class="form-control">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <label for="bedroomAmenities">Amenities</label>
+                <div id="e_bedroomAmenities" style="border: 1px solid black; border-radius: 5px; background-color: white; color: black; padding: 5px;"></div>
+                <input id="e_amenityCSV" type="hidden" />
+                <div id="e_cancelBedroom" style="float: left; padding: 10px; color: white; background-color: #990000; border-radius: 5px; margin-top: 15px;"> Cancel</div>
+                <div id="updateBedroom" style="float: right; padding: 10px; color: white; background-color: #006600; border-radius: 5px; margin-top: 15px;"> Update Bedroom Details</div>
+            </div>
 
         </div>
 
-        <div id="e_cancelFee" style="float: left; padding: 10px; color: white; background-color: #990000; border-radius: 5px; margin-top: 15px;"> Cancel</div>
-        <div id="updateFee" style="float: right; padding: 10px; color: white; background-color: #006600; border-radius: 5px; margin-top: 15px;"> Update Fee Details</div>
-    </div>
-</div>
-<div id="editRates" style="display: none;">
-    <div class="form-group editRateDetail" style="border: 1px solid black; border-radius: 5px; padding: 10px; background-color: #f5f5ef;">
-        <div class="row">
 
-            <div class="form-group col-sm-6 col-xs-12">
-                <label for="rateType">Type *</label>
-                <div class="contactSelect">
-                    <select name="rateType" id="e_rateType" class="form-control">
+        <div id="editBathroom">
+            <div class="form-group editBathroomDetail" style="border: 1px solid black; border-radius: 5px; padding: 10px; background-color: #f5f5ef;">
+                <div class="row">
+                    <div class="form-group col-sm-6 col-xs-12">
+                        <label for="bedroomTitle" ">Title *</label>
+                        <input type="text" class="form-control" id="e_bathroomTitle">
+                        <input type="hidden" id="editBathroomId" />
+                    </div>
+                    <div class="form-group col-sm-6 col-xs-12">
+                        <label for="bedroomType">Type *</label>
+                        <div class="contactSelect">
+                            <select name="bathroomType" id="e_bathroomType" class="form-control">
 
-                        <option value="STANDARD">Standard</option>
-                        <option value="HOLIDAY">Holiday</option>
-                        <option value="PEAK">Peak Season</option>
-                        <option value="THANKSGIVING">Thanksgiving</option>
-                        <option value="CHRISTMAS">Christmas</option>
-                        <option value="NEWYEARS">New Years</option>
-                        <option value="SPRING">Spring Break</option>
-                        <option value="PRESIDENTS">Presidents Week</option>
-                        <option value="FALL">Fall Season</option>
-                    </select>
+                                <option value="Full">Full</option>
+                                <option value="Half">Half</option>
+                                <option value="Shower">Shower</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-12 col-xs-12">
+                        <label for="bedroomDescription">Description *</label>
+                        <input type="text" class="form-control" id="e_bathroomDescription">
+                    </div>
                 </div>
-            </div>
-            <div class="form-group col-sm-6 col-xs-12">
-                <label for="rateAmount" ">Amount *</label>
-                <input type="text" class="form-control" id="e_rateAmount" onkeypress="return CheckIfFloat(event, 1, 12);">
-                <input type="hidden" id="editRateId"/>
-            </div>
-            <div class="form-group col-sm-6 col-xs-12">
-                <label for="e_rateStartDate">Start Date *</label>
-                <input type="text" class="form-control" id="e_rateStartDate" readonly >
-            </div>
-            <div class="form-group col-sm-6 col-xs-12">
-                <label for="e_rateEndDate">End Date *</label>
-                <input type="text" class="form-control" id="e_rateEndDate" readonly >
-            </div>
-
-            <div class="form-group col-sm-6 col-xs-12">
-                <label for="e_rateMinStay">Min Stay *</label>
-                <input type="text" class="form-control" id="e_rateMinStay" onkeypress="return CheckIfInt(event, 1, 3);">
-            </div>
-            <div class="form-group col-sm-6 col-xs-12">
-                <label for="cp60">Cancellation Policy (days)</label>
-                <label class="radio-inline">
-                    <input type="radio" name="e_optCancel" id="e_cp60" checked="checked">60
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="e_optCancel" id="e_cp90">90
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="e_optCancel" id="e_cp120">120
-                </label>
-            </div>
 
 
-        </div>
-
-        <div id="e_cancelRate" style="float: left; padding: 10px; color: white; background-color: #990000; border-radius: 5px; margin-top: 15px;"> Cancel</div>
-        <div id="updateRate" style="float: right; padding: 10px; color: white; background-color: #006600; border-radius: 5px; margin-top: 15px;"> Update Rate Details</div>
-    </div>
-</div>
-<div id="editBedroom" style="display: none;">
-    <div class="form-group editBedroomDetail" style="border: 1px solid black; border-radius: 5px; padding: 10px; background-color: #f5f5ef;">
-        <div class="row">
-            <div class="form-group col-sm-6 col-xs-12">
-                <label for="bedroomTitle">Title *</label>
-                <input type="text" class="form-control" id="e_bedroomTitle">
-                <input type="hidden" id="editBedroomId"/>
-            </div>
-            <div class="form-group col-sm-6 col-xs-12">
-                <label for="bedroomType">Type *</label>
-                <div class="contactSelect">
-                    <select name="bedroomType" id="e_bedroomType" class="form-control">
-                        <option value="0">Type</option>
-                        <option value="Bedroom">Bedroom</option>
-                        <option value="Studio">Studio</option>
-                        <option value="Other">Other</option>
-
-                    </select>
-                </div>
-            </div>
-            <div class="form-group col-sm-12 col-xs-12">
-                <label for="bedroomDescription">Description *</label>
-                <input type="text" class="form-control" id="e_bedroomDescription">
-            </div>
-            <div class="form-group col-sm-2 col-xs-12">
-                <label for="bedKing">king</label>
-                <div class="contactSelect">
-                    <select name="bedKing" id="e_bedKing" class="form-control">
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                    </select>
-                </div>
-            </div>
-            <div class="form-group col-sm-2 col-xs-12">
-                <label for="bedQueen">queen</label>
-                <div class="contactSelect">
-                    <select name="bedQueen" id="e_bedQueen" class="form-control">
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="form-group col-sm-2 col-xs-12">
-                <label for="bedDouble">double</label>
-                <div class="contactSelect">
-                    <select name="bedDouble" id="e_bedDouble" class="form-control">
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                    </select>
-                </div>
-            </div>
-            <div class="form-group col-sm-2 col-xs-12">
-                <label for="bedTwin">twin</label>
-                <div class="contactSelect">
-                    <select name="bedTwin" id="e_bedTwin" class="form-control">
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                    </select>
-                </div>
-            </div>
-            <div class="form-group col-sm-2 col-xs-12">
-                <label for="bedBunk">bunk bed</label>
-                <div class="contactSelect">
-                    <select name="bedBunk" id="e_bedBunk" class="form-control">
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="form-group col-sm-2 col-xs-12">
-                <label for="bedChild">child bed</label>
-                <div class="contactSelect">
-                    <select name="bedChild" id="e_bedChild" class="form-control">
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                    </select>
-                </div>
-            </div>
-            <div class="form-group col-sm-2 col-xs-12">
-                <label for="bedFuton">sleep sofa/futon</label>
-                <div class="contactSelect">
-                    <select name="bedFuton" id="e_bedFuton" class="form-control">
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                    </select>
-                </div>
-            </div>
-            <div class="form-group col-sm-2 col-xs-12">
-                <label for="bedMurphy">murphy bed</label>
-                <div class="contactSelect">
-                    <select name="bedMurphy" id="e_bedMurphy" class="form-control">
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                    </select>
-                </div>
-            </div>
-            <div class="form-group col-sm-2 col-xs-12">
-                <label for="bedCrib">baby crib</label>
-                <div class="contactSelect">
-                    <select name="bedCrib" id="e_bedCrib" class="form-control">
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-
-        <label for="bedroomAmenities">Amenities</label>
-        <div id="e_bedroomAmenities" style="border: 1px solid black; border-radius: 5px; background-color: white; color: black; padding: 5px;"></div>
-        <input id="e_amenityCSV" type="hidden"/>
-        <div id="e_cancelBedroom" style="float: left; padding: 10px; color: white; background-color: #990000; border-radius: 5px; margin-top: 15px;"> Cancel</div>
-        <div id="updateBedroom" style="float: right; padding: 10px; color: white; background-color: #006600; border-radius: 5px; margin-top: 15px;"> Update Bedroom Details</div>
-    </div>
-
-</div>
-
-
-<div id="editBathroom">
-    <div class="form-group editBathroomDetail" style="border: 1px solid black; border-radius: 5px; padding: 10px; background-color: #f5f5ef;">
-        <div class="row">
-            <div class="form-group col-sm-6 col-xs-12">
-                <label for="bedroomTitle" ">Title *</label>
-                <input type="text" class="form-control" id="e_bathroomTitle">
-                <input type="hidden" id="editBathroomId"/>
-            </div>
-            <div class="form-group col-sm-6 col-xs-12">
-                <label for="bedroomType">Type *</label>
-                <div class="contactSelect">
-                    <select name="bathroomType" id="e_bathroomType" class="form-control">
-
-                        <option value="Full">Full</option>
-                        <option value="Half">Half</option>
-                        <option value="Shower">Shower</option>
-                    </select>
-                </div>
-            </div>
-            <div class="form-group col-sm-12 col-xs-12">
-                <label for="bedroomDescription">Description *</label>
-                <input type="text" class="form-control" id="e_bathroomDescription">
+                <label for="bathroomAmenities">Amenities</label>
+                <div id="e_bathroomAmenities" style="border: 1px solid black; border-radius: 5px; background-color: white; color: black; padding: 5px;"></div>
+                <div id="e_cancelBathroom" style="float: left; padding: 10px; color: white; background-color: #990000; border-radius: 5px; margin-top: 15px;"> Cancel</div>
+                <div id="updateBathroom" style="float: right; padding: 10px; color: white; background-color: #006600; border-radius: 5px; margin-top: 15px;"> Update Bathroom Details</div>
             </div>
         </div>
 
 
-        <label for="bathroomAmenities">Amenities</label>
-        <div id="e_bathroomAmenities" style="border: 1px solid black; border-radius: 5px; background-color: white; color: black; padding: 5px;"></div>
-        <div id="e_cancelBathroom" style="float: left; padding: 10px; color: white; background-color: #990000; border-radius: 5px; margin-top: 15px;"> Cancel</div>
-        <div id="updateBathroom" style="float: right; padding: 10px; color: white; background-color: #006600; border-radius: 5px; margin-top: 15px;"> Update Bathroom Details</div>
-    </div>
-</div>
 
 
+        <!-- HEADER -->
+        <header id="pageTop" class="header">
+            <!-- TOP INFO BAR -->
 
+            <div class="navbar-dashboard-area">
+                <nav class="navbar navbar-default lightHeader navbar-dashboard" role="navigation">
+                    <div class="container">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-dash">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse navbar-dash">
+                            <ul class="nav navbar-nav mr0" style="padding-top: 50px;">
+                                <li>
+                                    <a href="dashboard.html"><i class="fa fa-tachometer icon-dash" aria-hidden="true"></i> Dashboard</a>
+                                </li>
+                                <li class="active">
+                                    <a href="listings.html"><i class="fa fa-list-ul icon-dash" aria-hidden="true"></i> Listings </a>
+                                </li>
 
-<!-- HEADER -->
-<header id="pageTop" class="header">
-    <!-- TOP INFO BAR -->
+                                <li>
+                                    <a href="messages.html"><i class="fa fa-envelope icon-dash" aria-hidden="true"></i> Messages </a>
+                                </li>
+                                <li><a href="profile.html"><i class="fa fa-user icon-dash" aria-hidden="true"></i> Personal Details</a></li>
+                                <li><a href="ticketing/index.html"><i class="fa fa-bug icon-dash" aria-hidden="true"></i> Tickets</a></li>
+                                <li style="padding-left: 75px; padding-top: 10px;">Welcome back <span id="welcomeUser"></span>!</li>
 
-    <div class="navbar-dashboard-area">
-        <nav class="navbar navbar-default lightHeader navbar-dashboard" role="navigation">
+                            </ul>
+
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- DASHBOARD ORDERS SECTION -->
+        <section class="clearfix bg-dark listingSection">
+
             <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-dash">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse navbar-dash">
-                    <ul class="nav navbar-nav mr0" style="padding-top: 50px;">
-                        <li>
-                            <a href="dashboard.html"><i class="fa fa-tachometer icon-dash" aria-hidden="true"></i> Dashboard</a>
-                        </li>
-                        <li class="active">
-                            <a href="listings.html"><i class="fa fa-list-ul icon-dash" aria-hidden="true"></i> Listings </a>
-                        </li>
-
-                        <li>
-                            <a href="messages.html" ><i class="fa fa-envelope icon-dash" aria-hidden="true"></i> Messages </a>
-                        </li>
-                        <li><a href="profile.html"><i class="fa fa-user icon-dash" aria-hidden="true"></i> Personal Details</a></li>
-                        <li><a href="ticketing/index.html"><i class="fa fa-bug icon-dash" aria-hidden="true"></i> Tickets</a></li>
-                        <li style="padding-left: 75px; padding-top: 10px;">Welcome back <span id="welcomeUser"></span>!</li>
-
-                    </ul>
-
-                </div>
-            </div>
-        </nav>
-    </div>
-</header>
-<!-- DASHBOARD ORDERS SECTION -->
-<section class="clearfix bg-dark listingSection">
-
-<div class="container">
-<div class="row">
-<div class="col-xs-12">
-<form action="" method="" class="listing__form">
-<div class="dashboardPageTitle text-center">
-    <div class="navbar-dashboard-area" style="background-color: #3258b5;">
-        <nav class="navbar navbar-default lightHeader navbar-dashboard" role="navigation">
-            <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-dash">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse navbar-dash">
-                    <ul class="nav navbar-nav mr0" style="padding-top: 50px; ">
-                        <li class="active aboutLi">
-                            <a href="#" id="aboutLink" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-home icon-dash" aria-hidden="true"></i>&nbsp;&nbsp;About </a>
-                        </li>
-                        <li class="active addLi">
-                            <a href="#" id="addressLink" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-compass icon-dash" aria-hidden="true"></i>&nbsp;&nbsp;Location </a>
-                        </li>
-                        <li class="amenLi">
-                            <a href="#" id="amenityLink"><i class="fa fa-tags icon-dash" aria-hidden="true"></i>&nbsp;&nbsp;Amenities</a>
-                        </li>
-                        <li class="ownLi"><a href="#" id="ownerLink"><i class="fa fa-male icon-dash" aria-hidden="true"></i>&nbsp;&nbsp;Owner</a></li>
-                        <li class="bedLi"><a href="#" id="bedroomLink"><i class="fa fa-bed icon-dash" aria-hidden="true"></i>&nbsp;&nbsp;Bed & Bath</a></li>
-                        <li class="rateLi"><a href="#" id="rateLink"><i class="fa fa-money icon-dash" aria-hidden="true"></i>&nbsp;&nbsp;Rates & Fees</a></li>
-                        <li class="picLi"><a href="#" id="pictureLink"><i class="fa fa-camera icon-dash" aria-hidden="true"></i>&nbsp;&nbsp;Pictures</a></li>
-                        <li class="linkLi"><a href="#" id="listingLink"><i class="fa fa-share-square-o icon-dash" aria-hidden="true"></i>&nbsp;&nbsp;View </a></li>
-                        <li class="deacLi"><a href="#" id="deactivateLink" style="color: red;"><i class="fa fa-ban icon-dash" aria-hidden="true"></i>&nbsp;&nbsp;Deactivate </a></li>
-                    </ul>
-                    <input type="hidden" id="unitId"/>
-                    <input type="hidden" id="listingId"/>
-                    <input type="hidden" id="userId"/>
-                </div>
-            </div>
-        </nav>
-    </div>
-</div>
-<div class="dashboardBoxBg mb30 aboutInfo" style="width: 100%;">
-    <div class="profileIntro paraMargin">
-        <h3>About</h3>
-        <div class="form-group col-xs-12 row">
-            <div class="errMsg" id="errMsgAbout"></div>
-        </div>
-        <div class="form-group col-xs-12 row">
-            <div id="listingSummary"></div>
-        </div>
-        <div class="row aboutInfo2">
-            <div class="form-group col-sm-2 col-xs-12">
-                <label for="listingCategory">Category</label>
-                <div class="contactSelect">
-                    <select multiple name="listingCategory" id="listingCategory" class="form-control about-form" style="height: 250px;">
-                        <optgroup label="Housing"></optgroup>
-                        <option value="APARTMENT">Apartment</option>
-                        <option value="BUNGALOW">Bungalow</option>
-                        <option value="CHALET">Chalet</option>
-                        <option value="CHATEU">Chateu</option>
-                        <option value="ESTATE">Estate</option>
-                        <option value="HOTEL">Hotel</option>
-                        <option value="HOTELSUITE">Hotel Suite</option>
-                        <option value="PENTHOUSE">Penthouse</option>
-                        <option value="ISLAND">Private Island</option>
-                        <option value="RESORT">Resort</option>
-                        <option value="VILLA">Villa</option>
-                        <optgroup label="Cars"></optgroup>
-                        <option value="EXOTIC_CAR">Exotic Car</option>
-                        <optgroup label="Jets"></optgroup>
-                        <option value="PRIVATE_JET">Private Jet</option>
-                        <optgroup label="Yachts"></optgroup>
-                        <option value="YACHT">Yacht</option>
-                    </select>
-                </div>
-            </div>
-            <div class="form-group col-sm-5 col-xs-12">
-                <label for="listingTitle">Headline</label>
-                <input type="text" class="form-control about-form" id="listingTitle" placeholder="Title">
-            </div>
-            <div class="form-group col-sm-4 col-xs-12">
-                <label for="listingTitle">Property Name (internal)</label>
-                <input type="text" class="form-control about-form" id="listingPropertyName" placeholder="Property Name">
-            </div>
-            <div class="form-group col-sm-1 col-xs-12">
-                <label for="listingTitle">Featured</label>
-                <input type="checkbox" class="form-control" id="listingFeatured">
-            </div>
-            <div class="form-group col-sm-2 col-xs-12">
-                <label for="listingCategory">Status</label>
-                <div class="contactSelect">
-                    <select name="listingStatus" id="listingStatus" class="form-control about-form">
-                        <option value="0">Select Status</option>
-                        <option value="Incomplete">Incomplete</option>
-                        <option value="Pending">Pending</option>
-                        <option value="Active">Active</option>
-                        <option value="Inactive">Inactive</option>
-                        <option value="Ghost">Ghost</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="form-group col-sm-2 col-xs-12">
-                <label for="listingTitle">Sq. Ft.</label>
-                <input type="text" class="form-control about-form" id="listingSqFt" placeholder="Sq. Ft." onkeypress="return CheckIfInt(event, 1, 5);">
-            </div>
-            <div class="form-group col-sm-2 col-xs-12">
-                <label for="listingTitle">Max Occupancy</label>
-                <input type="text" class="form-control about-form" id="listingMaxOccupancy" placeholder="Max Occupants" onkeypress="return CheckIfInt(event, 1, 5);">
-            </div>
-            <!-- <div class="form-group col-sm-2 col-xs-12">
-                <label for="listingTitle">View</label>
-                <div class="contactSelect">
-                    <select name="listingView" id="listingView" class="form-control">
-                        <option value="0">Select View</option>
-                        <option value="None">No View</option>
-                        <option value="Sunset">Sunset</option>
-                        <option value="Sunrise">Sunrise</option>
-                    </select>
-                </div>
-            </div>-->
-            <div class="form-group col-sm-2 col-xs-12">
-                <label for="listingBeds">Bed</label>
-                <input type="text" class="form-control about-form" id="listingBeds" placeholder="#" onkeypress="return CheckIfFloat(event, 1, 5);">
-            </div>
-            <div class="form-group col-sm-2 col-xs-12">
-                <label for="listingBaths">Bath</label>
-                <input type="text" class="form-control about-form" id="listingBaths" placeholder="#" onkeypress="return CheckIfFloat(event, 1, 5);">
-            </div>
-            <!--
-
-            -->
-            <div class="form-group col-sm-4 col-xs-12" style="display: inline;">
-                <label for="checkInHour">Check In</label>
-                <select class="form-control ci-co about-form" id="checkInHour">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option selected value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                </select> :
-                <select class="form-control ci-co about-form" id="checkInMinute">
-                    <option selected value="00">00</option>
-                    <option value="15">15</option>
-                    <option value="30">30</option>
-                    <option value="45">45</option>
-
-                </select>
-
-                <select class="form-control ci-co about-form" id="checkInAMPM">
-                    <option value="AM">AM</option>
-                    <option selected value="PM">PM</option>
-
-                </select>
-
-
-            </div>
-            <div class="form-group col-sm-4 col-xs-12" style="display: inline;">
-                <label for="checkOutHour">Check Out</label>
-                <select class="form-control ci-co about-form" id="checkOutHour">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option selected value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                </select> :
-                <select class="form-control ci-co about-form" id="checkOutMinute">
-                    <option selected value="00">00</option>
-                    <option value="15">15</option>
-                    <option value="30">30</option>
-                    <option value="45">45</option>
-
-                </select>
-
-                <select class="form-control ci-co about-form" id="checkOutAMPM">
-                    <option selected value="AM">AM</option>
-                    <option value="PM">PM</option>
-
-                </select>
-
-            </div>
-            <div class="form-group col-xs-2">
-                <label for="listingDescription">Listing Number: </label>
-                <label for="listingDescription" id="listingNumber" style="font-weight: 700; font-size: 24px; padding-top: 10px;"></label>
-
-            </div>
-
-            <div class="form-group col-xs-12">
-                <label for="listingDescription">Describe the listing</label>
-                <textarea class="form-control about-form" rows="12" id="listingDescription" placeholder="Describe the listing"></textarea>
-            </div>
-
-            <div class="form-group col-xs-12">
-                <label for="listingTags">Tags</label>
-                <input class="form-control about-form"  id="listingTags" placeholder="Tags">
-            </div>
-            <div class="form-group col-xs-4">
-                <div id="saveAbout">Save</div>
-            </div>
-
-            <!-- <div class="form-group col-sm-9 col-xs-12">
-                <label for="listingTags">Tags</label>
-                <input type="text" class="form-control" id="listingTags" placeholder="Add Tags">
-            </div>
-            <div class="form-group col-sm-3 col-xs-12">Related I</div>
-            <div class="form-group col-sm-3 col-xs-12">Related II</div>
-            <div class="form-group col-sm-3 col-xs-12">Related III</div>
-            <div class="form-group col-sm-3 col-xs-12">Related IV</div>-->
-
-        </div>
-    </div>
-</div>
-<div class="dashboardBoxBg mb30 addressInfo">
-    <div class="profileIntro paraMargin">
-        <h3>Location</h3>
-        <div class="form-group col-xs-12 row">
-            <div class="errMsg" id="errMsgAddress"></div>
-        </div>
-
-        <div class="row listingAddressInfo">
-            <div class="form-group col-sm-6 col-xs-12">
-                <label for="geoSubDivision1">Geographical Subdivision</label>
-                <select class="form-control location-form" id="geoSubDivision1">
-                    <option value="0">Select</option>
-                    <optgroup label="North America">
-                        <option value="7">Canada</option>
-                        <option value="8">Caribbean</option>
-                        <option value="9">Central America</option>
-                        <option value="10">Hawaii</option>
-                        <option value="11">Mexico</option>
-                        <option value="12">United States</option>
-                    </optgroup>
-                    <optgroup label="Europe">
-                        <option value="13">France</option>
-                        <option value="14">Greece</option>
-                        <option value="15">Italy</option>
-                        <option value="16">Spain</option>
-                        <option value="17">Switzerland</option>
-                    </optgroup>
-                    <optgroup label="Asia">
-                        <option value="18">Indian Ocean</option>
-                        <option value="19">Indonesia</option>
-                        <option value="20">Thailand</option>
-                    </optgroup>
-                    <optgroup label="Africa">
-                        <option value="21">South Africa</option>
-                    </optgroup>
-                    <optgroup label="Oceania">
-                        <option value="22">New Zealand</option>
-                        <option value="23">South Pacific</option>
-                    </optgroup>
-                    <optgroup label="Middle East">
-                        <option value="24">United Arab Emirates</option>
-                    </optgroup>
-                </select>
-                <select id="geoSubDivision2" class="form-control location-form">
-                    <option value="0">Select Region</option>
-                </select>
-                <select id="geoSubDivision3" class="form-control location-form">
-
-                </select>
-                <input type="hidden" id="myGeoBreakdown"/>
-            </div>
-            <!--<div class="form-group col-sm-6 col-xs-12">
-                <label for="destinationType">Destination Category</label>
-                <select multiple id="destinationType"class="form-control" style="height: 150px;">
-                    <option value="Beachfront">Beachfront Escapes</option>
-                    <option value="CityBreaks">City Breaks</option>
-                    <option value="Corporate">Corporate Retreats</option>
-                    <option value="Family">Family Friendly</option>
-                    <option value="Honeymoon">Honeymoon Hotspots</option>
-                </select>
-            </div>-->
-            <div class="form-group col-sm-6 col-xs-12">
-                <label for="listingAddress">Address</label>
-                <input type="text" class="form-control location-form" id="listingAddress" placeholder="Address">
-            </div>
-            <div class="form-group col-sm-6 col-xs-12">
-                <label for="listingAddress2">Address 2</label>
-                <input type="text" class="form-control location-form" id="listingAddress2" placeholder="Address 2">
-            </div>
-            <div class="form-group col-sm-3 col-xs-12">
-                <label for="listingCountry">Country</label>
-                <div class="contactSelect" id="listingCountryDiv">
-                    <select name="listingCountry" id="listingCountry" class="form-control location-form">
-                        <option value="">Country</option>
-                        <option value="USA">United States</option>
-                        <option value="CAN">Canada</option>
-                        <option value="OTHR">Other</option>
-                    </select>
-                </div>
-            </div>
-            <div class="form-group col-sm-3 col-xs-12">
-                <label for="listingCity">City</label>
-                <input type="text" class="form-control location-form" id="listingCity" placeholder="City">
-            </div>
-            <div class="form-group col-sm-3 col-xs-12">
-                <label for="listingState">State</label>
-                <!--<div class="contactSelect" id="listingStateDiv">
-                    <select name="listingState" id="listingState" class="form-control">
-                        <option value="0">State</option>
-                        <option value="CA">California</option>
-                        <option value="NY">New York</option>
-                        <option value="PA">Pennsylvania</option>
-                    </select>
-                </div>-->
-                <input type="text" class="form-control location-form" id="listingState" placeholder="State"/>
-            </div>
-            <div class="form-group col-sm-3 col-xs-12">
-                <label for="listingPostal">Zip/Postal Code</label>
-                <input type="text" class="form-control location-form" id="listingPostal" placeholder="Postal Code">
-            </div>
-            <div class="form-group col-sm-3 col-xs-12">
-                <label for="listingLatitude">Latitude</label>
-                <input type="text" class="form-control location-form" id="listingLatitude" placeholder="Latitude" >
-                <input type="hidden" id="lat"/>
-            </div>
-            <div class="form-group col-sm-3 col-xs-12">
-                <label for="listingLongitude">Longitude</label>
-                <input type="text" class="form-control location-form" id="listingLongitude" placeholder="Longitude" >
-                <input type="hidden" id="lng"/>
-            </div>
-            <div class="form-group col-sm-2 col-xs-12">
-                <label for="listingBaseCurrency">Base Currency</label>
-                <div class="contactSelect">
-                    <select name="listingBaseCurrency" id="listingBaseCurrency" class="form-control location-form">
-                        <option value="">Currency</option>
-                        <option value="USD">$ - U.S. Dollars </option>
-                        <option value="CHF">&#8355; - Swiss Franc</option>
-                        <option value="EUR">&euro; - Euro</option>
-                        <option value="GBP">&#xa3; - British Pound</option>
-                        <option value="JPY">&yen; - Yen</option>
-                        <option value="CAD">C$ - Canadian Dollar</option>
-
-                    </select>
-                </div>
-            </div>
-            <div class="form-group col-sm-2 col-xs-12">
-                <label for="listingTaxPercentage">Tax %</label>
-                <div class="input-group">
-                    <input type="text" maxlength="5" class="form-control location-form" id="listingTaxPercentage" placeholder="Tax %" onkeypress="return CheckIfFloat(event, 1, 5);">
-                    <span class="input-group-addon">%</span>
-                </div>
-                
-            </div>
-            <div class="form-group col-sm-2 col-xs-12">
-                <label for="listingTaxPercentage">Service Fee (%)</label>
-                <div class="input-group">
-                    <input type="text" class="form-control location-form" id="listingServiceFee" maxlength="2" placeholder="Service %" onkeypress="return CheckIfInt(event, 1, 2);">
-                    <span class="input-group-addon">%</span>
-                </div>
-                
-            </div>
-
-            <!--<div class="form-group col-xs-6">
-                **Map Adjustment Stuff Here**
-            </div>-->
-            <div class="form-group col-xs-12">
-                <div id="map" style="position: relative; margin: 0; padding: 0; height: 538px; max-width: none; display: none"></div>
-            </div>
-            <div class="form-group col-xs-4">
-                <div id="saveLocation">Save</div>
-            </div>
-
-        </div>
-        <h3>Points of Interest</h3>
-        <div class="row pointsOfInterest">
-            <div class="form-group">
-
-                <div id="addPOIDetail" style="padding-left: 40px;"> + Add Point of Interest</div>
-            </div>
-            <div class="form-group addPOIDetail" style="display: none; border: 1px solid black; border-radius: 5px; padding: 10px; background-color: #f5f5ef;">
-                <label for="poiTitle">Point of Interest & Distance</label>
-                <input type="text" class="form-control" id="poiTitle">
-                <div id="cancelPOI" style="float: left; padding: 10px; color: white; background-color: #990000; border-radius: 5px; margin-top: 15px;"> Cancel</div>
-                <div id="insertPOI" style="float: right; padding: 10px; color: white; background-color: #006600; border-radius: 5px; margin-top: 15px;"> Add Point of Interest</div>
-            </div>
-
-            <div class="form-group">
-                <div id="poiListingSection"></div>
-                <input id="poiCount" type="hidden" value="0"/>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="dashboardBoxBg mb30 amenityInfo">
-    <div class="profileIntro paraMargin">
-        <h2>Amenities</h2>
-        <div class="row listingAmenities" style="margin-top: -60px">
-            <div class="form-group col-sm-12 col-xs-12">
-                <div id="amenityListing"></div>
-                <input id="amenityCount" type="hidden" value="0"/>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="dashboardBoxBg mb30 ownerInfo" style="width: 100%;">
-    <div class="profileIntro paraMargin">
-        <h3>Owner</h3>
-        <div class="form-group col-xs-12 row">
-            <div class="errMsg" id="errMsgOwnerAddress"></div>
-        </div>
-        <div class="form-group col-sm-6 col-xs-12">
-            <label for="ownerFName">First Name</label>
-            <input type="text" class="form-control owner-form" id="ownerFName" placeholder="First Name">
-        </div>
-        <div class="form-group col-sm-6 col-xs-12">
-            <label for="ownerLName">Last Name</label>
-            <input type="text" class="form-control owner-form" id="ownerLName" placeholder="Last Name">
-        </div>
-        <div class="form-group col-sm-6 col-xs-12">
-            <label for="ownerPhone">Phone</label>
-           
-                <input type="text" class="form-control owner-form" id="ownerPhone" placeholder="Phone" aria-describedby="ownerPhonePrefix">
-            
-
-        </div>
-
-        <div class="form-group col-sm-6 col-xs-12">
-            <label for="ownerEmail">Email</label>
-            <input type="text" class="form-control owner-form" id="ownerEmail" placeholder="Email">
-        </div>
-        <div class="form-group col-sm-6 col-xs-12">
-            <label for="ownerCompany">Company</label>
-            <input type="text" class="form-control owner-form" id="ownerCompany" placeholder="Company">
-        </div>
-        <div class="form-group col-sm-6 col-xs-12">
-            <label for="ownerAddress">Address</label>
-            <input type="text" class="form-control owner-form" id="ownerAddress" placeholder="Address">
-        </div>
-        <div class="form-group col-sm-4 col-xs-12">
-            <label for="ownerAddress2">Address 2</label>
-            <input type="text" class="form-control owner-form" id="ownerAddress2" placeholder="Address 2">
-        </div>
-        <div class="form-group col-sm-2 col-xs-12">
-            <label for="ownerCountry">Country</label>
-            <div class="contactSelect" id="ownerCountryDiv">
-                <select name="listingCountry" id="ownerCountry" class="form-control owner-form">
-                    <option value="0">Country</option>
-                    <option value="USA">United States</option>
-                    <option value="CAN">Canada</option>
-                    <option value="OTHR">Other</option>
-                </select>
-            </div>
-        </div>
-        <div class="form-group col-sm-3 col-xs-12">
-            <label for="ownerCity">City</label>
-            <input type="text" class="form-control owner-form" id="ownerCity" placeholder="City">
-        </div>
-        <div class="form-group col-sm-3 col-xs-12">
-            <label for="ownerState">State</label>
-            <!--<div class="contactSelect" id="ownerStateDiv">
-                <select name="ownerState" id="ownerState" class="form-control">
-                    <option value="0">State</option>
-                    <option value="CA">California</option>
-                    <option value="NY">New York</option>
-                    <option value="PA">Pennsylvania</option>
-                </select>
-            </div>-->
-            <input type="text" class="form-control owner-form" id="ownerState" placeholder="State">
-        </div>
-        <div class="form-group col-sm-4 col-xs-12">
-            <label for="ownerPostal">Zip/Postal Code</label>
-            <input type="text" class="form-control owner-form" id="ownerPostal" placeholder="Postal Code">
-        </div>
-        <div class="form-group col-sm-4 col-xs-12">
-            <label for="ownerPostal">Commission %</label>
-            <div class="input-group">
-                <input type="text" class="form-control owner-form" id="ownerCommission" placeholder="Commission %" aria-describedby="ownComm">
-                <span class="input-group-addon" id="ownComm">%</span>
-            </div>
-        </div>
-        <div class="form-group col-sm-4 col-xs-12">
-            <label for="ownerPostal">Head Agent</label>
-            <div class="contactSelect">
-                <select name="ownerAgent" id="ownerAgent" class="form-control owner-form">
-                    <option value="0">Select Agent</option>
-                    <option value="Niko">Niko</option>
-                    <option value="Dave">Dave</option>
-                    <option value="Aras">Aras</option>
-                    <option value="Danelle">Danelle</option>
-                    <option value="Pablo">Pablo</option>
-                    <option value="Ricky">Ricky</option>
-                </select>
-            </div>
-        </div>
-
-    </div>
-    <div class="profileIntro paraMargin">
-        <h3>Reservations</h3>
-        <div class="form-group col-sm-12 col-xs-12">
-
-            <input type="checkbox" id="reservationSameAsOwner" placeholder="Same as owner" style="display: inline-block;">
-            <label for="reservationSameAsOwner" style="display: inline-block;">Use owner info</label>
-        </div>
-        <div id="resInfo">
-            <div class="form-group col-sm-6 col-xs-12">
-                <label for="reservationFName">First Name</label>
-                <input type="text" class="form-control owner-form" id="reservationFName" placeholder="First Name">
-            </div>
-            <div class="form-group col-sm-6 col-xs-12">
-                <label for="reservationLName">Last Name</label>
-                <input type="text" class="form-control owner-form" id="reservationLName" placeholder="Last Name">
-            </div>
-            <div class="form-group col-sm-4 col-xs-12">
-                <label for="reservationCompany">Company</label>
-                <input type="text" class="form-control owner-form" id="reservationCompany" placeholder="Company">
-            </div>
-            <div class="form-group col-sm-4 col-xs-12">
-                <label for="reservationPhone">Phone</label>
-                <input type="text" class="form-control owner-form" id="reservationPhone" placeholder="Phone Number">
-            </div>
-            <div class="form-group col-sm-4 col-xs-12">
-                <label for="reservationEmail">Email</label>
-                <input type="text" class="form-control owner-form" id="reservationEmail" placeholder="Email">
-            </div>
-        </div>
-    </div>
-    <div class="profileIntro paraMargin">
-        <h3>Concierge</h3>
-        <div class="form-group col-sm-12 col-xs-12">
-
-            <input type="checkbox" id="conciergeSameAsOwner" placeholder="Same as owner" style="display: inline-block;">
-            <label for="conciergeSameAsOwner" style="display: inline-block;">Use owner info</label>
-        </div>
-        <div id="concInfo">
-            <div class="form-group col-sm-6 col-xs-12">
-                <label for="reservationFName">First Name</label>
-                <input type="text" class="form-control owner-form" id="conciergeFName" placeholder="First Name">
-            </div>
-            <div class="form-group col-sm-6 col-xs-12">
-                <label for="reservationLName">Last Name</label>
-                <input type="text" class="form-control owner-form" id="conciergeLName" placeholder="Last Name">
-            </div>
-            <div class="form-group col-sm-4 col-xs-12">
-                <label for="conciergeCompany">Company</label>
-                <input type="text" class="form-control owner-form" id="conciergeCompany" placeholder="Company">
-            </div>
-            <div class="form-group col-sm-4 col-xs-12">
-                <label for="reservationPhone">Phone</label>
-                <input type="text" class="form-control owner-form" id="conciergePhone" placeholder="Phone Number">
-            </div>
-            <div class="form-group col-sm-4 col-xs-12">
-                <label for="reservationEmail">Email</label>
-                <input type="text" class="form-control owner-form" id="conciergeEmail" placeholder="Email">
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="form-group col-xs-4">
-            <div id="saveOwner">Save</div>
-        </div>
-    </div>
-    <div class="profileIntro paraMargin">
-        <h3>Website Information</h3>
-        <div class="row listingWebsites">
-            <div class="form-group">
-
-                <div id="addWebsiteDetail" style="padding-left: 40px;"> + Add Related Website</div>
-            </div>
-            <div class="form-group addWebsiteDetail" style="display: none; border: 1px solid black; border-radius: 5px; padding: 10px; background-color: #f5f5ef;">
-                <label for="websiteTitle">Nickname *</label>
-                <input type="text" class="form-control" id="websiteTitle">
-                <label for="websiteURL">URL *</label>
-                <input type="text" class="form-control" id="websiteURL">
-                <div id="cancelWebsite" style="float: left; padding: 10px; color: white; background-color: #990000; border-radius: 5px; margin-top: 15px;"> Cancel</div>
-                <div id="insertWebsite" style="float: right; padding: 10px; color: white; background-color: #006600; border-radius: 5px; margin-top: 15px;"> Add Website</div>
-            </div>
-
-            <div class="form-group">
-                <div id="websiteListingSection"></div>
-                <input id="websiteCount" type="hidden" value="0"/>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="dashboardBoxBg mb30 bedroomInfo" style="width: 100%; padding-bottom: 150px;">
-<div class="form-group col-xs-12">
-    <div class="errMsg" id="bedError"></div>
-</div>
-<div class="profileIntro paraMargin">
-    <h2>Bedrooms</h2>
-    <div class="row listingBedrooms">
-        <div class="form-group">
-
-            <div id="addBedroomDetail" style="padding-left: 40px;"> + Add Bedroom Detail</div>
-        </div>
-        <div class="form-group addBedroomDetail" style="display: none; border: 1px solid black; border-radius: 5px; padding: 10px; background-color: #f5f5ef;">
-            <div class="row">
-                <div class="form-group col-sm-6 col-xs-12">
-                    <label for="bedroomTitle">Title *</label>
-                    <input type="text" class="form-control" id="bedroomTitle">
-                </div>
-                <div class="form-group col-sm-6 col-xs-12">
-                    <label for="bedroomType">Type *</label>
-                    <div class="contactSelect">
-                        <select name="bedroomType" id="bedroomType" class="form-control">
-                            <option value="0">Type</option>
-                            <option value="Bedroom">Bedroom</option>
-                            <option value="Studio">Studio</option>
-                            <option value="Other">Other</option>
-
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group col-sm-12 col-xs-12">
-                    <label for="bedroomDescription">Description *</label>
-                    <input type="text" class="form-control" id="bedroomDescription">
-                </div>
-                <div class="form-group col-sm-2 col-xs-12">
-                    <label for="bedKing">king</label>
-                    <div class="contactSelect">
-                        <select name="bedKing" id="bedKing" class="form-control">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group col-sm-2 col-xs-12">
-                    <label for="bedQueen">queen</label>
-                    <div class="contactSelect">
-                        <select name="bedQueen" id="bedQueen" class="form-control">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="form-group col-sm-2 col-xs-12">
-                    <label for="bedDouble">double</label>
-                    <div class="contactSelect">
-                        <select name="bedDouble" id="bedDouble" class="form-control">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group col-sm-2 col-xs-12">
-                    <label for="bedTwin">twin</label>
-                    <div class="contactSelect">
-                        <select name="bedTwin" id="bedTwin" class="form-control">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group col-sm-2 col-xs-12">
-                    <label for="bedBunk">bunk bed</label>
-                    <div class="contactSelect">
-                        <select name="bedBunk" id="bedBunk" class="form-control">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="form-group col-sm-2 col-xs-12">
-                    <label for="bedChild">child bed</label>
-                    <div class="contactSelect">
-                        <select name="bedChild" id="bedChild" class="form-control">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group col-sm-2 col-xs-12">
-                    <label for="bedFuton">sleep sofa/futon</label>
-                    <div class="contactSelect">
-                        <select name="bedFuton" id="bedFuton" class="form-control">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group col-sm-2 col-xs-12">
-                    <label for="bedMurphy">murphy bed</label>
-                    <div class="contactSelect">
-                        <select name="bedMurphy" id="bedMurphy" class="form-control">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group col-sm-2 col-xs-12">
-                    <label for="bedCrib">baby crib</label>
-                    <div class="contactSelect">
-                        <select name="bedCrib" id="bedCrib" class="form-control">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-
-            <label for="bedroomAmenities">Amenities</label>
-            <div id="bedroomAmenities" style="border: 1px solid black; border-radius: 5px; background-color: white; color: black; padding: 5px;"></div>
-            <input id="amenityCSV" type="hidden"/>
-            <div id="cancelBedroom" style="float: left; padding: 10px; color: white; background-color: #990000; border-radius: 5px; margin-top: 15px;"> Cancel</div>
-            <div id="insertBedroom" style="float: right; padding: 10px; color: white; background-color: #006600; border-radius: 5px; margin-top: 15px;"> Add Bedroom Details</div>
-        </div>
-
-
-    </div>
-</div>
-<div class="profileIntro paraMargin" style="padding-top: 30px;">
-    <div class="form-group col-xs-12">
-        <div class="form-group">
-            <hr/>
-            <div id="bedroomListingSection"></div>
-            <input id="bedCount" type="hidden" value="0"/>
-
-        </div>
-    </div>
-</div>
-
-<div class="profileIntro paraMargin">
-    <div class="form-group col-xs-12">
-        <div class="errMsg" id="bathError"></div>
-    </div>
-    <h2>Bathrooms</h2>
-    <div class="row listingBathrooms">
-        <div class="form-group">
-
-            <div id="addBathroomDetail" style="padding-left: 40px;"> + Add Bathroom Detail</div>
-        </div>
-        <div class="form-group addBathroomDetail" style="display: none; border: 1px solid black; border-radius: 5px; padding: 10px; background-color: #f5f5ef;">
-            <div class="row">
-                <div class="form-group col-sm-6 col-xs-12">
-                    <label for="bedroomTitle" ">Title *</label>
-                    <input type="text" class="form-control" id="bathroomTitle">
-                </div>
-                <div class="form-group col-sm-6 col-xs-12">
-                    <label for="bedroomType">Type *</label>
-                    <div class="contactSelect">
-                        <select name="bathroomType" id="bathroomType" class="form-control">
-
-                            <option value="Full">Full</option>
-                            <option value="Half">Half</option>
-                            <option value="Shower">Shower</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group col-sm-12 col-xs-12">
-                    <label for="bedroomDescription">Description *</label>
-                    <input type="text" class="form-control" id="bathroomDescription">
-                </div>
-            </div>
-
-
-            <label for="bathroomAmenities">Amenities</label>
-            <div id="bathroomAmenities" style="border: 1px solid black; border-radius: 5px; background-color: white; color: black; padding: 5px;"></div>
-            <div id="cancelBathroom" style="float: left; padding: 10px; color: white; background-color: #990000; border-radius: 5px; margin-top: 15px;"> Cancel</div>
-            <div id="insertBathroom" style="float: right; padding: 10px; color: white; background-color: #006600; border-radius: 5px; margin-top: 15px;"> Add Bathroom Details</div>
-        </div>
-
-
-    </div>
-</div>
-
-<div class="profileIntro paraMargin" style="padding-top: 30px;">
-    <div class="form-group col-xs-12">
-        <div class="form-group">
-            <hr/>
-            <div id="bathroomListingSection"></div>
-            <input id="bathCount" type="hidden" value="0"/>
-
-        </div>
-    </div>
-</div>
-</div>
-
-
-
-<div class="dashboardBoxBg mb30 rateInfo">
-
-    <div class="profileIntro paraMargin">
-        <div class="form-group col-sm-12 col-xs-12" id="rateListing"></div>
-        <div class="row errMsg" id="errMsgRates"></div>
-        <div class="form-group">
-            <div id="addRateDetail" style="padding-left: 40px;"> + Add New Rate</div>
-        </div>
-        <div class="form-group addRateDetail" style="display: none; border: 1px solid black; border-radius: 5px; padding: 10px; background-color: #f5f5ef;">
-            <div class="row">
-                <div class="form-group col-sm-2 col-xs-12">
-                    <label for="listingTitle">Rate Type</label>
-                    <div class="contactSelect">
-                        <select name="rateType" id="rateType" class="form-control">
-                            <option value="0">Rate Type</option>
-                            <option value="STANDARD">Standard</option>
-                            <option value="HOLIDAY">Holiday</option>
-                            <option value="PEAK">Peak Season</option>
-                            <option value="THANKSGIVING">Thanksgiving</option>
-                            <option value="CHRISTMAS">Christmas</option>
-                            <option value="NEWYEARS">New Years</option>
-                            <option value="SPRINGBREAK">Spring Break</option>
-                            <option value="PRESIDENTS">President's Week</option>
-                            <option value="FALL">Fall Season</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group col-sm-2 col-xs-12">
-                    <label for="rateAmount">Amount</label>
-                    <input type="text" class="form-control" id="rateAmount" placeholder="Rate Amount"  onkeypress="return CheckIfFloat(event, 1, 12);">
-                </div>
-                <div class="form-group col-sm-2 col-xs-12">
-                    <label for="rateStartDate">Start Date</label>
-                    <input type="text" class="form-control" id="rateStartDate" placeholder="Start" readonly>
-                </div>
-                <div class="form-group col-sm-2 col-xs-12">
-                    <label for="rateEndDate">End Date</label>
-                    <input type="text" class="form-control" id="rateEndDate" placeholder="End" readonly>
-                </div>
-                <div class="form-group col-sm-1 col-xs-12">
-                    <label for="rateMinStay">Min Stay</label>
-                    <input type="text" class="form-control" id="rateMinStay" placeholder="Min"  onkeypress="return CheckIfInt(event, 1, 3);">
-                </div>
-                <div class="form-group col-sm-3 col-xs-12">
-                    <label for="cp60">Cancellation Policy (days)</label>
-                    <label class="radio-inline">
-                        <input type="radio" name="optCancel" id="cp60" checked="checked">60
-                    </label>
-                    <label class="radio-inline">
-                        <input type="radio" name="optCancel" id="cp90">90
-                    </label>
-                    <label class="radio-inline">
-                        <input type="radio" name="optCancel" id="cp120">120
-                    </label>
-                </div>
-            </div>
-            <div id="cancelRate" style="float: left; padding: 10px; color: white; background-color: #990000; border-radius: 5px; margin-top: 15px;"> Cancel</div>
-            <div id="insertRate" style="float: right; padding: 10px; color: white; background-color: #006600; border-radius: 5px; margin-top: 15px;"> Add Rate </div>
-        </div>
-
-        <div class="row listingRateInfo2">
-            <div class="form-group col-sm-6 col-xs-12">
-                <div class="form-group col-sm-12 col-xs-12" id="feeListing"></div>
-                <div class="row errMsg" id="errMsgFees"></div>
-                <div class="form-group">
-                    <div id="addFeeDetail" style="padding-left: 40px;"> + Add New Fee</div>
-                </div>
-                <div class="form-group addFeeDetail" style="display: none; border: 1px solid black; border-radius: 5px; padding: 10px; background-color: #f5f5ef;">
-                    <div class="row">
-                        <div class="form-group col-sm-6 col-xs-12">
-                            <label for="listingFeeType">Fees</label>
-                            <div class="contactSelect">
-                                <select name="listingFeeType" id="listingFeeType" class="form-control">
-                                    <option value="0">Type</option>
-                                    <option value="SECURITY">Security Deposit</option>
-                                    <option value="HOUSEKEEPING">Housekeeping</option>
-                                    <option value="CLEANING">Cleaning (Exit)</option>
-                                    <option value="CHEF">Private Chef</option>
-                                    <option value="EVENT">Event Fee</option>
-                                </select>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <form action="" method="" class="listing__form">
+                            <div class="dashboardPageTitle text-center">
+                                <div class="navbar-dashboard-area" style="background-color: #3258b5;">
+                                    <nav class="navbar navbar-default lightHeader navbar-dashboard" role="navigation">
+                                        <div class="container">
+                                            <!-- Brand and toggle get grouped for better mobile display -->
+                                            <div class="navbar-header">
+                                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-dash">
+                                                    <span class="sr-only">Toggle navigation</span>
+                                                    <span class="icon-bar"></span>
+                                                    <span class="icon-bar"></span>
+                                                    <span class="icon-bar"></span>
+                                                </button>
+                                            </div>
+                                            <!-- Collect the nav links, forms, and other content for toggling -->
+                                            <div class="collapse navbar-collapse navbar-dash">
+                                                <ul class="nav navbar-nav mr0" style="padding-top: 50px; ">
+                                                    <li class="active aboutLi">
+                                                        <a href="#" id="aboutLink" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-home icon-dash" aria-hidden="true"></i>&nbsp;&nbsp;About </a>
+                                                    </li>
+                                                    <li class="active addLi">
+                                                        <a href="#" id="addressLink" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-compass icon-dash" aria-hidden="true"></i>&nbsp;&nbsp;Location </a>
+                                                    </li>
+                                                    <li class="amenLi">
+                                                        <a href="#" id="amenityLink"><i class="fa fa-tags icon-dash" aria-hidden="true"></i>&nbsp;&nbsp;Amenities</a>
+                                                    </li>
+                                                    <li class="ownLi"><a href="#" id="ownerLink"><i class="fa fa-male icon-dash" aria-hidden="true"></i>&nbsp;&nbsp;Owner</a></li>
+                                                    <li class="bedLi"><a href="#" id="bedroomLink"><i class="fa fa-bed icon-dash" aria-hidden="true"></i>&nbsp;&nbsp;Bed & Bath</a></li>
+                                                    <li class="rateLi"><a href="#" id="rateLink"><i class="fa fa-money icon-dash" aria-hidden="true"></i>&nbsp;&nbsp;Rates & Fees</a></li>
+                                                    <li class="picLi"><a href="#" id="pictureLink"><i class="fa fa-camera icon-dash" aria-hidden="true"></i>&nbsp;&nbsp;Pictures</a></li>
+                                                    <li class="linkLi"><a href="#" id="listingLink"><i class="fa fa-share-square-o icon-dash" aria-hidden="true"></i>&nbsp;&nbsp;View </a></li>
+                                                    <li class="deacLi"><a href="#" id="deactivateLink" style="color: red;"><i class="fa fa-ban icon-dash" aria-hidden="true"></i>&nbsp;&nbsp;Deactivate </a></li>
+                                                </ul>
+                                                <input type="hidden" id="unitId" />
+                                                <input type="hidden" id="listingId" />
+                                                <input type="hidden" id="userId" />
+                                            </div>
+                                        </div>
+                                    </nav>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group col-sm-6 col-xs-12">
-                            <label for="listingFeeAmount">Amount</label>
-                            <input type="text" class="form-control" id="listingFeeAmount" placeholder="Amount">
-                        </div>
+                            <div class="dashboardBoxBg mb30 aboutInfo" style="width: 100%;">
+                                <div class="profileIntro paraMargin">
+                                    <h3>About</h3>
+                                    <div class="form-group col-xs-12 row">
+                                        <div class="errMsg" id="errMsgAbout"></div>
+                                    </div>
+                                    <div class="form-group col-xs-12 row">
+                                        <div id="listingSummary"></div>
+                                    </div>
+                                    <div class="row aboutInfo2">
+                                        <div class="form-group col-sm-2 col-xs-12">
+                                            <label for="listingCategory">Category</label>
+                                            <div class="contactSelect">
+                                                <select multiple name="listingCategory" id="listingCategory" class="form-control about-form" style="height: 250px;">
+                                                    <optgroup label="Housing"></optgroup>
+                                                    <option value="APARTMENT">Apartment</option>
+                                                    <option value="BUNGALOW">Bungalow</option>
+                                                    <option value="CHALET">Chalet</option>
+                                                    <option value="CHATEU">Chateu</option>
+                                                    <option value="ESTATE">Estate</option>
+                                                    <option value="HOTEL">Hotel</option>
+                                                    <option value="HOTELSUITE">Hotel Suite</option>
+                                                    <option value="PENTHOUSE">Penthouse</option>
+                                                    <option value="ISLAND">Private Island</option>
+                                                    <option value="RESORT">Resort</option>
+                                                    <option value="VILLA">Villa</option>
+                                                    <optgroup label="Cars"></optgroup>
+                                                    <option value="EXOTIC_CAR">Exotic Car</option>
+                                                    <optgroup label="Jets"></optgroup>
+                                                    <option value="PRIVATE_JET">Private Jet</option>
+                                                    <optgroup label="Yachts"></optgroup>
+                                                    <option value="YACHT">Yacht</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-sm-5 col-xs-12">
+                                            <label for="listingTitle">Headline</label>
+                                            <input type="text" class="form-control about-form" id="listingTitle" placeholder="Title">
+                                        </div>
+                                        <div class="form-group col-sm-4 col-xs-12">
+                                            <label for="listingTitle">Property Name (internal)</label>
+                                            <input type="text" class="form-control about-form" id="listingPropertyName" placeholder="Property Name">
+                                        </div>
+                                        <div class="form-group col-sm-1 col-xs-12">
+                                            <label for="listingTitle">Featured</label>
+                                            <input type="checkbox" class="form-control" id="listingFeatured">
+                                        </div>
+                                        <div class="form-group col-sm-2 col-xs-12">
+                                            <label for="listingCategory">Status</label>
+                                            <div class="contactSelect">
+                                                <select name="listingStatus" id="listingStatus" class="form-control about-form">
+                                                    <option value="0">Select Status</option>
+                                                    <option value="Incomplete">Incomplete</option>
+                                                    <option value="Pending">Pending</option>
+                                                    <option value="Active">Active</option>
+                                                    <option value="Inactive">Inactive</option>
+                                                    <option value="Ghost">Ghost</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group col-sm-2 col-xs-12">
+                                            <label for="listingTitle">Sq. Ft.</label>
+                                            <input type="text" class="form-control about-form" id="listingSqFt" placeholder="Sq. Ft." onkeypress="return CheckIfInt(event, 1, 5);">
+                                        </div>
+                                        <div class="form-group col-sm-2 col-xs-12">
+                                            <label for="listingTitle">Max Occupancy</label>
+                                            <input type="text" class="form-control about-form" id="listingMaxOccupancy" placeholder="Max Occupants" onkeypress="return CheckIfInt(event, 1, 5);">
+                                        </div>
+                                        <!-- <div class="form-group col-sm-2 col-xs-12">
+                                            <label for="listingTitle">View</label>
+                                            <div class="contactSelect">
+                                                <select name="listingView" id="listingView" class="form-control">
+                                                    <option value="0">Select View</option>
+                                                    <option value="None">No View</option>
+                                                    <option value="Sunset">Sunset</option>
+                                                    <option value="Sunrise">Sunrise</option>
+                                                </select>
+                                            </div>
+                                        </div>-->
+                                        <div class="form-group col-sm-2 col-xs-12">
+                                            <label for="listingBeds">Bed</label>
+                                            <input type="text" class="form-control about-form" id="listingBeds" placeholder="#" onkeypress="return CheckIfFloat(event, 1, 5);">
+                                        </div>
+                                        <div class="form-group col-sm-2 col-xs-12">
+                                            <label for="listingBaths">Bath</label>
+                                            <input type="text" class="form-control about-form" id="listingBaths" placeholder="#" onkeypress="return CheckIfFloat(event, 1, 5);">
+                                        </div>
+                                        <!--
+
+                                        -->
+                                        <div class="form-group col-sm-4 col-xs-12" style="display: inline;">
+                                            <label for="checkInHour">Check In</label>
+                                            <select class="form-control ci-co about-form" id="checkInHour">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option selected value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                            </select> :
+                                            <select class="form-control ci-co about-form" id="checkInMinute">
+                                                <option selected value="00">00</option>
+                                                <option value="15">15</option>
+                                                <option value="30">30</option>
+                                                <option value="45">45</option>
+
+                                            </select>
+
+                                            <select class="form-control ci-co about-form" id="checkInAMPM">
+                                                <option value="AM">AM</option>
+                                                <option selected value="PM">PM</option>
+
+                                            </select>
+
+
+                                        </div>
+                                        <div class="form-group col-sm-4 col-xs-12" style="display: inline;">
+                                            <label for="checkOutHour">Check Out</label>
+                                            <select class="form-control ci-co about-form" id="checkOutHour">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option selected value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                            </select> :
+                                            <select class="form-control ci-co about-form" id="checkOutMinute">
+                                                <option selected value="00">00</option>
+                                                <option value="15">15</option>
+                                                <option value="30">30</option>
+                                                <option value="45">45</option>
+
+                                            </select>
+
+                                            <select class="form-control ci-co about-form" id="checkOutAMPM">
+                                                <option selected value="AM">AM</option>
+                                                <option value="PM">PM</option>
+
+                                            </select>
+
+                                        </div>
+                                        <div class="form-group col-xs-2">
+                                            <label for="listingDescription">Listing Number: </label>
+                                            <label for="listingDescription" id="listingNumber" style="font-weight: 700; font-size: 24px; padding-top: 10px;"></label>
+
+                                        </div>
+
+                                        <div class="form-group col-xs-12">
+                                            <label for="listingDescription">Describe the listing</label>
+                                            <textarea class="form-control about-form" rows="12" id="listingDescription" placeholder="Describe the listing"></textarea>
+                                        </div>
+
+                                        <div class="form-group col-xs-12">
+                                            <label for="listingTags">Tags</label>
+                                            <input class="form-control about-form" id="listingTags" placeholder="Tags">
+                                        </div>
+                                        <div class="form-group col-xs-4">
+                                            <div id="saveAbout">Save</div>
+                                        </div>
+
+                                        <!-- <div class="form-group col-sm-9 col-xs-12">
+                                            <label for="listingTags">Tags</label>
+                                            <input type="text" class="form-control" id="listingTags" placeholder="Add Tags">
+                                        </div>
+                                        <div class="form-group col-sm-3 col-xs-12">Related I</div>
+                                        <div class="form-group col-sm-3 col-xs-12">Related II</div>
+                                        <div class="form-group col-sm-3 col-xs-12">Related III</div>
+                                        <div class="form-group col-sm-3 col-xs-12">Related IV</div>-->
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dashboardBoxBg mb30 addressInfo">
+                                <div class="profileIntro paraMargin">
+                                    <h3>Location</h3>
+                                    <div class="form-group col-xs-12 row">
+                                        <div class="errMsg" id="errMsgAddress"></div>
+                                    </div>
+
+                                    <div class="row listingAddressInfo">
+                                        <div class="form-group col-sm-6 col-xs-12">
+                                            <label for="geoSubDivision1">Geographical Subdivision</label>
+                                            <select class="form-control location-form" id="geoSubDivision1">
+                                                <option value="0">Select</option>
+                                                <optgroup label="North America">
+                                                    <option value="7">Canada</option>
+                                                    <option value="8">Caribbean</option>
+                                                    <option value="9">Central America</option>
+                                                    <option value="10">Hawaii</option>
+                                                    <option value="11">Mexico</option>
+                                                    <option value="12">United States</option>
+                                                </optgroup>
+                                                <optgroup label="Europe">
+                                                    <option value="13">France</option>
+                                                    <option value="14">Greece</option>
+                                                    <option value="15">Italy</option>
+                                                    <option value="16">Spain</option>
+                                                    <option value="17">Switzerland</option>
+                                                </optgroup>
+                                                <optgroup label="Asia">
+                                                    <option value="18">Indian Ocean</option>
+                                                    <option value="19">Indonesia</option>
+                                                    <option value="20">Thailand</option>
+                                                </optgroup>
+                                                <optgroup label="Africa">
+                                                    <option value="21">South Africa</option>
+                                                </optgroup>
+                                                <optgroup label="Oceania">
+                                                    <option value="22">New Zealand</option>
+                                                    <option value="23">South Pacific</option>
+                                                </optgroup>
+                                                <optgroup label="Middle East">
+                                                    <option value="24">United Arab Emirates</option>
+                                                </optgroup>
+                                            </select>
+                                            <select id="geoSubDivision2" class="form-control location-form">
+                                                <option value="0">Select Region</option>
+                                            </select>
+                                            <select id="geoSubDivision3" class="form-control location-form"></select>
+                                            <input type="hidden" id="myGeoBreakdown" />
+                                        </div>
+                                        <!--<div class="form-group col-sm-6 col-xs-12">
+                                            <label for="destinationType">Destination Category</label>
+                                            <select multiple id="destinationType"class="form-control" style="height: 150px;">
+                                                <option value="Beachfront">Beachfront Escapes</option>
+                                                <option value="CityBreaks">City Breaks</option>
+                                                <option value="Corporate">Corporate Retreats</option>
+                                                <option value="Family">Family Friendly</option>
+                                                <option value="Honeymoon">Honeymoon Hotspots</option>
+                                            </select>
+                                        </div>-->
+                                        <div class="form-group col-sm-6 col-xs-12">
+                                            <label for="listingAddress">Address</label>
+                                            <input type="text" class="form-control location-form" id="listingAddress" placeholder="Address">
+                                        </div>
+                                        <div class="form-group col-sm-6 col-xs-12">
+                                            <label for="listingAddress2">Address 2</label>
+                                            <input type="text" class="form-control location-form" id="listingAddress2" placeholder="Address 2">
+                                        </div>
+                                        <div class="form-group col-sm-3 col-xs-12">
+                                            <label for="listingCountry">Country</label>
+                                            <div class="contactSelect" id="listingCountryDiv">
+                                                <select name="listingCountry" id="listingCountry" class="form-control location-form">
+                                                    <option value="">Country</option>
+                                                    <option value="USA">United States</option>
+                                                    <option value="CAN">Canada</option>
+                                                    <option value="OTHR">Other</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-sm-3 col-xs-12">
+                                            <label for="listingCity">City</label>
+                                            <input type="text" class="form-control location-form" id="listingCity" placeholder="City">
+                                        </div>
+                                        <div class="form-group col-sm-3 col-xs-12">
+                                            <label for="listingState">State</label>
+                                            <!--<div class="contactSelect" id="listingStateDiv">
+                                                <select name="listingState" id="listingState" class="form-control">
+                                                    <option value="0">State</option>
+                                                    <option value="CA">California</option>
+                                                    <option value="NY">New York</option>
+                                                    <option value="PA">Pennsylvania</option>
+                                                </select>
+                                            </div>-->
+                                            <input type="text" class="form-control location-form" id="listingState" placeholder="State" />
+                                        </div>
+                                        <div class="form-group col-sm-3 col-xs-12">
+                                            <label for="listingPostal">Zip/Postal Code</label>
+                                            <input type="text" class="form-control location-form" id="listingPostal" placeholder="Postal Code">
+                                        </div>
+                                        <div class="form-group col-sm-3 col-xs-12">
+                                            <label for="listingLatitude">Latitude</label>
+                                            <input type="text" class="form-control location-form" id="listingLatitude" placeholder="Latitude">
+                                            <input type="hidden" id="lat" />
+                                        </div>
+                                        <div class="form-group col-sm-3 col-xs-12">
+                                            <label for="listingLongitude">Longitude</label>
+                                            <input type="text" class="form-control location-form" id="listingLongitude" placeholder="Longitude">
+                                            <input type="hidden" id="lng" />
+                                        </div>
+                                        <div class="form-group col-sm-2 col-xs-12">
+                                            <label for="listingBaseCurrency">Base Currency</label>
+                                            <div class="contactSelect">
+                                                <select name="listingBaseCurrency" id="listingBaseCurrency" class="form-control location-form">
+                                                    <option value="">Currency</option>
+                                                    <option value="USD">$ - U.S. Dollars </option>
+                                                    <option value="CHF">&#8355; - Swiss Franc</option>
+                                                    <option value="EUR">&euro; - Euro</option>
+                                                    <option value="GBP">&#xa3; - British Pound</option>
+                                                    <option value="JPY">&yen; - Yen</option>
+                                                    <option value="CAD">C$ - Canadian Dollar</option>
+
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-sm-2 col-xs-12">
+                                            <label for="listingTaxPercentage">Tax %</label>
+                                            <div class="input-group">
+                                                <input type="text" maxlength="5" class="form-control location-form" id="listingTaxPercentage" placeholder="Tax %" onkeypress="return CheckIfFloat(event, 1, 5);">
+                                                <span class="input-group-addon">%</span>
+                                            </div>
+
+                                        </div>
+                                        <div class="form-group col-sm-2 col-xs-12">
+                                            <label for="listingTaxPercentage">Service Fee (%)</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control location-form" id="listingServiceFee" maxlength="2" placeholder="Service %" onkeypress="return CheckIfInt(event, 1, 2);">
+                                                <span class="input-group-addon">%</span>
+                                            </div>
+
+                                        </div>
+
+                                        <!--<div class="form-group col-xs-6">
+                                            **Map Adjustment Stuff Here**
+                                        </div>-->
+                                        <div class="form-group col-xs-12">
+                                            <div id="map" style="position: relative; margin: 0; padding: 0; height: 538px; max-width: none; display: none"></div>
+                                        </div>
+                                        <div class="form-group col-xs-4">
+                                            <div id="saveLocation">Save</div>
+                                        </div>
+
+                                    </div>
+                                    <h3>Points of Interest</h3>
+                                    <div class="row pointsOfInterest">
+                                        <div class="form-group">
+
+                                            <div id="addPOIDetail" style="padding-left: 40px;"> + Add Point of Interest</div>
+                                        </div>
+                                        <div class="form-group addPOIDetail" style="display: none; border: 1px solid black; border-radius: 5px; padding: 10px; background-color: #f5f5ef;">
+                                            <label for="poiTitle">Point of Interest & Distance</label>
+                                            <input type="text" class="form-control" id="poiTitle">
+                                            <div id="cancelPOI" style="float: left; padding: 10px; color: white; background-color: #990000; border-radius: 5px; margin-top: 15px;"> Cancel</div>
+                                            <div id="insertPOI" style="float: right; padding: 10px; color: white; background-color: #006600; border-radius: 5px; margin-top: 15px;"> Add Point of Interest</div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div id="poiListingSection"></div>
+                                            <input id="poiCount" type="hidden" value="0" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dashboardBoxBg mb30 amenityInfo">
+                                <div class="profileIntro paraMargin">
+                                    <h2>Amenities</h2>
+                                    <div class="row listingAmenities" style="margin-top: -60px">
+                                        <div class="form-group col-sm-12 col-xs-12">
+                                            <div id="amenityListing"></div>
+                                            <input id="amenityCount" type="hidden" value="0" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dashboardBoxBg mb30 ownerInfo" style="width: 100%;">
+                                <div class="profileIntro paraMargin">
+                                    <h3>Owner</h3>
+                                    <div class="form-group col-xs-12 row">
+                                        <div class="errMsg" id="errMsgOwnerAddress"></div>
+                                    </div>
+                                    <div class="form-group col-sm-6 col-xs-12">
+                                        <label for="ownerFName">First Name</label>
+                                        <input type="text" class="form-control owner-form" id="ownerFName" placeholder="First Name">
+                                    </div>
+                                    <div class="form-group col-sm-6 col-xs-12">
+                                        <label for="ownerLName">Last Name</label>
+                                        <input type="text" class="form-control owner-form" id="ownerLName" placeholder="Last Name">
+                                    </div>
+                                    <div class="form-group col-sm-6 col-xs-12">
+                                        <label for="ownerPhone">Phone</label>
+
+                                        <input type="text" class="form-control owner-form" id="ownerPhone" placeholder="Phone" aria-describedby="ownerPhonePrefix">
+
+
+                                    </div>
+
+                                    <div class="form-group col-sm-6 col-xs-12">
+                                        <label for="ownerEmail">Email</label>
+                                        <input type="text" class="form-control owner-form" id="ownerEmail" placeholder="Email">
+                                    </div>
+                                    <div class="form-group col-sm-6 col-xs-12">
+                                        <label for="ownerCompany">Company</label>
+                                        <input type="text" class="form-control owner-form" id="ownerCompany" placeholder="Company">
+                                    </div>
+                                    <div class="form-group col-sm-6 col-xs-12">
+                                        <label for="ownerAddress">Address</label>
+                                        <input type="text" class="form-control owner-form" id="ownerAddress" placeholder="Address">
+                                    </div>
+                                    <div class="form-group col-sm-4 col-xs-12">
+                                        <label for="ownerAddress2">Address 2</label>
+                                        <input type="text" class="form-control owner-form" id="ownerAddress2" placeholder="Address 2">
+                                    </div>
+                                    <div class="form-group col-sm-2 col-xs-12">
+                                        <label for="ownerCountry">Country</label>
+                                        <div class="contactSelect" id="ownerCountryDiv">
+                                            <select name="listingCountry" id="ownerCountry" class="form-control owner-form">
+                                                <option value="0">Country</option>
+                                                <option value="USA">United States</option>
+                                                <option value="CAN">Canada</option>
+                                                <option value="OTHR">Other</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-3 col-xs-12">
+                                        <label for="ownerCity">City</label>
+                                        <input type="text" class="form-control owner-form" id="ownerCity" placeholder="City">
+                                    </div>
+                                    <div class="form-group col-sm-3 col-xs-12">
+                                        <label for="ownerState">State</label>
+                                        <!--<div class="contactSelect" id="ownerStateDiv">
+                                            <select name="ownerState" id="ownerState" class="form-control">
+                                                <option value="0">State</option>
+                                                <option value="CA">California</option>
+                                                <option value="NY">New York</option>
+                                                <option value="PA">Pennsylvania</option>
+                                            </select>
+                                        </div>-->
+                                        <input type="text" class="form-control owner-form" id="ownerState" placeholder="State">
+                                    </div>
+                                    <div class="form-group col-sm-4 col-xs-12">
+                                        <label for="ownerPostal">Zip/Postal Code</label>
+                                        <input type="text" class="form-control owner-form" id="ownerPostal" placeholder="Postal Code">
+                                    </div>
+                                    <div class="form-group col-sm-4 col-xs-12">
+                                        <label for="ownerPostal">Commission %</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control owner-form" id="ownerCommission" placeholder="Commission %" aria-describedby="ownComm">
+                                            <span class="input-group-addon" id="ownComm">%</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-4 col-xs-12">
+                                        <label for="ownerPostal">Head Agent</label>
+                                        <div class="contactSelect">
+                                            <select name="ownerAgent" id="ownerAgent" class="form-control owner-form">
+                                                <option value="0">Select Agent</option>
+                                                <option value="Niko">Niko</option>
+                                                <option value="Dave">Dave</option>
+                                                <option value="Aras">Aras</option>
+                                                <option value="Danelle">Danelle</option>
+                                                <option value="Pablo">Pablo</option>
+                                                <option value="Ricky">Ricky</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="profileIntro paraMargin">
+                                    <h3>Reservations</h3>
+                                    <div class="form-group col-sm-12 col-xs-12">
+
+                                        <input type="checkbox" id="reservationSameAsOwner" placeholder="Same as owner" style="display: inline-block;">
+                                        <label for="reservationSameAsOwner" style="display: inline-block;">Use owner info</label>
+                                    </div>
+                                    <div id="resInfo">
+                                        <div class="form-group col-sm-6 col-xs-12">
+                                            <label for="reservationFName">First Name</label>
+                                            <input type="text" class="form-control owner-form" id="reservationFName" placeholder="First Name">
+                                        </div>
+                                        <div class="form-group col-sm-6 col-xs-12">
+                                            <label for="reservationLName">Last Name</label>
+                                            <input type="text" class="form-control owner-form" id="reservationLName" placeholder="Last Name">
+                                        </div>
+                                        <div class="form-group col-sm-4 col-xs-12">
+                                            <label for="reservationCompany">Company</label>
+                                            <input type="text" class="form-control owner-form" id="reservationCompany" placeholder="Company">
+                                        </div>
+                                        <div class="form-group col-sm-4 col-xs-12">
+                                            <label for="reservationPhone">Phone</label>
+                                            <input type="text" class="form-control owner-form" id="reservationPhone" placeholder="Phone Number">
+                                        </div>
+                                        <div class="form-group col-sm-4 col-xs-12">
+                                            <label for="reservationEmail">Email</label>
+                                            <input type="text" class="form-control owner-form" id="reservationEmail" placeholder="Email">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="profileIntro paraMargin">
+                                    <h3>Concierge</h3>
+                                    <div class="form-group col-sm-12 col-xs-12">
+
+                                        <input type="checkbox" id="conciergeSameAsOwner" placeholder="Same as owner" style="display: inline-block;">
+                                        <label for="conciergeSameAsOwner" style="display: inline-block;">Use owner info</label>
+                                    </div>
+                                    <div id="concInfo">
+                                        <div class="form-group col-sm-6 col-xs-12">
+                                            <label for="reservationFName">First Name</label>
+                                            <input type="text" class="form-control owner-form" id="conciergeFName" placeholder="First Name">
+                                        </div>
+                                        <div class="form-group col-sm-6 col-xs-12">
+                                            <label for="reservationLName">Last Name</label>
+                                            <input type="text" class="form-control owner-form" id="conciergeLName" placeholder="Last Name">
+                                        </div>
+                                        <div class="form-group col-sm-4 col-xs-12">
+                                            <label for="conciergeCompany">Company</label>
+                                            <input type="text" class="form-control owner-form" id="conciergeCompany" placeholder="Company">
+                                        </div>
+                                        <div class="form-group col-sm-4 col-xs-12">
+                                            <label for="reservationPhone">Phone</label>
+                                            <input type="text" class="form-control owner-form" id="conciergePhone" placeholder="Phone Number">
+                                        </div>
+                                        <div class="form-group col-sm-4 col-xs-12">
+                                            <label for="reservationEmail">Email</label>
+                                            <input type="text" class="form-control owner-form" id="conciergeEmail" placeholder="Email">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-xs-4">
+                                        <div id="saveOwner">Save</div>
+                                    </div>
+                                </div>
+                                <div class="profileIntro paraMargin">
+                                    <h3>Website Information</h3>
+                                    <div class="row listingWebsites">
+                                        <div class="form-group">
+
+                                            <div id="addWebsiteDetail" style="padding-left: 40px;"> + Add Related Website</div>
+                                        </div>
+                                        <div class="form-group addWebsiteDetail" style="display: none; border: 1px solid black; border-radius: 5px; padding: 10px; background-color: #f5f5ef;">
+                                            <label for="websiteTitle">Nickname *</label>
+                                            <input type="text" class="form-control" id="websiteTitle">
+                                            <label for="websiteURL">URL *</label>
+                                            <input type="text" class="form-control" id="websiteURL">
+                                            <div id="cancelWebsite" style="float: left; padding: 10px; color: white; background-color: #990000; border-radius: 5px; margin-top: 15px;"> Cancel</div>
+                                            <div id="insertWebsite" style="float: right; padding: 10px; color: white; background-color: #006600; border-radius: 5px; margin-top: 15px;"> Add Website</div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div id="websiteListingSection"></div>
+                                            <input id="websiteCount" type="hidden" value="0" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dashboardBoxBg mb30 bedroomInfo" style="width: 100%; padding-bottom: 150px;">
+                                <div class="form-group col-xs-12">
+                                    <div class="errMsg" id="bedError"></div>
+                                </div>
+                                <div class="profileIntro paraMargin">
+                                    <h2>Bedrooms</h2>
+                                    <div class="row listingBedrooms">
+                                        <div class="form-group">
+
+                                            <div id="addBedroomDetail" style="padding-left: 40px;"> + Add Bedroom Detail</div>
+                                        </div>
+                                        <div class="form-group addBedroomDetail" style="display: none; border: 1px solid black; border-radius: 5px; padding: 10px; background-color: #f5f5ef;">
+                                            <div class="row">
+                                                <div class="form-group col-sm-6 col-xs-12">
+                                                    <label for="bedroomTitle">Title *</label>
+                                                    <input type="text" class="form-control" id="bedroomTitle">
+                                                </div>
+                                                <div class="form-group col-sm-6 col-xs-12">
+                                                    <label for="bedroomType">Type *</label>
+                                                    <div class="contactSelect">
+                                                        <select name="bedroomType" id="bedroomType" class="form-control">
+                                                            <option value="0">Type</option>
+                                                            <option value="Bedroom">Bedroom</option>
+                                                            <option value="Studio">Studio</option>
+                                                            <option value="Other">Other</option>
+
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-sm-12 col-xs-12">
+                                                    <label for="bedroomDescription">Description *</label>
+                                                    <input type="text" class="form-control" id="bedroomDescription">
+                                                </div>
+                                                <div class="form-group col-sm-2 col-xs-12">
+                                                    <label for="bedKing">king</label>
+                                                    <div class="contactSelect">
+                                                        <select name="bedKing" id="bedKing" class="form-control">
+                                                            <option value="0">0</option>
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                            <option value="6">6</option>
+                                                            <option value="7">7</option>
+                                                            <option value="8">8</option>
+                                                            <option value="9">9</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-sm-2 col-xs-12">
+                                                    <label for="bedQueen">queen</label>
+                                                    <div class="contactSelect">
+                                                        <select name="bedQueen" id="bedQueen" class="form-control">
+                                                            <option value="0">0</option>
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                            <option value="6">6</option>
+                                                            <option value="7">7</option>
+                                                            <option value="8">8</option>
+                                                            <option value="9">9</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group col-sm-2 col-xs-12">
+                                                    <label for="bedDouble">double</label>
+                                                    <div class="contactSelect">
+                                                        <select name="bedDouble" id="bedDouble" class="form-control">
+                                                            <option value="0">0</option>
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                            <option value="6">6</option>
+                                                            <option value="7">7</option>
+                                                            <option value="8">8</option>
+                                                            <option value="9">9</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-sm-2 col-xs-12">
+                                                    <label for="bedTwin">twin</label>
+                                                    <div class="contactSelect">
+                                                        <select name="bedTwin" id="bedTwin" class="form-control">
+                                                            <option value="0">0</option>
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                            <option value="6">6</option>
+                                                            <option value="7">7</option>
+                                                            <option value="8">8</option>
+                                                            <option value="9">9</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-sm-2 col-xs-12">
+                                                    <label for="bedBunk">bunk bed</label>
+                                                    <div class="contactSelect">
+                                                        <select name="bedBunk" id="bedBunk" class="form-control">
+                                                            <option value="0">0</option>
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                            <option value="6">6</option>
+                                                            <option value="7">7</option>
+                                                            <option value="8">8</option>
+                                                            <option value="9">9</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group col-sm-2 col-xs-12">
+                                                    <label for="bedChild">child bed</label>
+                                                    <div class="contactSelect">
+                                                        <select name="bedChild" id="bedChild" class="form-control">
+                                                            <option value="0">0</option>
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                            <option value="6">6</option>
+                                                            <option value="7">7</option>
+                                                            <option value="8">8</option>
+                                                            <option value="9">9</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-sm-2 col-xs-12">
+                                                    <label for="bedFuton">sleep sofa/futon</label>
+                                                    <div class="contactSelect">
+                                                        <select name="bedFuton" id="bedFuton" class="form-control">
+                                                            <option value="0">0</option>
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                            <option value="6">6</option>
+                                                            <option value="7">7</option>
+                                                            <option value="8">8</option>
+                                                            <option value="9">9</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-sm-2 col-xs-12">
+                                                    <label for="bedMurphy">murphy bed</label>
+                                                    <div class="contactSelect">
+                                                        <select name="bedMurphy" id="bedMurphy" class="form-control">
+                                                            <option value="0">0</option>
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                            <option value="6">6</option>
+                                                            <option value="7">7</option>
+                                                            <option value="8">8</option>
+                                                            <option value="9">9</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-sm-2 col-xs-12">
+                                                    <label for="bedCrib">baby crib</label>
+                                                    <div class="contactSelect">
+                                                        <select name="bedCrib" id="bedCrib" class="form-control">
+                                                            <option value="0">0</option>
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                            <option value="6">6</option>
+                                                            <option value="7">7</option>
+                                                            <option value="8">8</option>
+                                                            <option value="9">9</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <label for="bedroomAmenities">Amenities</label>
+                                            <div id="bedroomAmenities" style="border: 1px solid black; border-radius: 5px; background-color: white; color: black; padding: 5px;"></div>
+                                            <input id="amenityCSV" type="hidden" />
+                                            <div id="cancelBedroom" style="float: left; padding: 10px; color: white; background-color: #990000; border-radius: 5px; margin-top: 15px;"> Cancel</div>
+                                            <div id="insertBedroom" style="float: right; padding: 10px; color: white; background-color: #006600; border-radius: 5px; margin-top: 15px;"> Add Bedroom Details</div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <div class="profileIntro paraMargin" style="padding-top: 30px;">
+                                    <div class="form-group col-xs-12">
+                                        <div class="form-group">
+                                            <hr />
+                                            <div id="bedroomListingSection"></div>
+                                            <input id="bedCount" type="hidden" value="0" />
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="profileIntro paraMargin">
+                                    <div class="form-group col-xs-12">
+                                        <div class="errMsg" id="bathError"></div>
+                                    </div>
+                                    <h2>Bathrooms</h2>
+                                    <div class="row listingBathrooms">
+                                        <div class="form-group">
+
+                                            <div id="addBathroomDetail" style="padding-left: 40px;"> + Add Bathroom Detail</div>
+                                        </div>
+                                        <div class="form-group addBathroomDetail" style="display: none; border: 1px solid black; border-radius: 5px; padding: 10px; background-color: #f5f5ef;">
+                                            <div class="row">
+                                                <div class="form-group col-sm-6 col-xs-12">
+                                                    <label for="bedroomTitle" ">Title *</label>
+                                                    <input type="text" class="form-control" id="bathroomTitle">
+                                                </div>
+                                                <div class="form-group col-sm-6 col-xs-12">
+                                                    <label for="bedroomType">Type *</label>
+                                                    <div class="contactSelect">
+                                                        <select name="bathroomType" id="bathroomType" class="form-control">
+
+                                                            <option value="Full">Full</option>
+                                                            <option value="Half">Half</option>
+                                                            <option value="Shower">Shower</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-sm-12 col-xs-12">
+                                                    <label for="bedroomDescription">Description *</label>
+                                                    <input type="text" class="form-control" id="bathroomDescription">
+                                                </div>
+                                            </div>
+
+
+                                            <label for="bathroomAmenities">Amenities</label>
+                                            <div id="bathroomAmenities" style="border: 1px solid black; border-radius: 5px; background-color: white; color: black; padding: 5px;"></div>
+                                            <div id="cancelBathroom" style="float: left; padding: 10px; color: white; background-color: #990000; border-radius: 5px; margin-top: 15px;"> Cancel</div>
+                                            <div id="insertBathroom" style="float: right; padding: 10px; color: white; background-color: #006600; border-radius: 5px; margin-top: 15px;"> Add Bathroom Details</div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                                <div class="profileIntro paraMargin" style="padding-top: 30px;">
+                                    <div class="form-group col-xs-12">
+                                        <div class="form-group">
+                                            <hr />
+                                            <div id="bathroomListingSection"></div>
+                                            <input id="bathCount" type="hidden" value="0" />
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="dashboardBoxBg mb30 rateInfo">
+
+                                <div class="profileIntro paraMargin">
+                                    <div class="form-group col-sm-12 col-xs-12" id="rateListing"></div>
+                                    <div class="row errMsg" id="errMsgRates"></div>
+                                    <div class="form-group">
+                                        <div id="addRateDetail" style="padding-left: 40px;"> + Add New Rate</div>
+                                    </div>
+                                    <div class="form-group addRateDetail" style="display: none; border: 1px solid black; border-radius: 5px; padding: 10px; background-color: #f5f5ef;">
+                                        <div class="row">
+                                            <div class="form-group col-sm-2 col-xs-12">
+                                                <label for="listingTitle">Rate Type</label>
+                                                <div class="contactSelect">
+                                                    <select name="rateType" id="rateType" class="form-control">
+                                                        <option value="0">Rate Type</option>
+                                                        <option value="STANDARD">Standard</option>
+                                                        <option value="HOLIDAY">Holiday</option>
+                                                        <option value="PEAK">Peak Season</option>
+                                                        <option value="THANKSGIVING">Thanksgiving</option>
+                                                        <option value="CHRISTMAS">Christmas</option>
+                                                        <option value="NEWYEARS">New Years</option>
+                                                        <option value="SPRINGBREAK">Spring Break</option>
+                                                        <option value="PRESIDENTS">President's Week</option>
+                                                        <option value="FALL">Fall Season</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-sm-2 col-xs-12">
+                                                <label for="rateAmount">Amount</label>
+                                                <input type="text" class="form-control" id="rateAmount" placeholder="Rate Amount" onkeypress="return CheckIfFloat(event, 1, 12);">
+                                            </div>
+                                            <div class="form-group col-sm-2 col-xs-12">
+                                                <label for="rateStartDate">Start Date</label>
+                                                <input type="text" class="form-control" id="rateStartDate" placeholder="Start" readonly>
+                                            </div>
+                                            <div class="form-group col-sm-2 col-xs-12">
+                                                <label for="rateEndDate">End Date</label>
+                                                <input type="text" class="form-control" id="rateEndDate" placeholder="End" readonly>
+                                            </div>
+                                            <div class="form-group col-sm-1 col-xs-12">
+                                                <label for="rateMinStay">Min Stay</label>
+                                                <input type="text" class="form-control" id="rateMinStay" placeholder="Min" onkeypress="return CheckIfInt(event, 1, 3);">
+                                            </div>
+                                            <div class="form-group col-sm-3 col-xs-12">
+                                                <label for="cp60">Cancellation Policy (days)</label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" name="optCancel" id="cp60" checked="checked">60
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" name="optCancel" id="cp90">90
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" name="optCancel" id="cp120">120
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div id="cancelRate" style="float: left; padding: 10px; color: white; background-color: #990000; border-radius: 5px; margin-top: 15px;"> Cancel</div>
+                                        <div id="insertRate" style="float: right; padding: 10px; color: white; background-color: #006600; border-radius: 5px; margin-top: 15px;"> Add Rate </div>
+                                    </div>
+
+                                    <div class="row listingRateInfo2">
+                                        <div class="form-group col-sm-6 col-xs-12">
+                                            <div class="form-group col-sm-12 col-xs-12" id="feeListing"></div>
+                                            <div class="row errMsg" id="errMsgFees"></div>
+                                            <div class="form-group">
+                                                <div id="addFeeDetail" style="padding-left: 40px;"> + Add New Fee</div>
+                                            </div>
+                                            <div class="form-group addFeeDetail" style="display: none; border: 1px solid black; border-radius: 5px; padding: 10px; background-color: #f5f5ef;">
+                                                <div class="row">
+                                                    <div class="form-group col-sm-6 col-xs-12">
+                                                        <label for="listingFeeType">Fees</label>
+                                                        <div class="contactSelect">
+                                                            <select name="listingFeeType" id="listingFeeType" class="form-control">
+                                                                <option value="0">Type</option>
+                                                                <option value="SECURITY">Security Deposit</option>
+                                                                <option value="HOUSEKEEPING">Housekeeping</option>
+                                                                <option value="CLEANING">Cleaning (Exit)</option>
+                                                                <option value="CHEF">Private Chef</option>
+                                                                <option value="EVENT">Event Fee</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group col-sm-6 col-xs-12">
+                                                        <label for="listingFeeAmount">Amount</label>
+                                                        <input type="text" class="form-control" id="listingFeeAmount" placeholder="Amount">
+                                                    </div>
+                                                </div>
+                                                <div id="cancelFee" style="float: left; padding: 10px; color: white; background-color: #990000; border-radius: 5px; margin-top: 15px;"> Cancel</div>
+                                                <div id="insertFee" style="float: right; padding: 10px; color: white; background-color: #006600; border-radius: 5px; margin-top: 15px;"> Add Fee </div>
+                                            </div>
+                                            <div class="form-group col-xs-12">
+                                                <input id="rateCount" type="hidden" value="0" />
+                                                <input id="feeCount" type="hidden" value="0" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-sm-6 col-xs-12">
+                                            <h2>Policies</h2>
+                                            <div class="row policyInfo"></div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="dashboardBoxBg mb30 pictureInfo">
+                                <div class="profileIntro paraMargin">
+                                    <h3>
+                                        Gallery <a href="#" id="downloadPictures" title="Download all images as zip file"><i class="fa fa-download"></i></a>
+                                    </h3>
+                                    <div id="downloadPicturesNow" style="display: none;">
+                                        <a id="zipPicLink" href="#">
+                                            <h2>Download Zip File</h2>
+                                        </a>
+                                    </div>
+                                    <input id="pictureCount" type="hidden" value="0" />
+
+                                    <div class="row">
+                                        <div class="form-group col-xs-12" id="listingPictures">
+                                            <ul class="list-inline uploadImages"></ul>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-xs-12">
+                                            <div id="dZUpload" class="dropzone">
+                                                <div class="dz-default dz-message">Drop image here</div>
+                                            </div>
+                                            <div id="imageName" style="display: none;"></div>
+                                            <!--<div class="imageUploader text-center">
+                                                <div class="file-upload">
+                                                    <div class="upload-area">
+                                                        <input type="file" name="img[]" class="file">
+                                                        <button class="browse" type="button">Click or Drag images here</button>
+                                                    </div>
+                                                </div>
+                                            </div>-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-footer text-center submitNewListing">
+
+                            </div>
+                        </form>
                     </div>
-                    <div id="cancelFee" style="float: left; padding: 10px; color: white; background-color: #990000; border-radius: 5px; margin-top: 15px;"> Cancel</div>
-                    <div id="insertFee" style="float: right; padding: 10px; color: white; background-color: #006600; border-radius: 5px; margin-top: 15px;"> Add Fee </div>
-                </div>
-                <div class="form-group col-xs-12">
-                    <input id="rateCount" type="hidden" value="0"/>
-                    <input id="feeCount" type="hidden" value="0"/>
                 </div>
             </div>
-            <div class="form-group col-sm-6 col-xs-12">
-                <h2>Policies</h2>
-                <div class="row policyInfo"></div>
+        </section>
 
-            </div>
-        </div>
-
-    </div>
-</div>
-
-<div class="dashboardBoxBg mb30 pictureInfo">
-    <div class="profileIntro paraMargin">
-        <h3>
-            Gallery <a href="#" id="downloadPictures" title="Download all images as zip file"><i class="fa fa-download"></i></a>
-        </h3>
-        <div id="downloadPicturesNow" style="display: none;">
-            <a id="zipPicLink" href="#">
-                <h2>Download Zip File</h2>
-            </a>
-        </div>
-        <input id="pictureCount" type="hidden" value="0"/>
-
-        <div class="row">
-            <div class="form-group col-xs-12" id="listingPictures">
-                <ul class="list-inline uploadImages"></ul>
-
-            </div>
-
-        </div>
-        <div class="row">
-            <div class="form-group col-xs-12">
-                <div id="dZUpload" class="dropzone">
-                    <div class="dz-default dz-message">Drop image here</div>
-                </div>
-                <div id="imageName" style="display: none;"></div>
-                <!--<div class="imageUploader text-center">
-                    <div class="file-upload">
-                        <div class="upload-area">
-                            <input type="file" name="img[]" class="file">
-                            <button class="browse" type="button">Click or Drag images here</button>
-                        </div>
+        <!-- FOOTER -->
+        <footer class="copyRightDashboard">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <p>
+                            <span class="copyRight"></span> All Rights Reserved
+                        </p>
                     </div>
-                </div>-->
+                </div>
             </div>
-        </div>
+        </footer>
     </div>
-</div>
-
-<div class="form-footer text-center submitNewListing">
-
-</div>
-</form>
-</div>
-</div>
-</div>
-</section>
-
-<!-- FOOTER -->
-<footer class="copyRightDashboard">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <p><span class="copyRight"></span> All Rights Reserved
-                </p>
-            </div>
-        </div>
-    </div>
-</footer>
-</div>
     <!-- JAVASCRIPTS -->
     <script src="../plugins/jquery/jquery.min.js"></script>
     <script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
@@ -1563,32 +1561,32 @@
     <!--<script src="../plugins/datepicker/bootstrap-datepicker.min.js"></script>-->
     <script src="../plugins/selectbox/jquery.selectbox-0.1.3.min.js"></script>
     <script src="../plugins/rwdtable/js/rwd-table.min.js"></script>
-   
+
     <script src="../plugins/isotope/isotope.min.js"></script>
     <script src="../plugins/fancybox/jquery.fancybox.pack.js"></script>
-<script src="../plugins/isotope/isotope-triger.min.js"></script>
+    <script src="../plugins/isotope/isotope-triger.min.js"></script>
     <script src="../plugins/bootstrap/js/combobox.js"></script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEDfNcQRmKQEyulDN8nGWjLYPm8s4YB58"></script>
-<script src="../plugins/map/js/rich-marker.js"></script>
-<script src="../plugins/map/js/infobox_packed.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEDfNcQRmKQEyulDN8nGWjLYPm8s4YB58"></script>
+    <script src="../plugins/map/js/rich-marker.js"></script>
+    <script src="../plugins/map/js/infobox_packed.js"></script>
 
     <script src="../js/single-map.js"></script>
     <script src="../js/map.js"></script>
-   <!-- <script src="../js/custom.js"></script>-->
+    <!-- <script src="../js/custom.js"></script>-->
     <script src="scripts/jquery.ui.datepicker.validation.js"></script>
-<script src="Scripts/editListings.js"></script>
+    <script src="Scripts/editListings.js"></script>
     <script src="/admin/scripts/editListingsValidation.js"></script>
     <script src="../Scripts/utils.js"></script>
     <script src="../select/js/selectize.js"></script>
     <link href="../select/css/selectize.bootstrap3.css" rel="stylesheet" />
     <link href="../select/css/select.css" rel="stylesheet" />
-<script src="/admin/scripts/map.js"></script>
+    <script src="/admin/scripts/map.js"></script>
     <script src="../Scripts/utils.js"></script>
-<!-- <script src="/admin/scripts/detailmap.js"></script>-->
+    <!-- <script src="/admin/scripts/detailmap.js"></script>-->
     <script src="scripts/bootstrap-notify.min.js"></script>
-<script src="scripts/dropzone.js"></script>
-<script src="scripts/admin.js"></script>
-    
+    <script src="scripts/dropzone.js"></script>
+    <script src="scripts/admin.js"></script>
+
 </body>
 </html>

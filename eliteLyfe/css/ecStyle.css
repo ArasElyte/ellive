@@ -2535,11 +2535,51 @@ and (orientation : landscape) {
 
  /*desktop again*/
 
+ .signupButton {
+     background: #FFC34A;
+     color: #FFF;
+     font-family: Rosario;
+     padding: 11px;
+     text-align: center;
+     width: 100px;
+     margin-left:20px;
+     display: inline;
+ }
+ #modalSignup {
+     display: none;
+     position: relative;
+     width: 500px;
+     font-family: Crimson Text;
+     font-size: 18px;
+ }
+ #modalEmailSignup {
+     display: inline;
+     width: 280px;
+ }
+
+ #closeModal {
+        display: block;
+    position: absolute;
+    top: -35px;
+    right: 0;
+    z-index: 10000;
+    outline: none;
+    font-size: 30px;
+    line-height: 30px;
+    transition: transform .3s ease-in-out;
+    color: #FFF;
+ }
+.signUp {
+
+    background: #FFF;
+    padding: 50px;
+}
+
 .navbarWhite .navbar-default .navbar-nav > li > a ,.navbar-default .navbar-nav > li > a {
     font-family: Oswald;
     color: #FFF;
     font-weight: 100;
-    font-size: 14px;
+    font-size: 18px;
     background-color: transparent;
     display: inline-block;
     letter-spacing: 2px;

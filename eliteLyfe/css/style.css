@@ -2976,18 +2976,22 @@ and (max-width : 812px)
     display: inline;
     }
   .navbar-default .navbar-brand {
-      margin-top: -5px;
+      margin-top: 0px;
     }
 
   .navbar-brand > img {
       width: 190px;
-        margin: auto;
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    margin-left: -85px;
+      z-index: 99999;
     }
 
   .navbar .navbar-nav {
    /* float: none;*/
       float: right;
-      margin-top: -75px;
+      margin-top: 5px;
     }
 
   .ecPhoneHome {

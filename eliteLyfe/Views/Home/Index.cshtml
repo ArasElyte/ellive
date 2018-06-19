@@ -89,6 +89,14 @@
 </style>
 <div class="main-wrapper">
     <!-- HEADER -->
+    <div id="modalSignup">
+        <div class="signUp">
+            <a href="javascript:void(0);" onclick="Custombox.modal.close();" id="closeModal"><i class="fa fa-times"></i></a>
+            Enter your email address below to sign up for our newsletter, and to be informed about new travel destinations!<br/><br/>
+            <input type="text" class="form-control" id="modalEmailSignup" placeholder="Email Address"/>
+            <div class="signupButton">Sign Up!</div>
+        </div>
+    </div>
     <header id="pageTop" class="header">
 
         <!-- TOP INFO BAR -->
@@ -125,7 +133,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div><a class="navbar-brand" href="http://www.elitelyfe.com"><img src="../assets/All/el-logo-full.svg" alt="EliteLYFE"></a></div>
+                        <div><a class="navbar-brand" href="http://www.elitelyfe.com"><img id="eliteIcon" src="../assets/All/el-logo-no-tag.png" alt="EliteLYFE"></a></div>
                         <div class="logo crownTop"><a href="http://www.elitelyfe.com"><img src="../assets/svg/crown_mobile.svg" alt="EliteLYFE"></a></div>
                         <!--<div class="ecLine"></div>-->
                     </div>
@@ -373,10 +381,10 @@
         </div>
         <div class="col-md-6 big_slider_image_holder">
             <div class="big_slider_image inqueryContainerText">
-                
-                <div class="row" id="index_sussfull_submitions" style="display:none;">
+
+                <div class="row" id="index_sussfull_submitions" style="display: none;">
                     <div class="col-md-12">
-                        <div class="ajax_sussfull_submitions" style="font-size: 15px;  margin-top: 50px; text-align: center;">
+                        <div class="ajax_sussfull_submitions" style="font-size: 15px; margin-top: 50px; text-align: center;">
                             <h3>Thank you for your an inquiry!</h3>
                             <p>A Travel Designer will be in touch within 24 hours. Would you like to speak to a travel designer now? Give us a call!</p>
                             <p>USA & Canada: 1.877.887.7818 </p>
@@ -389,24 +397,24 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class='form-group'>
-                                    <input placeholder="First Name *" name="index_first_name" id="index_first_name" type="text" class="form-control " />
+                                    <input placeholder="First Name *" name="index_first_name" id="index_first_name" type="text" class="form-control "/>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class='form-group'>
-                                    <input placeholder="Last Name" name="index_last_name" type="text" id="index_last_name" class="form-control" />
+                                    <input placeholder="Last Name" name="index_last_name" type="text" id="index_last_name" class="form-control"/>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class='form-group'>
-                                    <input placeholder="Email *" name="index_email" id="index_email" type="text" class="form-control" />
+                                    <input placeholder="Email *" name="index_email" id="index_email" type="text" class="form-control"/>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class='form-group'>
-                                    <input placeholder="Phone #" name="index_phone_number" id="index_phone_number" type="text" class="form-control" />
+                                    <input placeholder="Phone #" name="index_phone_number" id="index_phone_number" type="text" class="form-control"/>
                                 </div>
                             </div>
 
@@ -416,23 +424,23 @@
                                 <div class='form-group'>
                                     <select name="index_would_like_to_go" id="index_would_like_to_go" class="form-control" placeholder="Destination">
                                         <option value="All Destinations">Destination</option>
-                                        <option style="margin-left:5px; font-weight:bold" value="29"><strong>Asia</strong></option>
+                                        <option style="margin-left: 5px; font-weight: bold" value="29"><strong>Asia</strong></option>
                                         <option style="margin-left: 15px;" value="64">--Indonesia</option>
-                                        <option style="margin-left:15px;" value="45">--Maldives</option>
-                                        <option style="margin-left:15px;" value="30">--Thailand</option>
-                                        <option style="margin-left:5px; font-weight:bold" value="80"><strong>Central America</strong></option>
-                                        <option style="margin-left:15px;" value="82">--Costa Rica</option>
-                                        <option style="margin-left:5px; font-weight:bold" value="20"><strong>Europe</strong></option>
-                                        <option style="margin-left:15px;" value="16">--France</option>
-                                        <option style="margin-left:15px;" value="125">--Greece</option>
-                                        <option style="margin-left:15px;" value="48">--Italy</option>
-                                        <option style="margin-left:15px;" value="51">--Spain</option>
-                                        <option style="margin-left:15px;" value="61">--Switzerland</option>
-                                        <option style="margin-left:5px; font-weight:bold" value="24"><strong>North America</strong></option>
-                                        <option style="margin-left:15px;" value="34">--Caribbean</option>
-                                        <option style="margin-left:15px;" value="131">--Hawaii</option>
-                                        <option style="margin-left:15px;" value="75">--Mexico</option>
-                                        <option style="margin-left:15px;" value="13">--United States</option>
+                                        <option style="margin-left: 15px;" value="45">--Maldives</option>
+                                        <option style="margin-left: 15px;" value="30">--Thailand</option>
+                                        <option style="margin-left: 5px; font-weight: bold" value="80"><strong>Central America</strong></option>
+                                        <option style="margin-left: 15px;" value="82">--Costa Rica</option>
+                                        <option style="margin-left: 5px; font-weight: bold" value="20"><strong>Europe</strong></option>
+                                        <option style="margin-left: 15px;" value="16">--France</option>
+                                        <option style="margin-left: 15px;" value="125">--Greece</option>
+                                        <option style="margin-left: 15px;" value="48">--Italy</option>
+                                        <option style="margin-left: 15px;" value="51">--Spain</option>
+                                        <option style="margin-left: 15px;" value="61">--Switzerland</option>
+                                        <option style="margin-left: 5px; font-weight: bold" value="24"><strong>North America</strong></option>
+                                        <option style="margin-left: 15px;" value="34">--Caribbean</option>
+                                        <option style="margin-left: 15px;" value="131">--Hawaii</option>
+                                        <option style="margin-left: 15px;" value="75">--Mexico</option>
+                                        <option style="margin-left: 15px;" value="13">--United States</option>
                                     </select>
                                 </div>
                             </div>
@@ -491,7 +499,6 @@
     </div>
 
 </section>
-
 
 <!-- FOOTER -->
 <footer class="ecFooter">
