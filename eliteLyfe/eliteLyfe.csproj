@@ -78,7 +78,17 @@
     <Reference Include="Microsoft.Office.Interop.Owc11, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
-      <HintPath>..\..\..\Microsoft.Office.Interop.Owc11.dll</HintPath>
+      <HintPath>missing dlls\Microsoft.Office.Interop.Owc11.dll</HintPath>
+    </Reference>
+    <Reference Include="MSCOMCTL, Version=10.0.4504.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>missing dlls\MSCOMCTL.dll</HintPath>
+    </Reference>
+    <Reference Include="OFFICE, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>missing dlls\OFFICE.DLL</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -158,6 +168,8 @@
     <Folder Include="admin\ticketing\download\" />
     <Folder Include="admin\ticketing\uploads\" />
     <Folder Include="App_Data\" />
+    <Folder Include="Assets\high_res\header\" />
+    <Folder Include="Assets\high_res\images\" />
     <Folder Include="img\articles\" />
     <Folder Include="img\background\" />
     <Folder Include="img\banner\" />
@@ -270,14 +282,18 @@
     <Content Include="Assets\All\4. Arrow\3. Angle\1. Super\Right.svg" />
     <Content Include="Assets\All\Aspen copy.png" />
     <Content Include="Assets\All\Category 2.png" />
+    <Content Include="Assets\All\el-logo-full.svg" />
+    <Content Include="Assets\All\el-logo-no-tag.png" />
     <Content Include="Assets\All\Hero2.png" />
     <Content Include="Assets\All\Ibiza copy.png" />
     <Content Include="Assets\All\Ibiza.png" />
     <Content Include="Assets\All\Luxury Villa copy.png" />
     <Content Include="Assets\All\Luxury Villa.png" />
     <Content Include="Assets\All\Miami.png" />
+    <Content Include="Assets\All\Placeholder.jpg" />
     <Content Include="Assets\All\Placeholder.png" />
     <Content Include="Assets\All\Private Estate.png" />
+    <Content Include="Assets\All\quote.png" />
     <Content Include="Assets\All\SVG\bath.svg" />
     <Content Include="Assets\All\SVG\bed.svg" />
     <Content Include="Assets\All\SVG\Concierge icon.svg" />
@@ -293,6 +309,47 @@
     <Content Include="Assets\All\Thailand.png" />
     <Content Include="Assets\All\USA Today copy.png" />
     <Content Include="Assets\All\USA Today.png" />
+    <Content Include="Assets\high_res\About us\AboutusHero%402x.png" />
+    <Content Include="Assets\high_res\About us\AboutusHero.jpg" />
+    <Content Include="Assets\high_res\About us\AboutusHero.png" />
+    <Content Include="Assets\high_res\About us\Mission Image%402x.png" />
+    <Content Include="Assets\high_res\About us\Mission Image.jpg" />
+    <Content Include="Assets\high_res\About us\Mission Image.png" />
+    <Content Include="Assets\high_res\About us\Services Image%402x.png" />
+    <Content Include="Assets\high_res\About us\Services Image.jpg" />
+    <Content Include="Assets\high_res\About us\Services Image.png" />
+    <Content Include="Assets\high_res\custom icons\custom icon\Bath%402x.png" />
+    <Content Include="Assets\high_res\custom icons\custom icon\Bath%403x.png" />
+    <Content Include="Assets\high_res\custom icons\custom icon\Bath.svg" />
+    <Content Include="Assets\high_res\custom icons\custom icon\Bed%402x.png" />
+    <Content Include="Assets\high_res\custom icons\custom icon\Bed%403x.png" />
+    <Content Include="Assets\high_res\custom icons\custom icon\Bed.svg" />
+    <Content Include="Assets\high_res\custom icons\custom icon\Crown%402x.png" />
+    <Content Include="Assets\high_res\custom icons\custom icon\Crown%403x.png" />
+    <Content Include="Assets\high_res\custom icons\custom icon\Crown.svg" />
+    <Content Include="Assets\high_res\custom icons\custom icon\Guests%402x.png" />
+    <Content Include="Assets\high_res\custom icons\custom icon\Guests%403x.png" />
+    <Content Include="Assets\high_res\custom icons\custom icon\Guests.svg" />
+    <Content Include="Assets\high_res\Elitelyfe Wordmark.svg" />
+    <Content Include="Assets\high_res\footer\Elitelyfe Logo Tagline White .svg" />
+    <Content Include="Assets\high_res\home\Aspen%402x.png" />
+    <Content Include="Assets\high_res\home\Aspen.png" />
+    <Content Include="Assets\high_res\home\Featured_LA.jpg" />
+    <Content Include="Assets\high_res\home\Featured_PuntaCana.jpg" />
+    <Content Include="Assets\high_res\home\Featured_StBarts.jpg" />
+    <Content Include="Assets\high_res\home\Featured_TandC.jpg" />
+    <Content Include="Assets\high_res\home\Homepage_Hero%402x.png" />
+    <Content Include="Assets\high_res\home\Homepage_Hero.png" />
+    <Content Include="Assets\high_res\home\Ibiza%402x.png" />
+    <Content Include="Assets\high_res\home\Ibiza.png" />
+    <Content Include="Assets\high_res\home\Luxuria%402x.png" />
+    <Content Include="Assets\high_res\home\Luxuria.png" />
+    <Content Include="Assets\high_res\home\Miami%402x.png" />
+    <Content Include="Assets\high_res\home\Miami.png" />
+    <Content Include="Assets\high_res\home\Thailand%402x.png" />
+    <Content Include="Assets\high_res\home\Thailand.png" />
+    <Content Include="Assets\high_res\home\USA Today%402x.png" />
+    <Content Include="Assets\high_res\home\USA Today.png" />
     <Content Include="Assets\Mobile\Aspen.png" />
     <Content Include="Assets\Mobile\Hero Mobile.png" />
     <Content Include="Assets\Mobile\Ibiza.png" />
@@ -302,6 +359,7 @@
     <Content Include="Assets\svg\bath.svg" />
     <Content Include="Assets\svg\bed.svg" />
     <Content Include="Assets\svg\Concierge icon.svg" />
+    <Content Include="Assets\svg\crown_mobile.svg" />
     <Content Include="Assets\svg\Itinerary Icon.svg" />
     <Content Include="Assets\svg\person.svg" />
     <Content Include="Assets\svg\Villa Icon.svg" />
@@ -362,6 +420,9 @@
     <Content Include="js\single-map.js" />
     <Content Include="listing-details_original.html" />
     <Content Include="listing-details.html" />
+    <Content Include="missing dlls\Microsoft.Office.Interop.Owc11.dll" />
+    <Content Include="missing dlls\MSCOMCTL.dll" />
+    <Content Include="missing dlls\OFFICE.DLL" />
     <Content Include="plugins\bootstrap\js\combobox.js" />
     <Content Include="plugins\bootstrap\js\stickyfill.min.js" />
     <Content Include="royalslider\blank.gif" />

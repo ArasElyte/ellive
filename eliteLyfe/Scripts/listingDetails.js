@@ -467,6 +467,7 @@ function initMapOld() {
     
 }
 
+
 function GetListingDetail(myId) {
 
     $("#listingDetail").css("display", "inline");
@@ -819,8 +820,8 @@ function GetListingDetail(myId) {
             $("#rateListing").html(displayRates);
 
             */
-
-            GetListingRatesByCurrCode(tc.baseCurrency);
+            
+           
 
             $("#currencyType").change(function() {
                 GetListingRatesByCurrCode($("#currencyType").val());//TODO:check this out !!!!!
@@ -889,6 +890,15 @@ function GetListingDetail(myId) {
             GetListingPolicies(myId);
             GetListingAccesibility(myId);
             GetListingPOI(myId);
+
+            var defCurr = getCookie("defaultCurrency");
+
+            if (defCurr !== "") {
+                GetListingRatesByCurrCode(defCurr);
+            } else {
+                GetListingRatesByCurrCode(tc.baseCurrency);
+            }
+
 
             //bedrooms
             //bathrooms
@@ -1012,6 +1022,171 @@ function DateRateMe(thisDate) {
     return thisDate;
 
 }
+function UpdateFeesAndBottom(conversion,currType)
+{
+    $("#listingDetail").css("display", "inline");
+    $("#grayout").fadeTo(50, 0.2);
+
+    var listingDetails = "";
+
+
+
+    var data = "{listingId:'" + $("#unitId").val() + "'}";
+
+    $.ajax({
+        type: "POST",
+        //data: JSON.stringify(model),
+        url: "/Home/GetListingDetails",
+        data: data,
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        beforeSend: function () {
+            $("#greyform").fadeTo(50, 0.8);
+            $("#loader").fadeTo(0, 1);
+        },
+        complete: function () {
+            $("#greyform").hide();
+            $("#loader").hide();
+        },
+        success: function (msg) {
+            var tc = msg;
+
+
+            var dollar = "$";
+
+            switch (currType) {
+                case "USD":
+                    dollar = "$";
+                    break;
+                case "CAD":
+                    dollar = "C$";
+                    break;
+                case "JPY":
+                    dollar = "&yen;";
+                    break;
+                case "CHF":
+                    dollar = "&#8355;";
+                    break;
+                case "EUR":
+                    dollar = "&euro;";
+                    break;
+                case "GBP":
+                    dollar = "&#xa3;";
+                    break;
+                default:
+                    dollar = "$";
+                    break;
+            }
+
+            //bottom box
+            $(".listing-summary").html(dollar + Number(tc.rateMin * conversion).toLocaleString('en').replace(".00", "") + " - " + dollar + Number(tc.rateMax * conversion).toLocaleString('en').replace(".00", "") + " / Per Night");
+            //fees
+
+
+            var myFees = tc.myFees;
+
+
+            if (myFees != undefined) {
+                var displayFees = "<div class='ecTitle'>Fees</div>";
+                var alt = "";
+                var feeType = "";
+                var feeTypeDisplay = "";
+                $("#feeCount").val(myFees.length);
+
+
+
+                for (var i = 0; i < myFees.length; i++) {
+
+
+                    feeType = myFees[i].feeType;
+
+                    switch (feeType) {
+                        case "SECURITY":
+                            feeTypeDisplay = "Security Deposit";
+                            break;
+                        case "CLEANING":
+                            feeTypeDisplay = "Cleaning Fee";
+                            break;
+                        case "HOUSEKEEPING":
+                            feeTypeDisplay = "Housekeeping";
+                            break;
+                        case "CHEF":
+                            feeTypeDisplay = "Private Chef";
+                            break;
+                        case "EVENT":
+                            feeTypeDisplay = "Event Fee";
+                            break;
+                        default:
+                            feeTypeDisplay = feeType;
+                            break;
+                    }
+
+
+                    displayFees = displayFees + "<div class='row'><div class='col-sm-3'><div class='feeType'>" + feeTypeDisplay + "</div></div><div class='col-sm-3'><div class='feeAmount'>" + dollar + Number(myFees[i].feeAmount * conversion).toLocaleString('en').replace(".00", "") + '</div></div></div>';
+                }
+
+               /* if (tc.taxPercentage !== 0 && tc.taxPercentage !== "") {
+                    displayFees = displayFees + "<div class='row'><div class='col-sm-3'><div class='feeType'>Tax:</div></div><div class='col-sm-3'><div class='feeAmount'>" + tc.taxPercentage + '%</div></div></div>';
+                }
+
+                if (tc.serviceFee !== 0 && tc.serviceFee !== "") {
+                    displayFees = displayFees + "<div class='row'><div class='col-sm-3'><div class='feeType'>Service Fee:</div></div><div class='col-sm-3'><div class='feeAmount'>" + tc.serviceFee + '%</div></div></div>';
+                }
+                */
+
+                $("#feeListing").html(displayFees);
+            }
+
+
+        },
+        error: function (msg) {
+            //alert("something went wrong! " + msg.exception);
+            //error yo
+        }
+    });
+
+
+
+}
+
+function GetListingFeesByCurrCode(currType) {
+    //getCurrencyConversion
+    var data = "{currType:'" + currType + "'}";
+    $.ajax({
+        type: "POST",
+        data: data,
+        url: "/Home/GetCurrencyConversion",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        beforeSend: function () {
+            $("#greyform").fadeTo(50, 0.8);
+            $("#loader").fadeTo(0, 1);
+        },
+        complete: function () {
+            $("#greyform").hide();
+            $("#loader").hide();
+        },
+        success: function (msg) {
+            var tc = msg;
+
+            var myConversion = Number(tc.conversionRate);
+            //if (currType !== "USD") {
+                setCookie("defaultCurrency", currType, 180);
+            //}
+            
+            UpdateFeesAndBottom(myConversion,currType);
+
+
+
+        },
+        error: function (msg) {
+            //alert("something went wrong! " + msg.exception);
+            //error yo
+        }
+    });
+
+    
+}
 
 function GetListingRatesByCurrCode(currType) {
     var listingId = $("#unitId").val();
@@ -1130,6 +1305,8 @@ function GetListingRatesByCurrCode(currType) {
                 $("#currencyType").change(function () {
                     GetListingRatesByCurrCode($("#currencyType").val());//TODO:check this out !!!!!
                 });
+
+                GetListingFeesByCurrCode(currType);
             }
             
         },
