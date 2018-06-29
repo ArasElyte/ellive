@@ -71,6 +71,42 @@ namespace eliteLyfe.Controllers
         }
 
         [HttpPost]
+        public ActionResult GetCurrencyConversion(string currType)
+        {
+
+            string conversionRate;
+            try
+            {
+                using (
+                    SqlConnection conn =
+                        new SqlConnection(
+                            System.Configuration.ConfigurationManager.ConnectionStrings["dbConnection"].ConnectionString)
+                    )
+                {
+                    conn.Open();
+                    SqlCommand sqlComm = new SqlCommand("getCurrencyConversion", conn);
+                    sqlComm.CommandType = CommandType.StoredProcedure;
+                    sqlComm.Parameters.AddWithValue("@currencyCode", currType);
+
+                    conversionRate = sqlComm.ExecuteScalar().ToString();
+
+               
+                    return Json(new { conversionRate = conversionRate });
+                }
+            }
+            catch (Exception ex)
+            {
+                string exception = ex.ToString();
+                //newAudit.title = "Updating Currency " + " **Error** ";
+                //newAudit.description = " Exception: " + exception;
+                //AddLogRecord(newAudit);
+                return Json(new { code = exception });
+
+            }
+
+        }
+
+        [HttpPost]
         public ActionResult UpdateCurrency(string rateDate, string USD, string EUR, string CAD, string GBP, string JPY,
             string CHF)
         {

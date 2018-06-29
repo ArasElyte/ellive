@@ -86,7 +86,7 @@ D:\git\elitelyfe\eliteLyfe\bin\System.Web.WebPages.xml
 D:\git\elitelyfe\eliteLyfe\bin\System.Web.WebPages.Deployment.xml
 D:\git\elitelyfe\eliteLyfe\bin\System.Web.WebPages.Razor.xml
 D:\git\elitelyfe\eliteLyfe\bin\Antlr3.Runtime.pdb
-D:\git\elitelyfe\eliteLyfe\obj\x86\Release\eliteLyfe.csprojResolveAssemblyReference.cache
 D:\git\elitelyfe\eliteLyfe\obj\x86\Release\eliteLyfe.csproj.ResolveComReference.cache
 D:\git\elitelyfe\eliteLyfe\obj\x86\Release\eliteLyfe.dll
 D:\git\elitelyfe\eliteLyfe\obj\x86\Release\eliteLyfe.pdb
+D:\git\elitelyfe\eliteLyfe\obj\x86\Release\eliteLyfe.csprojResolveAssemblyReference.cache
