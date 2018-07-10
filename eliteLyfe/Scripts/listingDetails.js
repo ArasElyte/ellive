@@ -671,7 +671,7 @@ function GetListingDetail(myId) {
                 autoScaleSliderWidth: 800,
                 autoScaleSliderHeight: 600,*/
                 loop: true,
-                imageScaleMode: 'fit-if-smaller',
+                imageScaleMode: 'fill',
                 navigateByClick: true,
                 numImagesToPreload: 4,
                 arrowsNav: true,

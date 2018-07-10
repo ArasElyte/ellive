@@ -1487,6 +1487,7 @@ line-height: 18px;
     font-family: Oswald;
      display: inline;
      margin-left: -5px;
+     cursor: pointer;
  }
  .ecSearchFilter {
          height: 50px;
